@@ -12,9 +12,7 @@
   --line:#1f3338;
   --text:#ffffff;
   --muted:#cfd8dc;
-  /* Suavizado: cores inspiradas no logo (turquesa e roxo pastel) */
-  /* Paleta ainda mais suave inspirada na logomarca: azul pastel e roxo lavanda */
-  --blue:#84D1F3;
+  --blue:#00E5FF; /* Azul Neon Ajustado para Alto Contraste */
   --green:#CDA3E7;
   --graphite:#151b20;
 }
@@ -28,168 +26,46 @@ h2{font-size:clamp(30px,4vw,46px);margin:0 0 18px}
 h3{font-size:22px;margin:0 0 12px}
 .small{font-size:15px}
 .highlight{color:var(--green)}
-.hero{min-height:95vh;display:flex;align-items:center;background:radial-gradient(circle at 80% 10%,rgba(var(--blue),.26),transparent 33%),radial-gradient(circle at 20% 80%,rgba(var(--green),.18),transparent 35%),linear-gradient(135deg,#050607,#111820 75%);position:relative;overflow:hidden}
+.hero{min-height:95vh;display:flex;align-items:center;background:radial-gradient(circle at 80% 10%,rgba(0,229,255,.15),transparent 33%),radial-gradient(circle at 20% 80%,rgba(205,163,231,.12),transparent 35%),linear-gradient(135deg,#050607,#111820 75%);position:relative;overflow:hidden}
 .hero-content{position:relative;z-index:1;max-width:1000px}
-.logo{width:150px;height:auto;margin-bottom:20px;filter:drop-shadow(0 0 10px rgba(0,0,0,0.5));}
-.badge{display:inline-block;border:1px solid var(--blue);color:var(--blue);padding:9px 16px;border-radius:40px;font-size:13px;margin-bottom:26px;letter-spacing:.12em;text-transform:uppercase;background:rgba(var(--blue),.06)}
-.buttons{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px}
-.btn{background:var(--blue);color:#001014;border:0;padding:16px 24px;border-radius:14px;font-weight:800;text-decoration:none;display:inline-block;box-shadow:0 0 26px rgba(var(--blue),.22)}
+.logo-container{padding:10px 0 25px 0;display:block;}
+.badge{display:inline-block;border:1px solid var(--blue);color:var(--blue);padding:9px 16px;border-radius:40px;font-size:13px;margin-bottom:26px;letter-spacing:.12em;text-transform:uppercase;background:rgba(0,229,255,.06)}
+.buttons{margin-top:34px;display:flex;flex-wrap:wrap;gap:15px}
+.btn{background:var(--blue);color:#001014;border:0;padding:16px 32px;border-radius:14px;font-weight:800;text-decoration:none;display:inline-block;box-shadow:0 0 26px rgba(0,229,255,.22);transition:0.3s ease;}
+.btn:hover{transform:translateY(-2px);opacity:0.9;}
 .btn.secondary{background:transparent;border:1px solid var(--blue);color:var(--blue);box-shadow:none}
-.btn.green{background:var(--green);color:#001014;box-shadow:0 0 26px rgba(var(--green),.18)}
+.btn.green{background:var(--green);color:#001014;box-shadow:0 0 26px rgba(205,163,231,.18)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:22px;margin-top:34px}
-.card{background:linear-gradient(180deg,var(--card),#090c0f);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 0 30px rgba(var(--blue),.08)}
+.card{background:linear-gradient(180deg,var(--card),#090c0f);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 0 30px rgba(0,229,255,.04)}
 .card h3{color:var(--blue)}
 .dark{background:var(--bg2)}
 .two{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
-.visual{min-height:360px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(circle at 70% 20%,rgba(var(--blue),.28),transparent 28%),radial-gradient(circle at 25% 75%,rgba(var(--green),.20),transparent 30%),linear-gradient(145deg,#111820,#050607);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;box-shadow:0 0 50px rgba(var(--blue),.1)}
-.visual span{font-size:42px;font-weight:900;color:white;text-shadow:0 0 20px rgba(var(--blue),.55)}
+.visual{min-height:360px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(circle at 70% 20%,rgba(0,229,255,.15),transparent 28%),radial-gradient(circle at 25% 75%,rgba(205,163,231,.12),transparent 30%),linear-gradient(145deg,#111820,#050607);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;box-shadow:0 0 50px rgba(0,229,255,.05)}
+.visual span{font-size:42px;font-weight:900;color:white;text-shadow:0 0 20px rgba(0,229,255,.45)}
 .steps{counter-reset:step}
 .step:before{counter-increment:step;content:counter(step);display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#001014;width:38px;height:38px;border-radius:50%;font-weight:900;margin-bottom:16px}
-.product .btn{margin-top:12px;padding:12px 16px;font-size:14px}
-.cta{text-align:center;background:radial-gradient(circle,rgba(var(--blue),.22),transparent 44%),#050607}
+.product .btn{margin-top:12px;padding:12px 16px;font-size:14px;width:100%;text-align:center;}
+.cta{text-align:center;background:radial-gradient(circle,rgba(0,229,255,.1),transparent 44%),#050607}
 .faq details{background:#111820;border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:12px}
 .faq summary{cursor:pointer;font-weight:800;color:#fff}
-.proof{border:1px dashed rgba(var(--blue),.4);background:rgba(var(--blue),.04)}
-footer{padding:34px 8%;text-align:center;color:#8fa3aa;background:#030404}
+.proof{border:1px dashed rgba(0,229,255,.4);background:rgba(0,229,255,.02)}
+footer{padding:34px 8%;text-align:center;color:#8fa3aa;background:#030404;line-height:1.8;}
 .sticky{position:fixed;bottom:18px;right:18px;z-index:5}
-.sticky .btn{border-radius:999px;padding:14px 20px}
+.sticky .btn{border-radius:999px;padding:14px 20px;box-shadow:0 4px 15px rgba(0,0,0,0.4);}
 @media(max-width:820px){section{padding:54px 6%}.two{grid-template-columns:1fr}.hero{min-height:auto;padding-top:72px;padding-bottom:72px}.buttons{flex-direction:column}.btn{text-align:center;width:100%}.sticky{left:16px;right:16px}.sticky .btn{width:100%}}
 </style>
 </head>
 <body>
-<div class="sticky"><a class="btn green" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20criar%20uma%20pe%C3%A7a%20personalizada%20com%20a%20Zyvora%20Labs.">WhatsApp</a></div>
+<div class="sticky"><a class="btn green" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20criar%20uma%20peça%20personalizada%20com%20a%20Zyvora%20Labs.">Falar no WhatsApp</a></div>
+
 <section class="hero" id="topo">
   <div class="hero-content">
-    <img src="zyvora_logo.png" alt="Zyvora Labs logo" class="logo">
+    <div class="logo-container">
+      <span style="color: #00E5FF; font-family: 'Arial Black', sans-serif; font-weight: 900; font-size: 32px; letter-spacing: 3px; text-shadow: 0 0 10px rgba(0,229,255,0.3);">ZYVORA</span>
+      <span style="color: #ffffff; font-family: 'Arial', sans-serif; font-weight: 300; font-size: 32px; letter-spacing: 3px; margin-left: 5px;">LABS</span>
+    </div>
     <div class="badge">ZYVORA LABS | GRIFE 3D</div>
     <h1>Produtos 3D personalizados com tecnologia, design e exclusividade.</h1>
     <p>A Zyvora Labs cria peças únicas sob encomenda, com acabamento premium, personalização inteligente, NFC, QR Code e CareCode para marcas, empresas, eventos, PETs e presentes especiais.</p>
     <div class="buttons">
-      <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20da%20Zyvora%20Labs.">Solicitar orçamento</a>
-      <a class="btn secondary" href="#produtos">Ver produtos</a>
-      <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20da%20Zyvora%20Labs.">Falar no WhatsApp</a>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="two">
-    <div>
-      <h2>O que fazemos</h2>
-      <p>Transformamos ideias em produtos físicos personalizados usando impressão 3D, design criativo e tecnologia inteligente. Cada peça pode ser feita sob encomenda, com cores, nomes, marcas, QR Code, NFC ou CareCode.</p>
-    </div>
-    <div class="visual"><span>3D + DESIGN<br>+ TECNOLOGIA</span></div>
-  </div>
-  <div class="grid">
-    <div class="card"><h3>Brindes corporativos</h3><p>Produtos personalizados para empresas, eventos, associações e campanhas.</p></div>
-    <div class="card"><h3>Chaveiros NFC</h3><p>Peças inteligentes que abrem WhatsApp, Instagram, cardápios e portfólios.</p></div>
-    <div class="card"><h3>Produtos PET</h3><p>Plaquinhas, esculturas e identificadores com opção de CareCode.</p></div>
-    <div class="card"><h3>Presentes criativos</h3><p>Peças exclusivas com nomes, datas, frases e detalhes únicos.</p></div>
-  </div>
-</section>
-<section class="dark">
-  <h2>Tecnologia NFC, QR Code e <span class="highlight">CareCode</span></h2>
-  <p>Mais do que peças bonitas, criamos produtos inteligentes. Com NFC, QR Code e CareCode, uma peça física pode abrir um cardápio digital, Instagram, WhatsApp, portfólio, página de produto, identificação PET, currículo, cartão de visita ou página personalizada.</p>
-  <div class="grid">
-    <div class="card"><h3>Chaveiro NFC</h3><p>Encoste no celular e abra um link personalizado.</p></div>
-    <div class="card"><h3>QR Code para cardápio</h3><p>Ideal para pizzarias, restaurantes, lanchonetes e cafés.</p></div>
-    <div class="card"><h3>CareCode PET</h3><p>Identificação digital para pets, objetos e peças especiais.</p></div>
-    <div class="card"><h3>Brinde inteligente</h3><p>Conecte sua marca ao cliente de forma moderna.</p></div>
-  </div>
-</section>
-<section>
-  <h2>Linhas de produtos</h2>
-  <div class="grid">
-    <div class="card"><h3>Linha Corporativa</h3><p>Brindes personalizados para empresas, eventos, associações e campanhas.</p></div>
-    <div class="card"><h3>NFC Smart Gifts</h3><p>Chaveiros, placas e peças inteligentes que conectam o físico ao digital.</p></div>
-    <div class="card"><h3>Linha PET</h3><p>Peças personalizadas para tutores apaixonados por seus pets.</p></div>
-    <div class="card"><h3>Linha Copa 2026</h3><p>Produtos temáticos para torcer, presentear e vender durante a Copa.</p></div>
-    <div class="card"><h3>Presentes Personalizados</h3><p>Peças exclusivas com nomes, datas, frases e detalhes únicos.</p></div>
-    <div class="card"><h3>Organizadores Premium</h3><p>Produtos funcionais para escritório, casa e rotina.</p></div>
-    <div class="card"><h3>Linha Maçônica &amp; Pessoal</h3><p>Peças personalizadas para pessoas e irmãos maçons.</p></div>
-  </div>
-</section>
-<section class="dark steps">
-  <h2>Como funciona</h2>
-  <div class="grid">
-    <div class="card step"><h3>Envie sua ideia</h3><p>Você envia nome, marca, referência ou objetivo da peça.</p></div>
-    <div class="card step"><h3>Criamos o conceito</h3><p>A Zyvora define o melhor formato visual e funcional.</p></div>
-    <div class="card step"><h3>Produzimos em 3D</h3><p>A peça é impressa com acabamento personalizado.</p></div>
-    <div class="card step"><h3>Adicionamos tecnologia</h3><p>Incluímos NFC, QR Code ou CareCode quando necessário.</p></div>
-    <div class="card step"><h3>Você recebe</h3><p>Uma peça exclusiva, pronta para usar, vender ou presentear.</p></div>
-  </div>
-</section>
-<section>
-  <h2>Por que escolher a Zyvora Labs</h2>
-  <div class="grid">
-    <div class="card"><h3>Exclusividade</h3><p>Produtos únicos e sob encomenda.</p></div>
-    <div class="card"><h3>Design premium</h3><p>Aparência moderna, tecnológica e sofisticada.</p></div>
-    <div class="card"><h3>Personalização</h3><p>Nome, marca, cor, função e tecnologia.</p></div>
-    <div class="card"><h3>Atendimento direto</h3><p>Orçamentos e pedidos pelo WhatsApp.</p></div>
-  </div>
-</section>
-<section id="produtos" class="dark">
-  <h2>Produtos em destaque</h2>
-  <div class="grid">
-    <div class="card product"><h3>Chaveiro inteligente NFC</h3><p>Abre WhatsApp, Instagram, cardápio ou portfólio.</p><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20chaveiro%20NFC.">Pedir orçamento</a></div>
-    <div class="card product"><h3>Porta-latinha Copa 2026</h3><p>Produto temático para torcer, presentear ou vender.</p><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20porta-latinha%20Copa%202026.">Pedir orçamento</a></div>
-    <div class="card product"><h3>Porta-figurinhas</h3><p>Organizador personalizado para colecionadores.</p><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20porta-figurinhas%20personalizado.">Pedir orçamento</a></div>
-    <div class="card product"><h3>Peça PET personalizada</h3><p>Plaquinhas, esculturas e lembranças afetivas.</p><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20pe%C3%A7a%20PET%20personalizada.">Pedir orçamento</a></div>
-    <div class="card product"><h3>Organizador de mesa premium</h3><p>Produto funcional para escritório e home office.</p><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20organizador%20premium.">Pedir orçamento</a></div>
-    <div class="card product"><h3>Brinde com QR Code</h3><p>Divulgue sua empresa com tecnologia e design.</p><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20brindes%20com%20QR%20Code.">Pedir orçamento</a></div>
-    <div class="card product"><h3>Produtos personalizados para pessoas &amp; irmãos maçons</h3><p>Peças exclusivas para homenagear pessoas especiais e membros da irmandade.</p><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20produtos%20personalizados%20de%20pessoas%20e%20irm%C3%A3os%20ma%C3%A7%C3%B4nicos.">Pedir orçamento</a></div>
-  </div>
-</section>
-<section>
-  <h2>Para empresas</h2>
-  <p>A Zyvora Labs desenvolve peças personalizadas para empresas que querem sair do comum. Criamos brindes, chaveiros, placas, displays e produtos inteligentes com QR Code ou NFC para divulgar cardápios, WhatsApp, redes sociais, catálogos, eventos e campanhas.</p>
-  <p class="small">Restaurantes • Pizzarias • Barbearias • Clínicas • Academias • Lojas • Construtoras • Associações • Eventos • Profissionais autônomos</p>
-</section>
-<section class="dark">
-  <h2>Seu PET também pode ter uma peça única.</h2>
-  <p>Criamos peças personalizadas para PETs, como plaquinhas, esculturas, lembranças, identificadores e produtos com CareCode. Uma forma criativa, afetiva e tecnológica de eternizar o carinho pelo seu companheiro.</p>
-</section>
-<section>
-  <h2>Exclusividade Zyvora</h2>
-  <p>Na Zyvora Labs, cada peça nasce de uma ideia. Não trabalhamos apenas com produtos prontos: criamos objetos com identidade, propósito e presença. Cada detalhe pode representar uma pessoa, uma marca, uma história ou uma ocasião especial.</p>
-</section>
-<section class="dark">
-  <h2>Prova social</h2>
-  <div class="grid">
-    <div class="card proof"><h3>Fotos de clientes</h3><p>Espaço para inserir entregas reais.</p></div>
-    <div class="card proof"><h3>Depoimentos</h3><p>Espaço para comentários de clientes.</p></div>
-    <div class="card proof"><h3>Bastidores</h3><p>Mostre a produção e o acabamento das peças.</p></div>
-  </div>
-</section>
-<section class="cta">
-  <h2>Quer criar uma peça exclusiva?</h2>
-  <p>Fale com a Zyvora Labs e transforme sua ideia em um produto personalizado, moderno e inteligente.</p>
-  <div class="buttons" style="justify-content:center">
-    <a class="btn green" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20criar%20uma%20pe%C3%A7a%20exclusiva%20com%20a%20Zyvora%20Labs.">Chamar no WhatsApp</a>
-    <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento.">Solicitar orçamento</a>
-    <a class="btn secondary" href="#produtos">Ver portfólio</a>
-  </div>
-</section>
-<section class="faq">
-  <h2>Perguntas frequentes</h2>
-  <details><summary>A Zyvora faz peças sob encomenda?</summary><p>Sim. Trabalhamos com peças personalizadas conforme a ideia do cliente.</p></details>
-  <details><summary>Posso colocar minha marca?</summary><p>Sim. Podemos incluir logotipo, nome, cores e QR Code da sua empresa.</p></details>
-  <details><summary>O que é NFC?</summary><p>É uma tecnologia que permite abrir links ao aproximar o celular da peça.</p></details>
-  <details><summary>O que é CareCode?</summary><p>É uma identificação digital que pode ser usada em PETs, objetos e produtos personalizados.</p></details>
-  <details><summary>Posso pedir apenas uma unidade?</summary><p>Sim. Podemos produzir uma peça única ou lotes para empresas.</p></details>
-  <details><summary>Fazem brindes para empresas?</summary><p>Sim. Criamos brindes personalizados para empresas, eventos e campanhas.</p></details>
-  <details><summary>Quanto tempo leva para produzir?</summary><p>O prazo depende da complexidade, quantidade e acabamento da peça.</p></details>
-  <details><summary>Posso escolher as cores?</summary><p>Sim. As cores podem ser definidas conforme o projeto e disponibilidade dos materiais.</p></details>
-  <details><summary>Vocês enviam para outras cidades?</summary><p>Sim. Podemos enviar para outras cidades mediante cotação de frete.</p></details>
-  <details><summary>Como faço um orçamento?</summary><p>Chame no WhatsApp e envie sua ideia, referência, quantidade e prazo desejado.</p></details>
-</section>
-<footer>
-  Zyvora Labs — Produtos 3D personalizados, inteligentes e exclusivos.<br>
-  Domínio Nacional:&nbsp;
-  <a href="https://zyvoralabs.com.br" target="_blank" style="color:var(--blue);text-decoration:none;">zyvoralabs.com.br</a>
-  &nbsp;|&nbsp;
-  Domínio Global/Tecnológico:&nbsp;
-  <a href="https://zyvora.io" target="_blank" style="color:var(--blue);text-decoration:none;">zyvora.io</a><br>
-  E-mail:&nbsp;<a href="mailto:nelson@zyvora.io" style="color:var(--blue);text-decoration:none;">nelson@zyvora.io</a>
-</footer>
-</body>
-</html>
+      <a class="btn" href="
