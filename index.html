@@ -37,7 +37,10 @@ body{
 }
 
 section{
-  padding:72px 8%;
+  padding:80px 8%;
+  position: relative;
+  z-index: 2;
+  background: var(--bg);
 }
 
 p{
@@ -79,22 +82,25 @@ h3{
   color:var(--blue);
 }
 
-.hero{
-  min-height:95vh;
-  display:flex;
-  align-items:center;
+/* Ajuste no Hero para não cobrir ou esconder os botões */
+.hero {
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
   background:
     radial-gradient(circle at 80% 10%,rgba(0,231,255,.16),transparent 33%),
     radial-gradient(circle at 20% 80%,rgba(217,70,255,.13),transparent 35%),
     linear-gradient(135deg,#05070D,#111820 75%);
-  position:relative;
+  position: relative;
+  z-index: 1;
+  padding: 60px 8%;
 }
 
 .hero-content{
   position:relative;
-  z-index:1;
+  z-index:3;
   max-width:1050px;
-  padding:40px 0;
+  width: 100%;
 }
 
 .logo-container{
@@ -138,6 +144,8 @@ h3{
   display:flex;
   flex-wrap:wrap;
   gap:15px;
+  position: relative;
+  z-index: 10;
 }
 
 .btn{
@@ -191,7 +199,7 @@ h3{
 }
 
 .dark{
-  background:var(--bg2);
+  background:var(--bg2) !important;
 }
 
 .two{
@@ -228,7 +236,7 @@ h3{
   background:
     radial-gradient(circle at 15% 20%,rgba(0,231,255,.10),transparent 28%),
     radial-gradient(circle at 85% 80%,rgba(217,70,255,.10),transparent 30%),
-    #090D10;
+    #090D10 !important;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
@@ -263,7 +271,7 @@ h3{
 .pet-section{
   background:
     radial-gradient(circle at 50% 20%,rgba(217,70,255,.11),transparent 34%),
-    linear-gradient(135deg,#05070D,#111820);
+    linear-gradient(135deg,#05070D,#111820) !important;
 }
 
 .memorial-box{
@@ -293,7 +301,7 @@ h3{
 .lighting-section{
   background:
     radial-gradient(circle at 50% 50%,rgba(217,70,255,0.08),transparent 50%),
-    #090D10;
+    #090D10 !important;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
@@ -345,7 +353,7 @@ h3{
   text-align:center;
   background:
     radial-gradient(circle,rgba(0,231,255,.10),transparent 44%),
-    #05070D;
+    #05070D !important;
 }
 
 .faq details{
@@ -384,7 +392,7 @@ footer a{
   position:fixed;
   bottom:18px;
   right:18px;
-  z-index:5;
+  z-index:55;
 }
 
 .sticky .btn{
@@ -404,7 +412,7 @@ footer a{
 
   .hero{
     min-height:auto;
-    padding-top:40px;
+    padding-top:60px;
     padding-bottom:60px;
   }
 
@@ -517,7 +525,7 @@ footer a{
     <div class="card">
       <h3>O que é NFC?</h3>
       <p>
-        NFC é uma tecnologia de aproximação. Basta encostar ou aproximar o celular da peça para abrir automaticamente um link, WhatsApp, Instagram, cardádio, catálogo, portfólio, vídeo ou página personalizada.
+        NFC é uma tecnologia de aproximação. Basta encostar ou aproximar o celular da peça para abrir automaticamente um link, WhatsApp, Instagram, cardápio, catálogo, portfólio, vídeo ou página personalizada.
       </p>
       <p class="small"><strong>Frase simples:</strong> encostou o celular, abriu a experiência.</p>
     </div>
@@ -533,7 +541,7 @@ footer a{
     <div class="card">
       <h3>O que é CareCode?</h3>
       <p>
-        CareCode é uma identificação digital aplicada à peça. Ele pode guardar informações importantes, contatos, dados do produto, página de homenagem, memorial digital, perfil do pet ou instruções personalizadas.
+        CareCode é uma identification digital aplicada à peça. Ele pode guardar informações importantes, contatos, dados do produto, página de homenagem, memorial digital, perfil do pet ou instruções personalizadas.
       </p>
       <p class="small"><strong>Frase simples:</strong> sua peça física conectada ao mundo digital.</p>
     </div>
@@ -634,7 +642,7 @@ footer a{
     <div class="feature-item">Luminárias infantis</div>
     <div class="feature-item">Luminárias para pets</div>
     <div class="feature-item">Luminárias para empresas</div>
-    <div class="lighting-item feature-item">Luminárias com logo</div>
+    <div class="feature-item">Luminárias com logo</div>
     <div class="feature-item">Luminárias para escritórios</div>
     <div class="feature-item">Luminárias para arquitetos e designers</div>
     <div class="feature-item">Peças especiais sob encomenda</div>
@@ -699,7 +707,7 @@ footer a{
 
     <div class="card">
       <h3>Linha Maçônica & Pessoal</h3>
-      <p>Peças personalizadas com simbolismo, history, identidade e acabamento especial.</p>
+      <p>Peças personalizadas com simbolismo, história, identidade e acabamento especial.</p>
     </div>
   </div>
 </section>
@@ -897,7 +905,7 @@ footer a{
   </details>
 
   <details>
-    <summary>O que é NFC?</summary>
+    <summary>O que O NFC?</summary>
     <p>NFC é uma tecnologia de aproximação. Basta aproximar o celular da peça para abrir um link, WhatsApp, Instagram, cardápio, catálogo, portfólio, contato ou página personalizada.</p>
   </details>
 
