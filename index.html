@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zyvora Labs | Peças 3D Inteligentes, Miniatura, PET, NFC e Luminárias Personalizadas</title>
+<title>Zyvora Labs | Peças 3D Inteligentes, PET, NFC e Luminárias Personalizadas</title>
 
 <meta name="description" content="Zyvora Labs cria peças 3D personalizadas, inteligentes e exclusivas com NFC, QR Code, CareCode, linha PET, luminárias personalizadas, brindes corporativos e presentes especiais.">
 
@@ -82,7 +82,6 @@ h3{
   color:var(--blue);
 }
 
-/* Ajuste no Hero para não cobrir ou esconder os botões */
 .hero {
   min-height: 95vh;
   display: flex;
@@ -196,6 +195,23 @@ h3{
 
 .card h3{
   color:var(--blue);
+}
+
+/* Estilo para as fotos ficarem responsivas e elegantes */
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 231, 255, 0.2);
+  margin-top: 5px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card-img.pet-highlight {
+  border-color: var(--magenta);
+  box-shadow: 0 0 15px rgba(217, 70, 255, 0.25);
 }
 
 .dark{
@@ -633,7 +649,7 @@ footer a{
   <h2>Luminárias personalizadas para ambientes únicos</h2>
 
   <p>
-    A Zyvora Labs cria luminárias personalizadas em impressão 3D para decoração, presentes, projetos arquitetônicos e ambientes comerciais. Cada peça pode ser desenvolvida com design exclusivo, nome, logo, textura, forma especial e integração com NFC ou CareCode.
+    A Zyvora Labs cria luminárias personalizadas in impressão 3D para decoração, presentes, projetos arquitetônicos e ambientes comerciais. Cada peça pode ser desenvolvida com design exclusivo, nome, logo, textura, forma especial e integração com NFC ou CareCode.
   </p>
 
   <div class="feature-list">
@@ -791,6 +807,7 @@ footer a{
 
     <div class="card product">
       <h3>Miniatura PET personalizada</h3>
+      <img src="CRISTAL1.jpeg" class="card-img pet-highlight" alt="Cristal - Miniatura PET Zyvora Labs">
       <p>Uma lembrança afetiva, decorativa e especial para eternizar o carinho pelo seu pet.</p>
       <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20uma%20miniatura%20PET%20personalizada.">Criar meu PET</a>
     </div>
@@ -905,7 +922,7 @@ footer a{
   </details>
 
   <details>
-    <summary>O que O NFC?</summary>
+    <summary>O que é NFC?</summary>
     <p>NFC é uma tecnologia de aproximação. Basta aproximar o celular da peça para abrir um link, WhatsApp, Instagram, cardápio, catálogo, portfólio, contato ou página personalizada.</p>
   </details>
 
