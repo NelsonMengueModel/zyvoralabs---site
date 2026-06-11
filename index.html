@@ -100,10 +100,10 @@ header {
   font-weight: 300;
 }
 
-/* Carrossel Dinâmico */
+/* Carrossel Dinâmico Altura Ajustada para Conter as Fotos Passando */
 .carousel-container {
   background: var(--bg2);
-  padding: 30px 0;
+  padding: 40px 0;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
   position: relative;
@@ -113,7 +113,7 @@ header {
   display: flex;
   gap: 30px;
   width: max-content;
-  animation: scroll 32s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
 .carousel-track:hover {
@@ -123,19 +123,18 @@ header {
 .carousel-item {
   background: var(--card);
   border: 1px solid var(--line);
-  padding: 15px 20px;
-  border-radius: 12px;
-  width: 310px;
+  padding: 20px;
+  border-radius: 16px;
+  width: 290px;
   flex-shrink: 0;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, border-color 0.3s;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
 }
 
 .carousel-item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
   border-color: var(--blue);
 }
 
@@ -143,15 +142,26 @@ header {
   border-color: var(--magenta);
 }
 
-.carousel-info {
-  flex: 1;
+/* Imagens Grandes Dentro do Carrossel que vão Ficar Passando */
+.carousel-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.carousel-img.pet-thumb {
+  border-color: rgba(217, 70, 255, 0.4);
+  box-shadow: 0 0 10px rgba(217, 70, 255, 0.15);
 }
 
 .carousel-item strong {
   color: var(--blue);
   display: block;
-  font-size: 15px;
-  margin-bottom: 4px;
+  font-size: 16px;
+  margin-bottom: 6px;
 }
 
 .carousel-item.pet-item strong {
@@ -160,24 +170,14 @@ header {
 
 .carousel-item span {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
   display: block;
 }
 
-/* Mini foto interna do carrossel */
-.carousel-thumb {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid var(--magenta);
-  box-shadow: 0 0 10px rgba(217, 70, 255, 0.3);
-}
-
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-310px * 5 - 150px)); }
+  100% { transform: translateX(calc(-290px * 5 - 150px)); }
 }
 
 /* Hero Section */
@@ -367,281 +367,4 @@ footer {
 
 <header>
   <div class="logo-box">
-    <img src="Logo Zyvoralabs.jpeg" class="logo-img" alt="Logo Zyvora Labs">
-    <div class="logo-text">ZYVORA <span>LABS</span></div>
-  </div>
-  <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20gostaria%20de%20um%20orçamento%20com%20a%20Zyvora%20Labs." target="_blank">Contato WhatsApp</a>
-</header>
-
-<div class="carousel-container">
-  <div class="carousel-track">
-    <div class="carousel-item" onclick="openModal('modal-nfc')">
-      <div class="carousel-info">
-        <strong>Produtos Com NFC e Core Code</strong>
-        <span>Peças conectadas com links e automações por aproximação.</span>
-      </div>
-    </div>
-    <div class="carousel-item" onclick="openModal('modal-chaveiros')">
-      <div class="carousel-info">
-        <strong>Chaveiros & Articulados</strong>
-        <span>Colecionáveis estruturados, marcas e peças flexíveis.</span>
-      </div>
-    </div>
-    <div class="carousel-item" onclick="openModal('modal-luminarias')">
-      <div class="carousel-info">
-        <strong>Luminárias Artísticas 3D</strong>
-        <span>Light design customizado com efeitos visuais incríveis.</span>
-      </div>
-    </div>
-    
-    <div class="carousel-item pet-item" onclick="openModal('modal-area-pet')">
-      <div class="carousel-info">
-        <strong>Área Pet (tudo com Pets)</strong>
-        <span>Eternize o carinho pelo seu pet com réplicas e memoriais.</span>
-      </div>
-      <img src="CRISTAL1.jpeg" class="carousel-thumb" alt="Cristal">
-    </div>
-
-    <div class="carousel-item" onclick="openModal('modal-brindes')">
-      <div class="carousel-info">
-        <strong>Brindes & Display</strong>
-        <span>Displays corporativos com QR Code e soluções de marcas.</span>
-      </div>
-    </div>
-    
-    <div class="carousel-item" onclick="openModal('modal-nfc')">
-      <div class="carousel-info">
-        <strong>Produtos Com NFC e Core Code</strong>
-        <span>Peças conectadas com links por aproximação.</span>
-      </div>
-    </div>
-    <div class="carousel-item pet-item" onclick="openModal('modal-area-pet')">
-      <div class="carousel-info">
-        <strong>Área Pet (tudo com Pets)</strong>
-        <span>Réplicas e memoriais afetivos.</span>
-      </div>
-      <img src="CRISTAL1.jpeg" class="carousel-thumb" alt="Cristal">
-    </div>
-  </div>
-</div>
-
-<section class="hero">
-  <h1>A Grife da Impressão 3D Inteligente</h1>
-  <p>Explore nossa vitrine completa de soluções abaixo. Clique em "Saiba Mais" para ver os detalhes e subcategorias de cada produto.</p>
-</section>
-
-<section id="opcoes-vitrine">
-  <h2>Nossas Opções e Soluções</h2>
-  <div class="grid">
-
-    <div class="card">
-      <div>
-        <h3>Produtos Com NFC e Core Code</h3>
-        <p>A união perfeita do físico com o digital. Dispositivos que executam ações instantâneas ao aproximar o celular.</p>
-      </div>
-      <button class="btn-sm" onclick="openModal('modal-nfc')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3>Chaveiros & Articulados</h3>
-        <p>Modelos flexíveis, chaveiros robustos corporativos e peças articuladas montadas diretamente na impressão.</p>
-      </div>
-      <button class="btn-sm" onclick="openModal('modal-chaveiros')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3>Luminárias Artísticas 3D</h3>
-        <p>Luz e arte unidas. Projetos de iluminação customizados para marcas, escritórios de arquitetura e decoração afetiva.</p>
-      </div>
-      <button class="btn-sm" onclick="openModal('modal-luminarias')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3 class="pet-title">Área Pet (tudo com Pets)</h3>
-        <img src="CRISTAL1.jpeg" class="card-img highlight" alt="Cristal - Miniatura Pet Zyvora Labs">
-        <p>Peças dedicadas exclusivamente aos tutores e aos amados pets, unindo lembrança física ao afeto real.</p>
-      </div>
-      <button class="btn-sm btn-magenta" onclick="openModal('modal-area-pet')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3>Brindes & Display</h3>
-        <p>Displays de mesa modernos com QR Code integrado, logos corporativas em relevo e brindes para marcas e eventos.</p>
-      </div>
-      <button class="btn-sm" onclick="openModal('modal-brindes')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3>Maçonaria & Outros</h3>
-        <p>Todo tipo de miniatura de pessoas em geral, símbolos tradicionais da ordem, representações históricas e heráldicas.</p>
-      </div>
-      <button class="btn-sm" onclick="openModal('modal-maconaria')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3 class="pet-title">Pets</h3>
-        <p>Réplicas, chaveiros e esculturas personalizadas focadas na modelagem fiel de animais de estimação.</p>
-      </div>
-      <button class="btn-sm btn-magenta" onclick="openModal('modal-pets-geral')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3>Mascotes de Times</h3>
-        <p>Esculturas personalizadas de símbolos, troféus e brasões para torcedores e colecionadores apaixonados.</p>
-      </div>
-      <button class="btn-sm" onclick="openModal('modal-times')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3>Props & Cosplays</h3>
-        <p>Acessórios em tamanho real, réplicas de itens colecionáveis, suportes geek e peças de ficção detalhadas.</p>
-      </div>
-      <button class="btn-sm" onclick="openModal('modal-props')">Saiba Mais</button>
-    </div>
-
-    <div class="card">
-      <div>
-        <h3>Religiões</h3>
-        <p>Estatuetas de fé e representações sagradas customizadas sob medida, respeitando todas as crenças e ritos.</p>
-      </div>
-      <button class="btn-sm" onclick="openModal('modal-religioes')">Saiba Mais</button>
-    </div>
-
-  </div>
-</section>
-
-<div class="modal" id="modal-nfc">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-nfc')">&times;</button>
-    <h4>Produtos Com NFC e Core Code</h4>
-    <p>A tecnologia NFC e o Core Code integrados às nossas criações permitem conectar o objeto físico a ações digitais completas.</p>
-    <ul>
-      <li><strong>Acesso por Aproximação:</strong> Encoste o celular para abrir sites, cardápios ou redes sociais.</li>
-      <li><strong>Displays Inteligentes:</strong> Compartilhamento de contatos imediatos sem digitação.</li>
-      <li><strong>Sem Bateria:</strong> Sistemas duráveis funcionando direto no chip interno da peça 3D.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="modal" id="modal-chaveiros">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-chaveiros')">&times;</button>
-    <h4>Chaveiros & Articulados</h4>
-    <p>Modelos funcionais desenvolvidos com alta resistência e engenharia mecânica direto na impressão 3D.</p>
-    <ul>
-      <li><strong>Logomarcas:</strong> Excelentes para empresas, frotas de veículos e fidelização.</li>
-      <li><strong>Articulados Flexíveis:</strong> Engrenagens perfeitas montadas na própria impressão.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="modal" id="modal-luminarias">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-luminarias')">&times;</button>
-    <h4>Luminárias Artísticas 3D</h4>
-    <p>Soluções em light design feitas sob medida para criar atmosferas exclusivas em qualquer ambiente.</p>
-    <ul>
-      <li><strong>Corporativo:</strong> Formatos esculpidos com a logo da sua marca para recepções.</li>
-      <li><strong>Residencial afetivo:</strong> Texturas translúcidas especiais e temas personalizados.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="modal" id="modal-area-pet">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-area-pet')">&times;</button>
-    <h4 style="color: var(--magenta);">Área Pet (tudo com Pets)</h4>
-    <img src="CRISTAL1.jpeg" class="card-img highlight" alt="Cristal no Memorial">
-    <p>Uma seção inteiramente dedicada aos pets, desenvolvida para trazer conforto emocional, segurança e lembranças indeléveis.</p>
-    <ul>
-      <li><strong>Homenagens e Miniaturas:</strong> Representações fiéis baseadas no formato do seu pet, como a nossa querida <strong>Cristal</strong>.</li>
-      <li><strong>Pet Memorial:</strong> Homenagem respeitosa com opção de tecnologia CareCode para preservar memórias na nuvem.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="modal" id="modal-brindes">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-brindes')">&times;</button>
-    <h4>Brindes & Display</h4>
-    <p>Acelere a presença física do seu negócio no balcão com itens corporativos de alto padrão visual.</p>
-    <ul>
-      <li><strong>Displays com QR Code:</strong> Ideais para balcões comerciais, facilitando PIX ou Instagram.</li>
-      <li><strong>Brindes e Troféus:</strong> Peças marcantes de mesa e premiações exclusivas.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="modal" id="modal-maconaria">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-maconaria')">&times;</button>
-    <h4>Maçonaria & Outros</h4>
-    <p>Artes complexas voltadas ao simbolismo tradicional, ordens de fraternidade e representações sob demanda com geometria impecável.</p>
-  </div>
-</div>
-
-<div class="modal" id="modal-pets-geral">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-pets-geral')">&times;</button>
-    <h4 style="color: var(--magenta);">Pets</h4>
-    <p>Modelagens específicas e exclusivas de animais de estimação, focando nas características únicas de cada raça para decoração e colecionáveis.</p>
-  </div>
-</div>
-
-<div class="modal" id="modal-times">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-times')">&times;</button>
-    <h4>Mascotes de Times</h4>
-    <p>Peças estilizadas e detalhadas de brasões e mascotes esportivos para eternizar a paixão pelo seu time de coração.</p>
-  </div>
-</div>
-
-<div class="modal" id="modal-props">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-props')">&times;</button>
-    <h4>Props & Cosplays</h4>
-    <p>Réplicas perfeitas de acessórios de filmes, séries e jogos, criados com fidelidade técnica para colecionadores e eventos geek.</p>
-  </div>
-</div>
-
-<div class="modal" id="modal-religioes">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-religioes')">&times;</button>
-    <h4>Religiões</h4>
-    <p>Desenvolvimento respeitoso de estatuetas religiosas sob medida. Inclui santos católicos e representações das matrizes africanas (Candomblé, Umbanda e pais de santo), com acabamento refinado.</p>
-  </div>
-</div>
-
-<footer>
-  <p>&copy; 2026 Zyvora Labs. Todos os direitos reservados. IA, Design e Tecnologia 3D.</p>
-</footer>
-
-<script>
-function openModal(modalId) {
-  document.getElementById(modalId).classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove('active');
-  document.body.style.overflow = 'auto';
-}
-
-window.onclick = function(event) {
-  if (event.target.classList.contains('modal')) {
-    event.target.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-}
-</script>
-
-</body>
-</html>
+    <img src="Logo Zyvoralabs.jpeg" class="
