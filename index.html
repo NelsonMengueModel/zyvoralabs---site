@@ -3,241 +3,562 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zyvora Labs | Peças 3D Inteligentes e Exclusivas</title>
-<meta name="description" content="A Zyvora Labs cria peças 3D personalizadas e exclusivas com tecnologia NFC, CareCode, luminárias artísticas e brindes corporativos de alto padrão.">
+<title>Zyvora Labs | Peças 3D Inteligentes, NFC e Customizações</title>
+<meta name="description" content="Zyvora Labs - Grife 3D Inteligente. Peças exclusivas com NFC, Core Code, Luminárias, Linha Pet e Miniaturas Customizadas.">
+
 <style>
 :root{
-  --bg:#05070D;
-  --bg2:#090D10;
-  --card:#101820;
-  --line:#1F3338;
-  --text:#FFFFFF;
-  --muted:#CFD8DC;
-  --blue:#00E7FF;
-  --magenta:#D946FF;
+  --bg: #05070D;
+  --bg2: #090D10;
+  --card: #101820;
+  --line: #1F3338;
+  --text: #FFFFFF;
+  --muted: #CFD8DC;
+  --blue: #00E7FF;
+  --magenta: #D946FF;
+  --electric: #3A7BFF;
+  --dark-modal: #0B0F14;
 }
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:var(--text);overflow-y:auto;overflow-x:hidden;}
-section{padding:60px 8%;position: relative;background: var(--bg);}
-p{color:var(--muted);font-size:17px;line-height:1.6;}
-h1,h2,h3{letter-spacing:-.03em}
-h1{font-size:clamp(36px,5vw,64px);max-width:950px;line-height:1.05;margin:0 0 20px}
-h2{font-size:clamp(28px,3.5vw,42px);margin:0 0 15px;color:#FFFFFF}
-h3{font-size:20px;margin:0 0 10px;color:var(--blue)}
-.highlight{color:var(--magenta)}
 
-/* Hero Impacto Inicial */
-.hero {
-  min-height: 80vh;
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+section{
+  padding: 60px 8%;
+  background: var(--bg);
+}
+
+p{
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4{
+  letter-spacing: -.02em;
+}
+
+h1{
+  font-size: clamp(32px, 5vw, 60px);
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+h2{
+  font-size: clamp(26px, 3.5vw, 40px);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Header & Logo */
+header {
+  padding: 20px 8%;
+  background: rgba(5, 7, 13, 0.9);
+  border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
-  background:
-    radial-gradient(circle at 80% 10%,rgba(0,231,255,.12),transparent 35%),
-    radial-gradient(circle at 20% 80%,rgba(217,70,255,.1),transparent 35%),
-    linear-gradient(135deg,#05070D,#111820 75%);
-  padding: 40px 8%;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
 }
-.hero-content{max-width:900px; width: 100%;}
-.logo-container{padding:0 0 20px 0; font-size:30px; font-family:'Arial Black', sans-serif; font-weight:900; letter-spacing:3px;}
-.logo-zyvora{color:var(--blue); text-shadow:0 0 10px rgba(0,231,255,0.3);}
-.badge{display:inline-block;border:1px solid var(--blue);color:var(--blue);padding:6px 14px;border-radius:40px;font-size:12px;margin-bottom:20px;text-transform:uppercase;background:rgba(0,231,255,.04)}
-.buttons{margin-top:25px;display:flex;flex-wrap:wrap;gap:12px}
 
-/* Botões */
-.btn{background:var(--blue);color:#001014;border:0;padding:14px 28px;border-radius:10px;font-weight:800;text-decoration:none;box-shadow:0 0 20px rgba(0,231,255,.15);transition:0.3s ease;text-align:center;}
-.btn:hover{transform:translateY(-2px);opacity:0.9;}
-.btn.secondary{background:transparent;border:1px solid var(--blue);color:var(--blue);box-shadow:none}
-.btn.magenta{background:var(--magenta);color:#080910;box-shadow:0 0 20px rgba(217,70,255,.15)}
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-/* --- CARROSSEL VITRINE AUTOMÁTICA --- */
-.carousel-wrapper {
+.logo-img {
+  height: 50px;
+  width: auto;
+  border-radius: 6px;
+  border: 1px solid var(--blue);
+}
+
+.logo-text {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--blue);
+  letter-spacing: 2px;
+}
+
+.logo-text span {
+  color: #FFF;
+  font-weight: 300;
+}
+
+/* Carrossel Dinâmico */
+.carousel-container {
+  background: var(--bg2);
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
   overflow: hidden;
-  width: 100%;
-  padding: 20px 0;
   position: relative;
 }
+
 .carousel-track {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   width: max-content;
-  animation: scrollVitrine 25s linear infinite;
+  animation: scroll 35s linear infinite;
 }
+
 .carousel-track:hover {
   animation-play-state: paused;
 }
-@keyframes scrollVitrine {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 10px)); }
+
+.carousel-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 15px 25px;
+  border-radius: 12px;
+  width: 280px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.carousel-card {
-  width: 290px;
-  background: linear-gradient(180deg,var(--card),#090C0F);
+.carousel-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue);
+}
+
+.carousel-item strong {
+  color: var(--blue);
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.carousel-item span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+  display: block;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-280px * 6 - 180px)); }
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 8%;
+  background: radial-gradient(circle at 80% 20%, rgba(0,231,255,0.12), transparent 40%), var(--bg);
+  text-align: center;
+}
+
+/* Grids & Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--card), #090C0F);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 22px;
-  box-shadow: 0 0 20px rgba(0,231,255,.02);
+  border-radius: 16px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-shrink: 0;
+  position: relative;
+  transition: box-shadow 0.3s;
 }
-.carousel-card h3 { color: var(--blue); margin-top: 0; }
-.card-img {width: 100%; height: 180px; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(0,231,255,0.1); object-fit: cover;}
-.card-img.pet-highlight {border-color: var(--magenta); box-shadow: 0 0 12px rgba(217,70,255,0.15);}
 
-.dark{background:var(--bg2) !important;}
-.two{display:grid;grid-template-columns:1.2fr 0.8fr;gap:30px;align-items:center}
-.visual{min-height:220px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(145deg,#111820,#05070D);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;}
-.visual span{font-size:32px;font-weight:900;color:white;text-shadow:0 0 15px rgba(0,231,255,.25)}
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 231, 255, 0.1);
+}
 
-/* Saiba Mais Interativo */
-.tech-details {background:rgba(255,255,255,0.01); border:1px solid var(--line); border-radius:8px; padding:12px; margin-top:10px;}
-.tech-details summary {cursor:pointer; color:var(--blue); font-weight:bold; font-size:15px; outline:none; list-style:none;}
-.tech-details summary::-webkit-details-marker {display:none;}
-.tech-details[open] summary {color:var(--magenta); margin-bottom:10px;}
+.card h3 {
+  color: #FFF;
+  margin-top: 0;
+  font-size: 20px;
+  border-left: 4px solid var(--blue);
+  padding-left: 10px;
+}
 
-/* Caixa de Parceria */
-.partner-box{background:linear-gradient(135deg,#101820,rgba(5,7,13,0.9));border:1px solid var(--line);border-radius:16px;padding:30px;margin-top:40px;}
+.card h3.pet-title {
+  border-left-color: var(--magenta);
+}
 
-.faq details{background:#111820;border:1px solid var(--line);border-radius:10px;padding:15px;margin-bottom:10px}
-.faq summary{cursor:pointer;font-weight:800;color:#fff}
-footer{padding:30px 8%;text-align:center;color:#8FA3AA;background:#030404;font-size:14px;line-height:1.6}
-footer a{color:var(--blue);text-decoration:none}
-.sticky{position:fixed;bottom:18px;right:18px;z-index:55}
-.sticky .btn{border-radius:999px;padding:12px 24px;}
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0;
+  border: 1px solid rgba(255,255,255,0.05);
+}
 
-@media(max-width:820px){
-  section{padding:40px 6%}.two{grid-template-columns:1fr}.hero{min-height:auto;padding:50px 6%}.buttons{flex-direction:column}.btn{text-align:center;width:100%}.sticky{left:16px;right:16px}
+.card-img.highlight {
+  border: 1px solid var(--magenta);
+  box-shadow: 0 0 15px rgba(217, 70, 255, 0.2);
+}
+
+/* Botões */
+.btn {
+  background: var(--blue);
+  color: #05070D;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-sm {
+  background: transparent;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  transition: all 0.2s;
+}
+
+.btn-sm:hover {
+  background: rgba(0, 231, 255, 0.1);
+}
+
+.btn-magenta {
+  border-color: var(--magenta);
+  color: var(--magenta);
+}
+
+.btn-magenta:hover {
+  background: rgba(217, 70, 255, 0.1);
+}
+
+/* Modais Inteligentes (Saiba Mais) */
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(5, 7, 13, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: var(--dark-modal);
+  border: 1px solid var(--line);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #FFF;
+}
+
+.modal h4 {
+  color: var(--blue);
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal ul {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.modal ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  padding: 40px 8%;
+  background: #020305;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+@media(max-width: 768px) {
+  .modal-content { padding: 25px; }
+  header { flex-direction: column; gap: 15px; text-align: center; }
 }
 </style>
 </head>
 <body>
 
-<div class="sticky">
-  <a class="btn magenta" href="https://wa.me/5527981783433?text=Olá%2C%20quero%20conversar%20sobre%20um%20projeto%20com%20a%20Zyvora%20Labs.">Falar no WhatsApp</a>
+<header>
+  <div class="logo-box">
+    <img src="Logo Zyvoralabs.jpeg" class="logo-img" alt="Logo Zyvora Labs">
+    <div class="logo-text">ZYVORA <span>LABS</span></div>
+  </div>
+  <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20gostaria%20de%20um%20orçamento%20com%20a%20Zyvora%20Labs." target="_blank">Contato WhatsApp</a>
+</header>
+
+<div class="carousel-container">
+  <div class="carousel-track">
+    <div class="carousel-item" onclick="openModal('modal-nfc')">
+      <strong>Produtos Com NFC e Core Code</strong>
+      <span>Peças conectadas com links, automações e tags funcionais por aproximação.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-chaveiros')">
+      <strong>Chaveiros & Articulados</strong>
+      <span>Colecionáveis estruturados, chaveiros de marcas e peças articuladas móveis.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-luminarias')">
+      <strong>Luminárias Artísticas 3D</strong>
+      <span>Light design customizado com efeitos visuais incríveis sob encomenda.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-pet')">
+      <strong>Área Pet (Tudo com Pets)</strong>
+      <span>Eternize o carinho pelo seu pet com réplicas, tags e memoriais.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-brindes')">
+      <strong>Brindes & Display</strong>
+      <span>Displays corporativos com QR Code e soluções para empresas.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-maconaria')">
+      <strong>Maçonaria & Outros</strong>
+      <span>Miniaturas de pessoas em geral, heráldica, times e religião.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-nfc')">
+      <strong>Produtos Com NFC e Core Code</strong>
+      <span>Peças conectadas com links e automações funcionais.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-chaveiros')">
+      <strong>Chaveiros & Articulados</strong>
+      <span>Colecionáveis estruturados e peças móveis.</span>
+    </div>
+  </div>
 </div>
 
 <section class="hero">
-  <div class="hero-content">
-    <div class="logo-container"><span class="logo-zyvora">ZYVORA</span><span class="logo-labs">LABS</span></div>
-    <div class="badge">Grife 3D Inteligente</div>
-    <h1>Peças exclusivas que unem design, emoção e tecnologia.</h1>
-    <p>Transformamos grandes ideias em objetos físicos de alto padrão. Unimos fabricação inteligente em impressão 3D com soluções digitais como NFC e CareCode para criar produtos únicos sob encomenda.</p>
-    <div class="buttons">
-      <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20Zyvora%20Labs.">Solicitar Orçamento</a>
-      <a class="btn secondary" href="#portfolio">Ver Vitrine de Produtos</a>
-    </div>
-  </div>
+  <h1>A Grife da Impressão 3D Inteligente</h1>
+  <p>Explore nossas opções completas abaixo. Clique em "Saiba Mais" para ver detalhes, subcategorias e aplicações exclusivas de cada linha tecnológica.</p>
 </section>
 
-<section id="portfolio" class="dark" style="overflow: hidden;">
-  <h2>Produtos em Destaque</h2>
-  <p>Explore nossa vitrine de soluções exclusivas (passe o mouse para pausar).</p>
+<section id="opcoes-vitrine">
+  <h2>Nossas Opções e Soluções</h2>
+  <div class="grid">
 
-  <div class="carousel-wrapper">
-    <div class="carousel-track">
-      
-      <div class="carousel-card">
-        <h3>Miniatura PET Personalizada</h3>
-        <img src="CRISTAL1.jpeg" class="card-img pet-highlight" alt="Cristal - Miniatura PET Zyvora Labs">
-        <p style="font-size:14px; margin-bottom:15px;">Plaquinhas modernas e memoriais com CareCode integrado para eternizar histórias.</p>
-        <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20uma%20peça%20PET%20personalizada.">Encomendar PET</a>
+    <div class="card">
+      <div>
+        <h3>Produtos Com NFC e Core Code</h3>
+        <p>A união perfeita do físico com o digital. Dispositivos que executam ações instantâneas ao aproximar o celular.</p>
       </div>
+      <button class="btn-sm" onclick="openModal('modal-nfc')">Saiba Mais</button>
+    </div>
 
-      <div class="carousel-card">
+    <div class="card">
+      <div>
+        <h3>Chaveiros & Articulados</h3>
+        <p>Modelos flexíveis, chaveiros robustos corporativos e peças articuladas montadas diretamente na impressão.</p>
+      </div>
+      <button class="btn-sm" onclick="openModal('modal-chaveiros')">Saiba Mais</button>
+    </div>
+
+    <div class="card">
+      <div>
         <h3>Luminárias Artísticas 3D</h3>
-        <p style="font-size:14px; margin-bottom:15px;">Light design inovador com efeitos de luz e texturas exclusivas feitas sob medida.</p>
-        <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20projetar%20uma%20luminária%20personalizada.">Projetar Peça</a>
+        <p>Luz e arte unidas. Projetos de iluminação customizados para marcas, escritórios de arquitetura e decoração afetiva.</p>
       </div>
-
-      <div class="carousel-card">
-        <h3>Brindes &amp; Displays</h3>
-        <p style="font-size:14px; margin-bottom:15px;">Displays inteligentes com QR Code para restaurantes, hotéis e logomarcas 3D institucionais.</p>
-        <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20soluções%20corporativas.">Orçamento B2B</a>
-      </div>
-
-      <div class="carousel-card">
-        <h3>Smart Gifts Premium</h3>
-        <p style="font-size:14px; margin-bottom:15px;">Chaveiros NFC inteligentes e organizadores de mesa para rotinas executivas de alto padrão.</p>
-        <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20organizadores%20e%20chaveiros%20NFC.">Pedir Orçamento</a>
-      </div>
-
-      <div class="carousel-card">
-        <h3>Miniatura PET Personalizada</h3>
-        <img src="CRISTAL1.jpeg" class="card-img pet-highlight" alt="Cristal - Miniatura PET Zyvora Labs">
-        <p style="font-size:14px; margin-bottom:15px;">Plaquinhas modernas e memoriais com CareCode integrado para eternizar histórias.</p>
-        <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20uma%20peça%20PET%20personalizada.">Encomendar PET</a>
-      </div>
-
-      <div class="carousel-card">
-        <h3>Luminárias Artísticas 3D</h3>
-        <p style="font-size:14px; margin-bottom:15px;">Light design inovador com efeitos de luz e texturas exclusivas feitas sob medida.</p>
-        <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20projetar%20uma%20luminária%20personalizada.">Projetar Peça</a>
-      </div>
-
-      <div class="carousel-card">
-        <h3>Brindes &amp; Displays</h3>
-        <p style="font-size:14px; margin-bottom:15px;">Displays inteligentes com QR Code para restaurantes, hotéis e logomarcas 3D institucionais.</p>
-        <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20soluções%20corporativas.">Orçamento B2B</a>
-      </div>
-
-      <div class="carousel-card">
-        <h3>Smart Gifts Premium</h3>
-        <p style="font-size:14px; margin-bottom:15px;">Chaveiros NFC inteligentes e organizadores de mesa para rotinas executivas de alto padrão.</p>
-        <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20tenho%20interesse%20em%20organizadores%20e%20chaveiros%20NFC.">Pedir Orçamento</a>
-      </div>
-
+      <button class="btn-sm" onclick="openModal('modal-luminarias')">Saiba Mais</button>
     </div>
+
+    <div class="card">
+      <div>
+        <h3 class="pet-title">Área Pet (Tudo com Pets)</h3>
+        <img src="CRISTAL1.jpeg" class="card-img highlight" alt="Cristal - Miniatura Pet Zyvora Labs">
+        <p>Peças dedicadas exclusivamente aos tutores e aos amados pets, unindo lembrança física ao afeto real.</p>
+      </div>
+      <button class="btn-sm btn-magenta" onclick="openModal('modal-pet')">Saiba Mais</button>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>Brindes & Display</h3>
+        <p>Displays de mesa modernos com QR Code integrado, logos corporativas em relevo e brindes para marcas e eventos.</p>
+      </div>
+      <button class="btn-sm" onclick="openModal('modal-brindes')">Saiba Mais</button>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>Maçonaria & Outros</h3>
+        <p>Todo tipo de miniatura de pessoas em geral, símbolos tradicionais, representações e coleções temáticas.</p>
+      </div>
+      <button class="btn-sm" onclick="openModal('modal-maconaria')">Saiba Mais</button>
+    </div>
+
   </div>
 </section>
 
-<section>
-  <div class="two">
-    <div>
-      <h2>Conectando o físico ao digital</h2>
-      <p>Mais do que objetos decorativos, desenvolvemos produtos inteligentes. Clique nas tecnologias abaixo para entender como criamos canais diretos de conexão:</p>
-      
-      <details class="tech-details">
-        <summary>◆ Saiba mais sobre a Tecnologia NFC</summary>
-        <p class="small" style="margin:5px 0 0 0; font-size:15px;"><strong>O que é:</strong> Tecnologia de aproximação sem fios.<br><strong>Aplicação prática:</strong> Basta o cliente encostar o celular na sua peça física para abrir instantaneamente links de WhatsApp, redes sociais, portfólios, cartões virtuais ou sites institucionais.</p>
-      </details>
-
-      <details class="tech-details">
-        <summary>◆ Saiba mais sobre Sistemas de QR Code</summary>
-        <p class="small" style="margin:5px 0 0 0; font-size:15px;"><strong>O que é:</strong> Código visual escaneável por câmera.<br><strong>Aplicação prática:</strong> Muito usado em displays operacionais premium para acessar cardápios digitais em restaurantes, catálogos em feiras ou direcionar fluxos de pagamentos de forma elegante.</p>
-      </details>
-
-      <details class="tech-details">
-        <summary>◆ Saiba mais sobre o ecossistema CareCode</summary>
-        <p class="small" style="margin:5px 0 0 0; font-size:15px;"><strong>O que é:</strong> Identificação digital exclusiva e criptografada da Zyvora Labs.<br><strong>Aplicação prática:</strong> Atua na segurança de pets (através de plaquinhas inteligentes com dados de emergência) ou no desenvolvimento de memórias e memoriais afetivos conectados.</p>
-      </details>
-    </div>
-    <div class="visual"><span>FABRICAÇÃO<br>INTELIGENTE</span></div>
+<div class="modal" id="modal-nfc">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-nfc')">&times;</button>
+    <h4>Produtos Com NFC e Core Code</h4>
+    <p>A tecnologia NFC (Near Field Communication) e o Core Code integrados às nossas criações permitem conectar o objeto físico a ações digitais completas.</p>
+    <ul>
+      <li><strong>Acesso por Aproximação:</strong> Encoste o smartphone para abrir sites, cardápios, portfólios, links de pagamento ou redes sociais.</li>
+      <li><strong>Cartões de Visita e Displays Inteligentes:</strong> Compartilhamento de contatos imediatos sem digitação.</li>
+      <li><strong>Segurança e Praticidade:</strong> Sistemas que não necessitam de bateria, funcionando direto no chip interno da peça 3D.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5527981783433?text=Quero%20saber%20mais%20sobre%20os%20Produtos%20com%20NFC" target="_blank">Encomendar esta linha</a>
   </div>
+</div>
 
-  <div class="partner-box">
-    <h3 style="color:var(--magenta); font-size:24px; margin-bottom:10px;">Hub para Arquitetos e Designers</h3>
-    <p>Apoiamos escritórios de arquitetura e design de interiores na materialização de peças exclusivas, suportes sob medida, luminárias personalizadas, heráldica e elementos de ambientação fina para clientes finais.</p>
-    <div class="buttons">
-      <a class="btn secondary" href="https://wa.me/5527981783433?text=Olá%2C%20sou%20arquiteto/designer%20e%20gostaria%20de%20conhecer%20os%20modelos%20de%20parceria.">Conhecer Modelo de Parceria</a>
-    </div>
+<div class="modal" id="modal-chaveiros">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-chaveiros')">&times;</button>
+    <h4>Chaveiros & Articulados</h4>
+    <p>Modelos funcionais desenvolvidos com alta resistência e engenharia mecânica direto na impressão 3D.</p>
+    <ul>
+      <li><strong>Chaveiros de Logomarcas:</strong> Excelentes para marcas comerciais, clubes, frotas de veículos e fidelização de clientes.</li>
+      <li><strong>Articulados Flexíveis:</strong> Action figures e criaturas articuladas cujas engrenagens se movem perfeitamente, unindo design lúdico e precisão.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5527981783433?text=Quero%20saber%20mais%20sobre%20Chaveiros%20e%20Articulados" target="_blank">Encomendar esta linha</a>
   </div>
-</section>
+</div>
 
-<section class="dark faq">
-  <h2>Perguntas Frequentes</h2>
-  <details><summary>A Zyvora faz peças sob encomenda?</summary><p>Sim. Todos os projetos nascem de uma necessidade ou ideia específica do cliente, definindo cores, tamanhos e tecnologias aplicadas.</p></details>
-  <details><summary>Como funcionam as peças inteligentes (NFC/CareCode)?</summary><p>As peças contêm microchips ou códigos exclusivos que, ao serem aproximados ou escaneados pelo celular, abrem instantaneamente portfólios, contatos, cardápios ou links de segurança.</p></details>
-  <details><summary>Qual o volume mínimo de pedido?</summary><p>Trabalhamos tanto com o desenvolvimento de peças únicas e exclusivas de alto padrão quanto com lotes personalizados para marcas e eventos corporativos.</p></details>
-  <details><summary>Como faço para solicitar um orçamento?</summary><p>Basta clicar em um de nossos botões de atendimento para iniciar uma conversa direta via WhatsApp. Se possível, envie uma referência visual, tamanho pretendido e o prazo de entrega necessário.</p></details>
-</section>
+<div class="modal" id="modal-luminarias">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-luminarias')">&times;</button>
+    <h4>Luminárias Artísticas 3D</h4>
+    <p>Soluções em light design feitas sob medida para criar atmosferas exclusivas em qualquer ambiente.</p>
+    <ul>
+      <li><strong>Luminárias Corporativas:</strong> Formatos esculpidos com a logo da sua empresa para recepções e escritórios.</li>
+      <li><strong>Decoração Residencial:</strong> Luminárias temáticas, com nomes customizados e texturas translúcidas especiais.</li>
+      <li><strong>Parceria para Arquitetura:</strong> Desenvolvimento de projetos de iluminação customizados para estúdios e designers de interiores.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5527981783433?text=Quero%20saber%20mais%20sobre%20Luminárias%20Artísticas" target="_blank">Encomendar esta linha</a>
+  </div>
+</div>
+
+<div class="modal" id="modal-pet">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-pet')">&times;</button>
+    <h4 style="color: var(--magenta);">Área Pet (Tudo com Pets)</h4>
+    <img src="CRISTAL1.jpeg" class="card-img highlight" alt="Cristal no Memorial">
+    <p>Uma seção inteiramente dedicada aos pets, desenvolvida para trazer conforto emocional, segurança e lembranças indeléveis.</p>
+    <ul>
+      <li><strong>Pets (Miniaturas e Réplicas):</strong> Representações personalizadas baseadas no formato real do seu animalzinho de estimação, assim como a nossa querida <strong>Cristal</strong>.</li>
+      <li><strong>Plaquinhas e Tags de Identificação:</strong> Identificadores modernos com contatos em relevo ou QR Code para segurança nos passeios.</li>
+      <li><strong>Pet Memorial:</strong> Uma homenagem respeitosa e eterna para os companheiros que já partiram, unindo bases esculpidas e opcionais tecnológicos como o CareCode para preservação de fotos e memórias na nuvem.</li>
+    </ul>
+    <a class="btn" style="background: var(--magenta); color:#000;" href="https://wa.me/5527981783433?text=Quero%20saber%20mais%20sobre%20a%20Área%20Pet" target="_blank">Encomendar esta linha</a>
+  </div>
+</div>
+
+<div class="modal" id="modal-brindes">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-brindes')">&times;</button>
+    <h4>Brindes & Display Corporativo</h4>
+    <p>Acelere a presença física do seu negócio no balcão e no escritório com itens corporativos de alto padrão visual.</p>
+    <ul>
+      <li><strong>Displays com QR Code:</strong> Ideais para balcões comerciais, facilitando PIX, acesso ao Instagram ou cardápios digitais instantâneos.</li>
+      <li><strong>Brindes de Alta Escala Visual:</strong> Peças marcantes de mesa, troféus internos e brindes de fim de ano que fogem do clichê.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5527981783433?text=Quero%20saber%20mais%20sobre%20Brindes%20e%20Displays" target="_blank">Encomendar esta linha</a>
+  </div>
+</div>
+
+<div class="modal" id="modal-maconaria">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-maconaria')">&times;</button>
+    <h4>Maçonaria & Miniaturas de Pessoas em Geral</h4>
+    <p>Nesta ramificação reunimos artes complexas voltadas à heráldica, simbolismos tradicionais e coleções sob demanda para nichos específicos.</p>
+    <ul>
+      <li><strong>Maçonaria:</strong> Criação de símbolos, ordens e insígnias tradicionais com fidelidade e geometria impecável.</li>
+      <li><strong>Mascotes de Times:</strong> Esculturas personalizadas de mascotes e emblemas para torcedores apaixonados.</li>
+      <li><strong>Props & Cosplays:</strong> Acessórios em tamanho real, réplicas de itens ficcionais e suportes para colecionadores.</li>
+      <li><strong>Religiões:</strong> Estatuetas religiosas customizadas sob medida, incluindo santos católicos, imagens de matrizes africanas (Candomblé/Umbanda) e representações de fé com fino acabamento.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5527981783433?text=Quero%20saber%20mais%20sobre%20a%20linha%20Maçonaria%20e%20Miniaturas" target="_blank">Encomendar esta linha</a>
+  </div>
+</div>
 
 <footer>
-  <strong>Zyvora Labs</strong> — Fabricação Digital Inteligente.<br>
-  Vila Velha - ES | Atendimento Global<br><br>
-  Plataforma: <a href="https://www.zyvoralabs.io" target="_blank">zyvoralabs.io</a> | Contato: <a href="mailto:nelson@zyvoralabs.io">nelson@zyvoralabs.io</a>
+  <p>&copy; 2026 Zyvora Labs. Todos os direitos reservados. IA, Design e Tecnologia 3D.</p>
+  <p>Contato: <a href="mailto:nelson@zyvoralabs.io">nelson@zyvoralabs.io</a></p>
 </footer>
+
+<script>
+function openModal(modalId) {
+  document.getElementById(modalId).classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+// Fecha o modal caso o cliente clique fora da caixinha de conteúdo
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    event.target.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+}
+</script>
 
 </body>
 </html>
