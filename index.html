@@ -100,7 +100,7 @@ header {
   font-weight: 300;
 }
 
-/* Carrossel Dinâmico Altura Ajustada para Conter as Fotos Passando */
+/* Carrossel Dinâmico - Ajustado para exibir imagens Grandes */
 .carousel-container {
   background: var(--bg2);
   padding: 40px 0;
@@ -138,11 +138,15 @@ header {
   border-color: var(--blue);
 }
 
+.carousel-item.pet-item {
+  border-color: rgba(217, 70, 255, 0.3);
+}
+
 .carousel-item.pet-item:hover {
   border-color: var(--magenta);
 }
 
-/* Imagens Grandes Dentro do Carrossel que vão Ficar Passando */
+/* Imagens do Carrossel */
 .carousel-img {
   width: 100%;
   height: 160px;
@@ -153,8 +157,8 @@ header {
 }
 
 .carousel-img.pet-thumb {
-  border-color: rgba(217, 70, 255, 0.4);
-  box-shadow: 0 0 10px rgba(217, 70, 255, 0.15);
+  border: 1px solid var(--magenta);
+  box-shadow: 0 0 15px rgba(217, 70, 255, 0.3);
 }
 
 .carousel-item strong {
@@ -440,6 +444,10 @@ footer {
     <div class="card">
       <div>
         <h3>Chaveiros & Articulados</h3>
+        <div style="display: flex; gap: 10px; margin: 15px 0;">
+          <img src="AMANDA_THE_Panda.png" class="card-img" alt="Amanda the Panda" style="flex: 1; height: 140px; margin: 0; object-fit: cover;">
+          <img src="Mesh_Pets.png" class="card-img" alt="Mesh Pets Articulados" style="flex: 1; height: 140px; margin: 0; object-fit: cover;">
+        </div>
         <p>Modelos flexíveis, chaveiros robustos corporativos e peças articuladas montadas diretamente na impressão.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-chaveiros')">Saiba Mais</button>
@@ -481,7 +489,11 @@ footer {
     <div class="card">
       <div>
         <h3 class="pet-title">Pets</h3>
-        <p>Réplicas, chaveiros e esculturas personalizadas focadas na modelagem fiel de animais de estimação.</p>
+        <div style="display: flex; gap: 10px; margin: 15px 0;">
+          <img src="CRISTAL1.jpeg" class="card-img highlight" alt="Cristal - Miniatura Pet" style="flex: 1; height: 140px; margin: 0; object-fit: cover;">
+          <img src="BONECOS.PNG" class="card-img highlight" alt="Bonecos Pets" style="flex: 1; height: 140px; margin: 0; object-fit: cover;">
+        </div>
+        <p>Réplicas, chaveiros e esculturas personalizadas focadas na modelagem fiel e afetiva de animais de estimação.</p>
       </div>
       <button class="btn-sm btn-magenta" onclick="openModal('modal-pets-geral')">Saiba Mais</button>
     </div>
@@ -505,7 +517,7 @@ footer {
     <div class="card">
       <div>
         <h3>Religiões</h3>
-        <p>Estatuetas de fé e representações sagradas customizadas sob medida, respeitando todas as cremças e ritos.</p>
+        <p>Estatuetas de fé e representações sagradas customizadas sob medida, respeitando todas as crenças e ritos.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-religioes')">Saiba Mais</button>
     </div>
