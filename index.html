@@ -241,6 +241,29 @@ header {
   box-shadow: 0 0 15px rgba(217, 70, 255, 0.25);
 }
 
+/* Imagens demonstrativas dos cards principais */
+.main-card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  margin: 16px 0 14px;
+  border: 1px solid rgba(0, 231, 255, 0.22);
+  box-shadow: 0 0 18px rgba(0, 231, 255, 0.08);
+  background: #05070D;
+}
+
+.main-card-img.contain {
+  object-fit: contain;
+  padding: 8px;
+}
+
+.main-card-img.pet-border {
+  border-color: rgba(217, 70, 255, 0.6);
+  box-shadow: 0 0 18px rgba(217, 70, 255, 0.20);
+}
+
 /* Botões */
 .btn {
   background: var(--blue);
@@ -427,6 +450,7 @@ footer {
 <section class="hero">
   <h1>A Grife da Impressão 3D Inteligente</h1>
   <p>Explore nossa vitrine completa de soluções abaixo. Clique em "Saiba Mais" para ver os detalhes e subcategorias de cada produto.</p>
+  <p style="font-size:14px; color: var(--blue); margin-top: 18px;">Teste visual: imagens demonstrativas inseridas diretamente nos cards principais.</p>
 </section>
 
 <section id="opcoes-vitrine">
@@ -436,6 +460,7 @@ footer {
     <div class="card">
       <div>
         <h3>Produtos Com NFC e Core Code</h3>
+        <img src="images/cards/card1_hero.png" class="main-card-img contain" alt="Produtos inteligentes com NFC e Core Code">
         <p>A união perfeita do físico com o digital. Dispositivos que executam ações instantâneas ao aproximar o celular.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-nfc')">Saiba Mais</button>
@@ -444,10 +469,7 @@ footer {
     <div class="card">
       <div>
         <h3>Chaveiros & Articulados</h3>
-        <div style="display: flex; gap: 10px; margin: 15px 0;">
-          <img src="AMANDA_THE_Panda.png" class="card-img" alt="Amanda the Panda" style="flex: 1; height: 140px; margin: 0; object-fit: cover;">
-          <img src="Mesh_Pets.png" class="card-img" alt="Mesh Pets Articulados" style="flex: 1; height: 140px; margin: 0; object-fit: cover;">
-        </div>
+        <img src="images/cards/card3_portfolio.png" class="main-card-img contain" alt="Portfólio de chaveiros, articulados e peças personalizadas">
         <p>Modelos flexíveis, chaveiros robustos corporativos e peças articuladas montadas diretamente na impressão.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-chaveiros')">Saiba Mais</button>
@@ -456,6 +478,7 @@ footer {
     <div class="card">
       <div>
         <h3>Luminárias Artísticas 3D</h3>
+        <img src="images/cards/card4_branding.png" class="main-card-img contain" alt="Design, tecnologia e apresentação visual Zyvora Labs">
         <p>Luz e arte unidas. Projetos de iluminação customizados para marcas, escritórios de arquitetura e decoração afetiva.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-luminarias')">Saiba Mais</button>
@@ -473,6 +496,7 @@ footer {
     <div class="card">
       <div>
         <h3>Brindes & Display</h3>
+        <img src="images/cards/card2_services.png" class="main-card-img contain" alt="Brindes corporativos, displays e soluções personalizadas">
         <p>Displays de mesa modernos com QR Code integrado, logos corporativas em relevo e brindes para marcas e eventos.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-brindes')">Saiba Mais</button>
@@ -481,6 +505,7 @@ footer {
     <div class="card">
       <div>
         <h3>Maçonaria & Outros</h3>
+        <img src="images/cards/card4_branding.png" class="main-card-img contain" alt="Apresentação institucional e produtos personalizados Zyvora Labs">
         <p>Todo tipo de miniatura de pessoas em geral, símbolos tradicionais da ordem, representações históricas e heráldicas.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-maconaria')">Saiba Mais</button>
@@ -626,26 +651,6 @@ footer {
     <p>Desenvolvimento respeitoso de estatuetas religiosas sob medida. Inclui santos católicos e representações das matrizes africanas (Candomblé, Umbanda e pais de santo), com acabamento refinado.</p>
   </div>
 </div>
-
-  <!-- Seção de testes para visualização dos cards gerados -->
-  <section id="teste-cards">
-    <h2>Prévia dos Cards</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="images/cards/card1_hero.png" class="card-img" alt="Card 1">
-      </div>
-      <div class="card">
-        <img src="images/cards/card2_services.png" class="card-img" alt="Card 2">
-      </div>
-      <div class="card">
-        <img src="images/cards/card3_portfolio.png" class="card-img" alt="Card 3">
-      </div>
-      <div class="card">
-        <img src="images/cards/card4_branding.png" class="card-img" alt="Card 4">
-      </div>
-    </div>
-  </section>
-
 <footer>
   <p>&copy; 2026 Zyvora Labs. Todos os direitos reservados. IA, Design e Tecnologia 3D.</p>
 </footer>
