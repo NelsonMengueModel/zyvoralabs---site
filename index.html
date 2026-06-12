@@ -194,9 +194,21 @@ header {
 /* Grids & Cards */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
   gap: 25px;
   margin-top: 20px;
+}
+
+@media(max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+@media(max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -244,26 +256,21 @@ header {
 /* Imagens demonstrativas dos cards principais */
 .main-card-img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 190px;
+  object-fit: contain;
   object-position: center;
   border-radius: 12px;
   margin: 16px 0 14px;
+  padding: 8px;
   border: 1px solid rgba(0, 231, 255, 0.22);
   box-shadow: 0 0 18px rgba(0, 231, 255, 0.08);
   background: #05070D;
-}
-
-.main-card-img.contain {
-  object-fit: contain;
-  padding: 8px;
 }
 
 .main-card-img.pet-border {
   border-color: rgba(217, 70, 255, 0.6);
   box-shadow: 0 0 18px rgba(217, 70, 255, 0.20);
 }
-
 /* Botões */
 .btn {
   background: var(--blue);
@@ -450,11 +457,10 @@ footer {
 <section class="hero">
   <h1>A Grife da Impressão 3D Inteligente</h1>
   <p>Explore nossa vitrine completa de soluções abaixo. Clique em "Saiba Mais" para ver os detalhes e subcategorias de cada produto.</p>
-  <p style="font-size:14px; color: var(--blue); margin-top: 18px;">Teste visual: imagens demonstrativas inseridas diretamente nos cards principais.</p>
 </section>
 
 <section id="opcoes-vitrine">
-  <h2>Nossas Opções e Soluções</h2>
+  <h2>Produtos e Soluções Zyvora Labs</h2>
   <div class="grid">
 
     <div class="card">
