@@ -199,13 +199,13 @@ header {
   margin-top: 20px;
 }
 
-@media(max-width: 1100px) {
+@media(max-width: 1180px) {
   .grid {
     grid-template-columns: repeat(2, minmax(260px, 1fr));
   }
 }
 
-@media(max-width: 720px) {
+@media(max-width: 760px) {
   .grid {
     grid-template-columns: 1fr;
   }
@@ -253,24 +253,60 @@ header {
   box-shadow: 0 0 15px rgba(217, 70, 255, 0.25);
 }
 
-/* Imagens demonstrativas dos cards principais */
-.main-card-img {
-  width: 100%;
-  height: 190px;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 12px;
-  margin: 16px 0 14px;
-  padding: 8px;
+/* Seção visual com imagens demonstrativas grandes */
+.visual-showcase {
+  background: linear-gradient(180deg, #05070D, #070B12);
+  padding-top: 50px;
+}
+
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.visual-card {
+  background: linear-gradient(180deg, #101820, #080B0F);
   border: 1px solid rgba(0, 231, 255, 0.22);
-  box-shadow: 0 0 18px rgba(0, 231, 255, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 0 24px rgba(0, 231, 255, 0.06);
+}
+
+.visual-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
   background: #05070D;
 }
 
-.main-card-img.pet-border {
-  border-color: rgba(217, 70, 255, 0.6);
-  box-shadow: 0 0 18px rgba(217, 70, 255, 0.20);
+.visual-card h3 {
+  margin: 16px 0 8px;
+  color: var(--blue);
+  border-left: 4px solid var(--blue);
+  padding-left: 10px;
 }
+
+.visual-card p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.section-intro {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media(max-width: 900px) {
+  .visual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Botões */
 .btn {
   background: var(--blue);
@@ -459,6 +495,38 @@ footer {
   <p>Explore nossa vitrine completa de soluções abaixo. Clique em "Saiba Mais" para ver os detalhes e subcategorias de cada produto.</p>
 </section>
 
+
+<section id="destaques-visuais" class="visual-showcase">
+  <h2>Destaques Visuais da Zyvora Labs</h2>
+  <p class="section-intro">Esta área mostra, de forma mais premium e legível, os conceitos visuais da marca. As imagens grandes funcionam melhor aqui do que dentro dos cards pequenos.</p>
+
+  <div class="visual-grid">
+    <div class="visual-card">
+      <img src="images/cards/card1_hero.png" alt="Visão geral da Zyvora Labs e proposta da marca">
+      <h3>Marca, tecnologia e impacto</h3>
+      <p>Imagem institucional para apresentar a Zyvora Labs como uma grife de fabricação inteligente, com foco em personalização, tecnologia e desejo de compra.</p>
+    </div>
+
+    <div class="visual-card">
+      <img src="images/cards/card2_services.png" alt="Serviços e soluções personalizadas da Zyvora Labs">
+      <h3>Soluções e possibilidades</h3>
+      <p>Apresentação visual das categorias de serviço, ideal para mostrar que a Zyvora Labs pode atender empresas, eventos, brindes e projetos personalizados.</p>
+    </div>
+
+    <div class="visual-card">
+      <img src="images/cards/card3_portfolio.png" alt="Portfólio e projetos da Zyvora Labs">
+      <h3>Portfólio e aplicações</h3>
+      <p>Imagem para reforçar a variedade de produtos e aplicações: chaveiros, articulados, peças comerciais, presentes personalizados e produtos sob encomenda.</p>
+    </div>
+
+    <div class="visual-card">
+      <img src="images/cards/card4_branding.png" alt="Branding e presença digital da Zyvora Labs">
+      <h3>Branding e presença digital</h3>
+      <p>Material demonstrativo para reforçar a identidade visual da Zyvora Labs, sua presença online e sua comunicação profissional.</p>
+    </div>
+  </div>
+</section>
+
 <section id="opcoes-vitrine">
   <h2>Produtos e Soluções Zyvora Labs</h2>
   <div class="grid">
@@ -466,7 +534,6 @@ footer {
     <div class="card">
       <div>
         <h3>Produtos Com NFC e Core Code</h3>
-        <img src="images/cards/card1_hero.png" class="main-card-img contain" alt="Produtos inteligentes com NFC e Core Code">
         <p>A união perfeita do físico com o digital. Dispositivos que executam ações instantâneas ao aproximar o celular.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-nfc')">Saiba Mais</button>
@@ -475,7 +542,6 @@ footer {
     <div class="card">
       <div>
         <h3>Chaveiros & Articulados</h3>
-        <img src="images/cards/card3_portfolio.png" class="main-card-img contain" alt="Portfólio de chaveiros, articulados e peças personalizadas">
         <p>Modelos flexíveis, chaveiros robustos corporativos e peças articuladas montadas diretamente na impressão.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-chaveiros')">Saiba Mais</button>
@@ -484,7 +550,6 @@ footer {
     <div class="card">
       <div>
         <h3>Luminárias Artísticas 3D</h3>
-        <img src="images/cards/card4_branding.png" class="main-card-img contain" alt="Design, tecnologia e apresentação visual Zyvora Labs">
         <p>Luz e arte unidas. Projetos de iluminação customizados para marcas, escritórios de arquitetura e decoração afetiva.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-luminarias')">Saiba Mais</button>
@@ -502,7 +567,6 @@ footer {
     <div class="card">
       <div>
         <h3>Brindes & Display</h3>
-        <img src="images/cards/card2_services.png" class="main-card-img contain" alt="Brindes corporativos, displays e soluções personalizadas">
         <p>Displays de mesa modernos com QR Code integrado, logos corporativas em relevo e brindes para marcas e eventos.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-brindes')">Saiba Mais</button>
@@ -511,7 +575,6 @@ footer {
     <div class="card">
       <div>
         <h3>Maçonaria & Outros</h3>
-        <img src="images/cards/card4_branding.png" class="main-card-img contain" alt="Apresentação institucional e produtos personalizados Zyvora Labs">
         <p>Todo tipo de miniatura de pessoas em geral, símbolos tradicionais da ordem, representações históricas e heráldicas.</p>
       </div>
       <button class="btn-sm" onclick="openModal('modal-maconaria')">Saiba Mais</button>
