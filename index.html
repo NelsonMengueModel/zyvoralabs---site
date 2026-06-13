@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zyvora Labs | Impressão 3D Inteligente</title>
-<meta name="description" content="Zyvora Labs - Produtos 3D personalizados, brindes inteligentes, lembranças de Vila Velha, linha pet, mascotes e peças sob encomenda.">
+<meta name="description" content="Zyvora Labs - Produtos 3D personalizados, brindes para associações, lembranças de Vila Velha, pets, mascotes e peças sob encomenda.">
 
 <style>
 :root{
   --bg:#05070D;
-  --bg2:#080D12;
   --card:#101820;
-  --card2:#0B1016;
+  --card2:#080B10;
   --line:#1F3338;
   --text:#FFFFFF;
   --muted:#CFD8DC;
   --blue:#00E7FF;
   --magenta:#D946FF;
-  --electric:#3A7BFF;
   --gold:#D5A84A;
 }
 
-*{
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;scroll-behavior:smooth}
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:var(--bg);
   color:var(--text);
-  overflow-x:hidden;
 }
+img{max-width:100%;display:block}
+p{color:var(--muted);line-height:1.6}
+a{text-decoration:none;color:inherit}
 
-a{
-  color:inherit;
-}
-
-p{
-  color:var(--muted);
-  line-height:1.6;
-}
-
-img{
-  max-width:100%;
-  display:block;
+.top-alert{
+  background:linear-gradient(90deg,var(--blue),var(--magenta));
+  color:#020305;
+  font-weight:900;
+  text-align:center;
+  padding:10px;
+  letter-spacing:.5px;
 }
 
 header{
@@ -55,226 +46,181 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:20px;
-  padding:18px 7%;
-  background:rgba(5,7,13,.92);
+  padding:16px 7%;
+  background:rgba(5,7,13,.94);
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(12px);
 }
 
-.logo-box{
+.logo{
   display:flex;
   align-items:center;
-  gap:14px;
-}
-
-.logo-img{
-  width:62px;
-  height:42px;
-  object-fit:contain;
-  border:1px solid rgba(0,231,255,.55);
-  border-radius:8px;
-  background:#030507;
-}
-
-.logo-text{
+  gap:12px;
+  font-size:24px;
   font-weight:900;
   letter-spacing:2px;
-  font-size:24px;
   color:var(--blue);
 }
 
-.logo-text span{
-  color:#fff;
-  font-weight:500;
+.logo img{
+  width:58px;
+  height:38px;
+  object-fit:contain;
+  border:1px solid rgba(0,231,255,.5);
+  border-radius:8px;
 }
+
+.logo span{color:#fff;font-weight:500}
 
 .btn{
   display:inline-flex;
   justify-content:center;
   align-items:center;
-  padding:12px 22px;
+  padding:12px 20px;
   border-radius:10px;
   background:var(--blue);
   color:#020305;
-  font-weight:800;
-  text-decoration:none;
-  border:0;
+  font-weight:900;
 }
 
 .btn-outline{
   background:transparent;
   color:var(--blue);
   border:1px solid var(--blue);
+  padding:10px 14px;
+  border-radius:9px;
+  font-weight:800;
+  margin-top:auto;
+  text-align:center;
 }
 
 .hero{
-  padding:78px 7% 70px;
+  padding:76px 7%;
   text-align:center;
   background:
-    radial-gradient(circle at 78% 18%, rgba(0,231,255,.12), transparent 32%),
-    radial-gradient(circle at 20% 10%, rgba(217,70,255,.10), transparent 30%),
-    linear-gradient(180deg, #05070D, #071016);
+    radial-gradient(circle at 76% 20%, rgba(0,231,255,.14), transparent 34%),
+    radial-gradient(circle at 18% 10%, rgba(217,70,255,.12), transparent 32%),
+    linear-gradient(180deg,#05070D,#071016);
 }
 
 .hero h1{
-  font-size:clamp(34px,5vw,68px);
-  margin:0 0 18px;
-  line-height:1.05;
+  font-size:clamp(34px,5vw,64px);
+  margin:0 0 16px;
 }
 
 .hero p{
-  max-width:900px;
-  margin:0 auto 28px;
+  max-width:880px;
+  margin:0 auto 26px;
   font-size:18px;
 }
 
-.hero-badges{
+.badges{
   display:flex;
-  justify-content:center;
   flex-wrap:wrap;
   gap:12px;
+  justify-content:center;
 }
 
 .badge{
   border:1px solid rgba(0,231,255,.35);
-  color:var(--muted);
-  padding:10px 14px;
   border-radius:999px;
+  padding:10px 14px;
   background:rgba(16,24,32,.55);
-  font-size:14px;
+  color:var(--muted);
 }
 
-.carousel-container{
-  padding:34px 0;
+.carousel{
   overflow:hidden;
+  padding:30px 0;
   background:#070B0F;
   border-bottom:1px solid var(--line);
 }
 
-.carousel-track{
+.track{
   display:flex;
-  gap:24px;
+  gap:22px;
   width:max-content;
-  animation:scroll 42s linear infinite;
-}
-
-.carousel-track:hover{
-  animation-play-state:paused;
+  animation:scroll 45s linear infinite;
 }
 
 @keyframes scroll{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
 }
 
-.carousel-item{
+.slide{
   width:300px;
-  min-height:260px;
   flex-shrink:0;
   border:1px solid var(--line);
-  background:linear-gradient(180deg, var(--card), #080B10);
   border-radius:18px;
+  background:linear-gradient(180deg,var(--card),var(--card2));
   overflow:hidden;
 }
 
-.carousel-item img{
+.slide img{
   width:100%;
   height:170px;
   object-fit:cover;
 }
 
-.carousel-item div{
-  padding:16px;
-}
-
-.carousel-item strong{
-  color:var(--blue);
-  display:block;
-  margin-bottom:6px;
-}
-
-.carousel-item.pet strong,
-.carousel-item.pet{
-  border-color:rgba(217,70,255,.35);
-}
-
-.carousel-item.pet strong{
-  color:var(--magenta);
-}
+.slide div{padding:14px}
+.slide strong{display:block;color:var(--blue);margin-bottom:6px}
 
 section{
   padding:64px 7%;
 }
 
-.section-dark{
-  background:var(--bg);
-}
-
-.section-alt{
-  background:linear-gradient(180deg, #071016, #05070D);
+.alt{
+  background:linear-gradient(180deg,#071016,#05070D);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
 
-.section-title{
+.title{
   text-align:center;
   margin-bottom:34px;
 }
 
-.section-title h2{
-  font-size:clamp(28px,3.6vw,44px);
+.title h2{
+  font-size:clamp(28px,3.5vw,44px);
   margin:0 0 12px;
 }
 
-.section-title p{
+.title p{
   max-width:880px;
   margin:0 auto;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(4, minmax(220px, 1fr));
+  grid-template-columns:repeat(4,minmax(220px,1fr));
   gap:24px;
 }
 
 .product-grid{
   display:grid;
-  grid-template-columns:repeat(3, minmax(260px, 1fr));
+  grid-template-columns:repeat(3,minmax(260px,1fr));
   gap:24px;
 }
 
 .card{
   border:1px solid var(--line);
   border-radius:18px;
-  background:linear-gradient(180deg, var(--card), var(--card2));
+  background:linear-gradient(180deg,var(--card),var(--card2));
   overflow:hidden;
   display:flex;
   flex-direction:column;
-  min-height:100%;
-  transition:.25s ease;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(0,231,255,.7);
-  box-shadow:0 0 28px rgba(0,231,255,.08);
-}
-
-.card.pet:hover{
-  border-color:rgba(217,70,255,.8);
-  box-shadow:0 0 28px rgba(217,70,255,.10);
 }
 
 .card img{
   width:100%;
-  aspect-ratio:16 / 9;
+  aspect-ratio:16/9;
   object-fit:cover;
   background:#020305;
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.card-body{
+.body{
   padding:20px;
   display:flex;
   flex-direction:column;
@@ -283,39 +229,17 @@ section{
 
 .card h3{
   margin:0 0 10px;
+  padding-left:10px;
+  border-left:4px solid var(--blue);
   font-size:20px;
   line-height:1.15;
-  border-left:4px solid var(--blue);
-  padding-left:10px;
 }
 
-.card.pet h3{
-  border-left-color:var(--magenta);
-}
+.card.pet h3{border-left-color:var(--magenta)}
+.card.gold h3{border-left-color:var(--gold)}
 
-.card.gold h3{
-  border-left-color:var(--gold);
-}
-
-.card p{
-  margin:0 0 18px;
-  font-size:15px;
-}
-
-.card ul{
-  margin:0 0 18px;
-  padding-left:18px;
-  color:var(--muted);
-  line-height:1.55;
-  font-size:14px;
-}
-
-.card .btn-outline{
-  margin-top:auto;
-  padding:10px 12px;
-  border-radius:9px;
-  font-size:14px;
-}
+.card p{font-size:15px;margin:0 0 16px}
+.card ul{color:var(--muted);line-height:1.55;font-size:14px;margin:0 0 16px;padding-left:18px}
 
 .callout{
   margin-top:34px;
@@ -329,9 +253,7 @@ section{
   align-items:center;
 }
 
-.callout p{
-  margin:0;
-}
+.callout p{margin:0}
 
 footer{
   padding:38px 7%;
@@ -341,79 +263,53 @@ footer{
 }
 
 @media(max-width:1200px){
-  .grid{grid-template-columns:repeat(3, minmax(220px, 1fr));}
-  .product-grid{grid-template-columns:repeat(2, minmax(260px, 1fr));}
+  .grid{grid-template-columns:repeat(3,minmax(220px,1fr))}
+  .product-grid{grid-template-columns:repeat(2,minmax(260px,1fr))}
 }
 
 @media(max-width:820px){
-  header{flex-direction:column;text-align:center;}
-  .grid,.product-grid{grid-template-columns:1fr;}
-  .callout{flex-direction:column;text-align:center;}
-  .carousel-item{width:260px;}
+  header{flex-direction:column;gap:14px;text-align:center}
+  .grid,.product-grid{grid-template-columns:1fr}
+  .callout{flex-direction:column;text-align:center}
+  .slide{width:260px}
 }
 </style>
 </head>
 
 <body>
 
+<div class="top-alert">VERSÃO TESTE V4 — ASSOCIAÇÕES + VILA VELHA + CARDS NOVOS</div>
+
 <header>
-  <div class="logo-box">
-    <img src="Logo Zyvoralabs.jpeg" class="logo-img" alt="Logo Zyvora Labs">
-    <div class="logo-text">ZYVORA <span>LABS</span></div>
+  <div class="logo">
+    <img src="Logo Zyvoralabs.jpeg" alt="Logo Zyvora Labs">
+    ZYVORA <span>LABS</span>
   </div>
-  <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20gostaria%20de%20um%20orçamento%20com%20a%20Zyvora%20Labs." target="_blank" rel="noopener">Contato WhatsApp</a>
+  <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20gostaria%20de%20um%20orçamento%20com%20a%20Zyvora%20Labs." target="_blank">Contato WhatsApp</a>
 </header>
 
-<div class="carousel-container">
-  <div class="carousel-track">
-    <article class="carousel-item">
-      <img src="images/cards/card_nfc_brindes.png" alt="Produtos NFC e brindes corporativos">
-      <div><strong>NFC & Brindes</strong><span>Peças conectadas, úteis e com alta percepção de valor.</span></div>
-    </article>
-    <article class="carousel-item pet">
-      <img src="images/cards/card_pets_personalizados.png" alt="Linha pet personalizada">
-      <div><strong>Linha Pet</strong><span>Miniaturas, chaveiros e lembranças afetivas.</span></div>
-    </article>
-    <article class="carousel-item">
-      <img src="images/cards/card_mascotes_times.png" alt="Mascotes de times em 3D">
-      <div><strong>Mascotes de Times</strong><span>Peças de alto apelo para torcedores e colecionadores.</span></div>
-    </article>
-    <article class="carousel-item">
-      <img src="images/associacoes/associacao_suporte_smartphone.png" alt="Brindes para associações">
-      <div><strong>Associações</strong><span>Brindes úteis para aposentados, sindicatos e prefeitura.</span></div>
-    </article>
-    <article class="carousel-item">
-      <img src="images/vila-velha/vila_velha_chaveiro.png" alt="Lembranças de Vila Velha">
-      <div><strong>Vila Velha</strong><span>Souvenirs para turistas, quiosques e pontos de praia.</span></div>
-    </article>
+<div class="carousel">
+  <div class="track">
+    <article class="slide"><img src="images/cards/card_nfc_brindes.png"><div><strong>NFC & Brindes</strong><span>Peças conectadas e úteis.</span></div></article>
+    <article class="slide"><img src="images/cards/card_pets_personalizados.png"><div><strong>Linha Pet</strong><span>Miniaturas e lembranças afetivas.</span></div></article>
+    <article class="slide"><img src="images/cards/card_mascotes_times.png"><div><strong>Mascotes de Times</strong><span>Peças para torcedores.</span></div></article>
+    <article class="slide"><img src="images/associacoes/associacao_suporte_smartphone.png"><div><strong>Associações</strong><span>Brindes úteis e comemorativos.</span></div></article>
+    <article class="slide"><img src="images/vila_velha/vila_velha_chaveiro.png"><div><strong>Vila Velha</strong><span>Souvenirs para turistas.</span></div></article>
+    <article class="slide"><img src="images/cards/card_articulados_criativos.png"><div><strong>Articulados</strong><span>Peças criativas e colecionáveis.</span></div></article>
 
-    <article class="carousel-item">
-      <img src="images/cards/card_nfc_brindes.png" alt="Produtos NFC e brindes corporativos">
-      <div><strong>NFC & Brindes</strong><span>Peças conectadas, úteis e com alta percepção de valor.</span></div>
-    </article>
-    <article class="carousel-item pet">
-      <img src="images/cards/card_pets_personalizados.png" alt="Linha pet personalizada">
-      <div><strong>Linha Pet</strong><span>Miniaturas, chaveiros e lembranças afetivas.</span></div>
-    </article>
-    <article class="carousel-item">
-      <img src="images/cards/card_mascotes_times.png" alt="Mascotes de times em 3D">
-      <div><strong>Mascotes de Times</strong><span>Peças de alto apelo para torcedores e colecionadores.</span></div>
-    </article>
-    <article class="carousel-item">
-      <img src="images/associacoes/associacao_suporte_smartphone.png" alt="Brindes para associações">
-      <div><strong>Associações</strong><span>Brindes úteis para aposentados, sindicatos e prefeitura.</span></div>
-    </article>
-    <article class="carousel-item">
-      <img src="images/vila-velha/vila_velha_chaveiro.png" alt="Lembranças de Vila Velha">
-      <div><strong>Vila Velha</strong><span>Souvenirs para turistas, quiosques e pontos de praia.</span></div>
-    </article>
+    <article class="slide"><img src="images/cards/card_nfc_brindes.png"><div><strong>NFC & Brindes</strong><span>Peças conectadas e úteis.</span></div></article>
+    <article class="slide"><img src="images/cards/card_pets_personalizados.png"><div><strong>Linha Pet</strong><span>Miniaturas e lembranças afetivas.</span></div></article>
+    <article class="slide"><img src="images/cards/card_mascotes_times.png"><div><strong>Mascotes de Times</strong><span>Peças para torcedores.</span></div></article>
+    <article class="slide"><img src="images/associacoes/associacao_suporte_smartphone.png"><div><strong>Associações</strong><span>Brindes úteis e comemorativos.</span></div></article>
+    <article class="slide"><img src="images/vila_velha/vila_velha_chaveiro.png"><div><strong>Vila Velha</strong><span>Souvenirs para turistas.</span></div></article>
+    <article class="slide"><img src="images/cards/card_articulados_criativos.png"><div><strong>Articulados</strong><span>Peças criativas e colecionáveis.</span></div></article>
   </div>
 </div>
 
 <section class="hero">
   <h1>A Grife da Impressão 3D Inteligente</h1>
   <p>Produtos personalizados, brindes úteis e peças sob encomenda, pensados para impressão rápida, baixo desperdício e alto desejo de compra.</p>
-  <div class="hero-badges">
+  <div class="badges">
     <span class="badge">1 a 3 cores sólidas</span>
     <span class="badge">Peças simples e vendáveis</span>
     <span class="badge">Brindes corporativos</span>
@@ -422,133 +318,36 @@ footer{
   </div>
 </section>
 
-<section class="section-dark" id="produtos">
-  <div class="section-title">
+<section id="produtos">
+  <div class="title">
     <h2>Produtos e Soluções Zyvora Labs</h2>
-    <p>Uma vitrine enxuta com os principais nichos de venda da Zyvora: peças úteis, personalizadas, fáceis de produzir e com forte apelo visual.</p>
+    <p>Uma vitrine enxuta com os principais nichos de venda: peças úteis, personalizadas, fáceis de produzir e com forte apelo visual.</p>
   </div>
 
   <div class="grid">
-    <article class="card">
-      <img src="images/cards/card_nfc_brindes.png" alt="Produtos com NFC e brindes corporativos">
-      <div class="card-body">
-        <h3>NFC, Core Code & Brindes</h3>
-        <p>Chaveiros, displays e peças inteligentes que conectam o produto físico ao WhatsApp, Instagram, cardápio, Pix ou página do cliente.</p>
-        <a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20NFC%20e%20brindes%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a>
-      </div>
-    </article>
-
-    <article class="card pet">
-      <img src="images/cards/card_pets_personalizados.png" alt="Pets personalizados em 3D">
-      <div class="card-body">
-        <h3>Linha Pet</h3>
-        <p>Miniaturas, chaveiros e plaquinhas afetivas para eternizar o carinho por cães e gatos, com peças simples e personalizadas.</p>
-        <a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20a%20Linha%20Pet%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/cards/card_articulados_criativos.png" alt="Articulados criativos em 3D">
-      <div class="card-body">
-        <h3>Articulados & Criativos</h3>
-        <p>Dragões, criaturas, bonecos e colecionáveis de alto giro, com foco em impressão FDM rápida e montagem simples.</p>
-        <a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20articulados%20e%20criativos%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/cards/card_luminarias_3d.png" alt="Luminárias artísticas 3D">
-      <div class="card-body">
-        <h3>Luminárias Artísticas 3D</h3>
-        <p>Luminárias decorativas e funcionais com design moderno, peças modulares e foco em montagem prática.</p>
-        <a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20luminárias%203D%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a>
-      </div>
-    </article>
-
-    <article class="card gold">
-      <img src="images/cards/card_maconaria_outros.png" alt="Produtos maçônicos personalizados">
-      <div class="card-body">
-        <h3>Maçonaria & Outros</h3>
-        <p>Miniaturas, chaveiros, placas e presentes personalizados para irmãos maçons, lojas, datas especiais e homenagens.</p>
-        <a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20produtos%20maçônicos%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/cards/card_mascotes_times.png" alt="Mascotes de times em 3D">
-      <div class="card-body">
-        <h3>Mascotes de Times</h3>
-        <p>Peças inspiradas na paixão dos torcedores: mascotes, chaveiros, troféus e displays colecionáveis de alta margem.</p>
-        <a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20mascotes%20de%20times%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/cards/card_props_cosplays.png" alt="Props e cosplays em 3D">
-      <div class="card-body">
-        <h3>Props & Cosplays</h3>
-        <p>Acessórios, réplicas genéricas, suportes e itens criativos para eventos, decoração geek e colecionadores.</p>
-        <a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20props%20e%20cosplays%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/cards/card_religioes.png" alt="Peças religiosas em 3D">
-      <div class="card-body">
-        <h3>Religiões</h3>
-        <p>Peças decorativas, placas de fé e presentes simbólicos com respeito, simplicidade e acabamento elegante.</p>
-        <a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20peças%20religiosas%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a>
-      </div>
-    </article>
+    <article class="card"><img src="images/cards/card_nfc_brindes.png"><div class="body"><h3>NFC, Core Code & Brindes</h3><p>Chaveiros, displays e peças inteligentes que conectam o produto físico ao WhatsApp, Instagram, cardápio, Pix ou página do cliente.</p><a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20NFC%20e%20brindes%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a></div></article>
+    <article class="card pet"><img src="images/cards/card_pets_personalizados.png"><div class="body"><h3>Linha Pet</h3><p>Miniaturas, chaveiros e plaquinhas afetivas para eternizar o carinho por cães e gatos.</p><a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20a%20Linha%20Pet%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a></div></article>
+    <article class="card"><img src="images/cards/card_articulados_criativos.png"><div class="body"><h3>Articulados & Criativos</h3><p>Dragões, criaturas, bonecos e colecionáveis de alto giro, com foco em impressão FDM rápida e montagem simples.</p><a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20articulados%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a></div></article>
+    <article class="card"><img src="images/cards/card_luminarias_3d.png"><div class="body"><h3>Luminárias Artísticas 3D</h3><p>Luminárias decorativas e funcionais com design moderno e montagem prática.</p><a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20luminárias%203D%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a></div></article>
+    <article class="card gold"><img src="images/cards/card_maconaria_outros.png"><div class="body"><h3>Maçonaria & Outros</h3><p>Miniaturas, chaveiros, placas e presentes personalizados para irmãos maçons, lojas e homenagens.</p><a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20produtos%20maçônicos%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a></div></article>
+    <article class="card"><img src="images/cards/card_mascotes_times.png"><div class="body"><h3>Mascotes de Times</h3><p>Peças inspiradas na paixão dos torcedores: mascotes, chaveiros, troféus e displays colecionáveis.</p><a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20mascotes%20de%20times%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a></div></article>
+    <article class="card"><img src="images/cards/card_props_cosplays.png"><div class="body"><h3>Props & Cosplays</h3><p>Acessórios, réplicas genéricas, suportes e itens criativos para eventos, decoração geek e colecionadores.</p><a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20props%20e%20cosplays%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a></div></article>
+    <article class="card"><img src="images/cards/card_religioes.png"><div class="body"><h3>Religiões</h3><p>Peças decorativas, placas de fé e presentes simbólicos com respeito, simplicidade e acabamento elegante.</p><a class="btn-outline" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20peças%20religiosas%20da%20Zyvora%20Labs" target="_blank">Pedir orçamento</a></div></article>
   </div>
 </section>
 
-<section class="section-alt" id="associacoes">
-  <div class="section-title">
+<section class="alt" id="associacoes">
+  <div class="title">
     <h2>Brindes para Associações, Sindicatos e Prefeitura</h2>
     <p>Produtos úteis e fáceis de entregar em datas comemorativas, homenagens, eventos, campanhas e ações com aposentados.</p>
   </div>
 
   <div class="product-grid">
-    <article class="card">
-      <img src="images/associacoes/associacao_suporte_smartphone.png" alt="Suporte para smartphone">
-      <div class="card-body">
-        <h3>Suporte para Smartphone</h3>
-        <ul><li>Útil no dia a dia</li><li>Impressão rápida</li><li>Excelente para grandes quantidades</li></ul>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/associacoes/associacao_chaveiro_institucional.png" alt="Chaveiro institucional">
-      <div class="card-body">
-        <h3>Chaveiro Institucional</h3>
-        <ul><li>Baixo custo</li><li>Ideal para eventos</li><li>Personalização com nome ou logo</li></ul>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/associacoes/associacao_trofeu_mesa.png" alt="Troféu de mesa para homenagens">
-      <div class="card-body">
-        <h3>Troféu / Placa de Mesa</h3>
-        <ul><li>Presente de maior valor percebido</li><li>Ótimo para homenagens</li><li>1 a 3 cores sólidas</li></ul>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/associacoes/associacao_porta_retrato.png" alt="Porta-retrato 3D">
-      <div class="card-body">
-        <h3>Porta-retrato de Mesa</h3>
-        <ul><li>Afetivo e útil</li><li>Bom para datas comemorativas</li><li>Peças simples e montáveis</li></ul>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/associacoes/associacao_suporte_oculos.png" alt="Suporte para óculos 3D">
-      <div class="card-body">
-        <h3>Suporte para Óculos</h3>
-        <ul><li>Produto útil para aposentados</li><li>Baixo consumo de material</li><li>Boa aceitação como brinde</li></ul>
-      </div>
-    </article>
+    <article class="card"><img src="images/associacoes/associacao_suporte_smartphone.png"><div class="body"><h3>Suporte para Smartphone</h3><ul><li>Útil no dia a dia</li><li>Impressão rápida</li><li>Excelente para grandes quantidades</li></ul></div></article>
+    <article class="card"><img src="images/associacoes/associacao_chaveiro_institucional.png"><div class="body"><h3>Chaveiro Institucional</h3><ul><li>Baixo custo</li><li>Ideal para eventos</li><li>Personalização com nome ou logo</li></ul></div></article>
+    <article class="card"><img src="images/associacoes/associacao_trofeu_mesa.png"><div class="body"><h3>Troféu / Placa de Mesa</h3><ul><li>Presente de maior valor percebido</li><li>Ótimo para homenagens</li><li>1 a 3 cores sólidas</li></ul></div></article>
+    <article class="card"><img src="images/associacoes/associacao_porta_retrato.png"><div class="body"><h3>Porta-retrato de Mesa</h3><ul><li>Afetivo e útil</li><li>Bom para datas comemorativas</li><li>Peças simples e montáveis</li></ul></div></article>
+    <article class="card"><img src="images/associacoes/associacao_suporte_oculos.png"><div class="body"><h3>Suporte para Óculos</h3><ul><li>Produto útil para aposentados</li><li>Baixo consumo de material</li><li>Boa aceitação como brinde</li></ul></div></article>
   </div>
 
   <div class="callout">
@@ -557,52 +356,18 @@ footer{
   </div>
 </section>
 
-<section class="section-dark" id="vila-velha">
-  <div class="section-title">
+<section id="vila-velha">
+  <div class="title">
     <h2>Lembranças de Vila Velha</h2>
     <p>Souvenirs simples, bonitos e vendáveis para quiosques, pontos turísticos, praias, feiras, lojas e representantes locais.</p>
   </div>
 
   <div class="product-grid">
-    <article class="card">
-      <img src="images/vila-velha/vila_velha_chaveiro.png" alt="Chaveiro Vila Velha">
-      <div class="card-body">
-        <h3>Chaveiro Vila Velha</h3>
-        <ul><li>Alto giro na praia</li><li>Leve e barato de produzir</li><li>Ideal para turista levar de lembrança</li></ul>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/vila-velha/vila_velha_ima_geladeira.png" alt="Ímã de geladeira Vila Velha">
-      <div class="card-body">
-        <h3>Ímã de Geladeira</h3>
-        <ul><li>Souvenir clássico</li><li>Fácil de vender</li><li>Formato com Convento, mar e coqueiro</li></ul>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/vila-velha/vila_velha_barquinho.png" alt="Mini barco decorativo Vila Velha">
-      <div class="card-body">
-        <h3>Mini Barco Decorativo</h3>
-        <ul><li>Peça de mesa</li><li>Bom valor percebido</li><li>Remete ao mar e à cidade</li></ul>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/vila-velha/vila_velha_placa_souvenir.png" alt="Placa lembrança de Vila Velha">
-      <div class="card-body">
-        <h3>Placa Souvenir</h3>
-        <ul><li>Produto de exposição</li><li>1 a 3 cores</li><li>Ótimo para vitrines e bancadas</li></ul>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="images/vila-velha/vila_velha_porta_latinha.png" alt="Porta-latinha Vila Velha">
-      <div class="card-body">
-        <h3>Porta-latinha Praia</h3>
-        <ul><li>Útil na praia</li><li>Ótimo para ponto de venda</li><li>Produto com margem boa</li></ul>
-      </div>
-    </article>
+    <article class="card"><img src="images/vila_velha/vila_velha_chaveiro.png"><div class="body"><h3>Chaveiro Vila Velha</h3><ul><li>Alto giro na praia</li><li>Leve e barato de produzir</li><li>Ideal para turista levar de lembrança</li></ul></div></article>
+    <article class="card"><img src="images/vila_velha/vila_velha_ima_geladeira.png"><div class="body"><h3>Ímã de Geladeira</h3><ul><li>Souvenir clássico</li><li>Fácil de vender</li><li>Formato com Convento, mar e coqueiro</li></ul></div></article>
+    <article class="card"><img src="images/vila_velha/vila_velha_barquinho.png"><div class="body"><h3>Mini Barco Decorativo</h3><ul><li>Peça de mesa</li><li>Bom valor percebido</li><li>Remete ao mar e à cidade</li></ul></div></article>
+    <article class="card"><img src="images/vila_velha/vila_velha_placa_souvenir.png"><div class="body"><h3>Placa Souvenir</h3><ul><li>Produto de exposição</li><li>1 a 3 cores</li><li>Ótimo para vitrines e bancadas</li></ul></div></article>
+    <article class="card"><img src="images/vila_velha/vila_velha_porta_latinha.png"><div class="body"><h3>Porta-latinha Praia</h3><ul><li>Útil na praia</li><li>Ótimo para ponto de venda</li><li>Produto com margem boa</li></ul></div></article>
   </div>
 
   <div class="callout">
