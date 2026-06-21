@@ -709,6 +709,12 @@ body{
 .fixed-whatsapp{box-shadow:0 10px 34px rgba(0,102,204,.28)}
 @media(max-width:980px){.brand-logo{width:160px!important}.commerce-grid{grid-template-columns:1fr}}
 
+
+.commerce-grid-four{grid-template-columns:repeat(4,minmax(190px,1fr))}
+.commerce-actions{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:1100px){.commerce-grid-four{grid-template-columns:repeat(2,minmax(220px,1fr))}}
+@media(max-width:700px){.commerce-grid-four{grid-template-columns:1fr}.commerce-actions .btn{width:100%}}
+
 </style>
 </head>
 
@@ -717,7 +723,7 @@ body{
   <!-- HEADER -->
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Zyvora Labs">
-      <img class="brand-logo" src="images/optimized/Logo Zyvoralabs.webp" alt="Zyvora Labs - IA, criatividade e fabrica??o inteligente">
+      <img class="brand-logo" src="images/optimized/Logo Zyvoralabs.webp" alt="Zyvora Labs - IA, criatividade e fabricação inteligente">
     </a>
 
     <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
@@ -728,6 +734,7 @@ body{
       <a href="#linhas">Linhas</a>
       <a href="#pet-3d">Pet 3D</a>
       <a href="#precos">Preços</a>
+      <a href="#como-comprar">Como comprar</a>
       <a href="#orcamento">Orçamento</a>
       <a class="btn magenta" href="https://www.instagram.com/zyvoralabs.io" target="_blank" rel="noopener">Instagram</a>
       <a class="btn whats" href="https://wa.me/5527981783433?text=Olá%2C%20vi%20a%20Vitrine%20Zyvora%20Labs%20e%20quero%20fazer%20um%20orçamento%20de%20um%20produto%20personalizado." target="_blank" rel="noopener">WhatsApp</a>
@@ -740,18 +747,18 @@ body{
       <div class="hero-copy">
         <p class="section-kicker">Vitrine comercial sob encomenda</p>
         <h1>Produtos 3D personalizados feitos sob encomenda</h1>
-        <p class="brand-manifesto">IA, criatividade e fabrica??o inteligente.</p>
+        <p class="brand-manifesto">IA, criatividade e fabricação inteligente.</p>
         <p>Transformamos fotos, ideias, marcas e presentes em peças físicas exclusivas com impressão 3D, IA e acabamento premium.</p>
         <div class="hero-actions">
           <a class="btn whats" href="https://wa.me/5527981783433?text=Olá%2C%20vi%20a%20Vitrine%20Zyvora%20Labs%20e%20quero%20fazer%20um%20orçamento%20de%20um%20produto%20personalizado." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
-          <a class="btn outline" href="#linhas">Ver linhas</a>
+          <a class="btn outline" href="#linhas">Ver produtos</a>
         </div>
       </div>
 
       <div class="hero-visual" aria-label="Destaques da vitrine">
         <div class="visual-card wide"><img src="images/optimized/cards/card_nfc_brindes.webp" alt="Produtos 3D personalizados e brindes inteligentes"></div>
         <div class="visual-card"><img src="images/optimized/cards/card_pets_personalizados.webp" alt="Pet 3D personalizado"></div>
-        <div class="visual-card"><img src="images/optimized/cards/card_luminarias_3d.webp" alt="Luminária personalizada"></div>
+        <div class="visual-card"><img src="images/optimized/cards/card_luminarias_3d.webp" alt="Decoração para luminárias"></div>
       </div>
     </section>
 
@@ -810,10 +817,10 @@ body{
           <div class="product-body">
             <h3>Pet 3D personalizado</h3>
             <p>Miniaturas e lembranças inspiradas no pet do cliente.</p>
-            <p class="price-line">Sob orçamento</p>
-            <p class="variation-note">Valores podem variar conforme tamanho, quantidade, cores, acabamento e complexidade.</p>
+            <p class="price-line">A partir de R$ 80,00</p>
+            <p class="variation-note">Valor depende do tamanho, nível de detalhe, cores e acabamento.</p>
             <div class="seals"><span class="seal">Sob encomenda</span><span class="seal">Valor sob avaliação</span><span class="seal">Personalização disponível</span></div>
-            <div class="card-actions"><button class="btn magenta" type="button" data-modal="pet">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%3F%2C%20quero%20or%3Famento%20para%20um%20Pet%203D%20personalizado." target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+            <div class="card-actions"><button class="btn magenta" type="button" data-modal="pet">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20pedir%20pelo%20WhatsApp.%0A%0AProduto%20desejado%3A%20Pet%203D%20personalizado%0AQuantidade%3A%20%0ATamanho%20aproximado%3A%20%0ACores%20desejadas%3A%20%0APersonaliza%C3%A7%C3%A3o%20desejada%3A%20%0ACidade%2FBairro%3A%20%0APrazo%20desejado%3A%20%0AObserva%C3%A7%C3%B5es%3A%20" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
           </div>
         </article>
 
@@ -822,20 +829,22 @@ body{
           <div class="product-body">
             <h3>Chaveiro NFC & QR Code</h3>
             <p>Peças conectadas para WhatsApp, Instagram, Pix, cardápio ou página.</p>
-            <p class="price-line">A partir de R$ 49,90</p>
-            <p class="variation-note">Valores podem variar conforme tamanho, quantidade, cores, acabamento e complexidade.</p>
+            <p class="price-line">A partir de R$ 25,00</p>
+            <p class="variation-note">Valor pode variar conforme tamanho, cores, NFC, QR Code e acabamento.</p>
             <div class="seals"><span class="seal">Sob encomenda</span><span class="seal">Valor sob avaliação</span><span class="seal">Personalização disponível</span></div>
-            <div class="card-actions"><button class="btn magenta" type="button" data-modal="chaveiro">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%3F%2C%20quero%20pedir%20um%20Chaveiro%20NFC%20%26%20QR%20Code.%20Pode%20me%20passar%20as%20op%3F%3Fes%3F" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+            <div class="card-actions"><button class="btn magenta" type="button" data-modal="chaveiro">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20pedir%20pelo%20WhatsApp.%0A%0AProduto%20desejado%3A%20Chaveiro%20NFC%20%26%20QR%20Code%0AQuantidade%3A%20%0ATamanho%20aproximado%3A%20%0ACores%20desejadas%3A%20%0APersonaliza%C3%A7%C3%A3o%20desejada%3A%20%0ACidade%2FBairro%3A%20%0APrazo%20desejado%3A%20%0AObserva%C3%A7%C3%B5es%3A%20" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
           </div>
         </article>
 
         <article class="product-card">
-          <div class="product-media"><img src="images/optimized/cards/card_luminarias_3d.webp" alt="Luminárias personalizadas"></div>
+          <div class="product-media"><img src="images/optimized/cards/card_luminarias_3d.webp" alt="Decoração para luminárias"></div>
           <div class="product-body">
-            <h3>Luminárias personalizadas</h3>
-            <p>Peças decorativas com presença visual para ambientes e presentes.</p>
+            <h3>Decoração para luminárias</h3>
+            <p>Peças decorativas 3D para compor ambientes, presentes e projetos personalizados.</p>
+            <p class="price-line">Sob orçamento</p>
+            <p class="variation-note">Valor depende do tamanho, cores, material, acabamento e complexidade.</p>
             <div class="seals"><span class="seal">Sob encomenda</span><span class="seal">Valor sob avaliação</span><span class="seal">Personalização disponível</span></div>
-            <div class="card-actions"><button class="btn magenta" type="button" data-modal="luminarias">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%3F%2C%20quero%20or%3Famento%20para%20uma%20lumin%3Fria%20personalizada%20em%203D." target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+            <div class="card-actions"><button class="btn magenta" type="button" data-modal="luminarias">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20para%20uma%20pe%C3%A7a%20decorativa%203D%20para%20lumin%C3%A1ria%2Filumina%C3%A7%C3%A3o%20da%20Zyvora%20Labs.%0A%0AQuantidade%3A%0ATamanho%20aproximado%3A%0ACores%20desejadas%3A%0ATipo%20de%20ambiente%3A%0APersonaliza%C3%A7%C3%A3o%20desejada%3A%0ACidade%2FBairro%3A%0APrazo%20desejado%3A%0AObserva%C3%A7%C3%B5es%3A" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
           </div>
         </article>
 
@@ -844,10 +853,10 @@ body{
           <div class="product-body">
             <h3>Nomes e letras 3D</h3>
             <p>Letreiros, nomes e elementos personalizados para decoração e presente.</p>
-            <p class="price-line">A partir de R$ 25,00</p>
-            <p class="variation-note">Valores podem variar conforme tamanho, quantidade, cores, acabamento e complexidade.</p>
+            <p class="price-line">A partir de R$ 30,00</p>
+            <p class="variation-note">Valor varia conforme tamanho, fonte, cores e complexidade.</p>
             <div class="seals"><span class="seal">Sob encomenda</span><span class="seal">Valor sob avaliação</span><span class="seal">Personalização disponível</span></div>
-            <div class="card-actions"><button class="btn magenta" type="button" data-modal="criativos">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%3F%2C%20quero%20pedir%20nomes%20ou%20letras%203D%20personalizados." target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+            <div class="card-actions"><button class="btn magenta" type="button" data-modal="criativos">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20pedir%20pelo%20WhatsApp.%0A%0AProduto%20desejado%3A%20Nomes%20e%20letras%203D%0AQuantidade%3A%20%0ATamanho%20aproximado%3A%20%0ACores%20desejadas%3A%20%0APersonaliza%C3%A7%C3%A3o%20desejada%3A%20%0ACidade%2FBairro%3A%20%0APrazo%20desejado%3A%20%0AObserva%C3%A7%C3%B5es%3A%20" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
           </div>
         </article>
 
@@ -857,9 +866,9 @@ body{
             <h3>Brindes corporativos</h3>
             <p>Itens para empresas, eventos, campanhas, associações e ações promocionais.</p>
             <p class="price-line">Sob orçamento por quantidade</p>
-            <p class="variation-note">Valores podem variar conforme tamanho, quantidade, cores, acabamento e complexidade.</p>
+            <p class="variation-note">Valor depende do modelo, número de cores, quantidade e acabamento.</p>
             <div class="seals"><span class="seal">Sob encomenda</span><span class="seal">Valor sob avaliação</span><span class="seal">Personalização disponível</span></div>
-            <div class="card-actions"><button class="btn magenta" type="button" data-modal="brindes">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%3F%2C%20quero%20or%3Famento%20para%20brindes%20corporativos%20personalizados." target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+            <div class="card-actions"><button class="btn magenta" type="button" data-modal="brindes">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20pedir%20pelo%20WhatsApp.%0A%0AProduto%20desejado%3A%20Brindes%20corporativos%0AQuantidade%3A%20%0ATamanho%20aproximado%3A%20%0ACores%20desejadas%3A%20%0APersonaliza%C3%A7%C3%A3o%20desejada%3A%20%0ACidade%2FBairro%3A%20%0APrazo%20desejado%3A%20%0AObserva%C3%A7%C3%B5es%3A%20" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
           </div>
         </article>
 
@@ -868,8 +877,10 @@ body{
           <div class="product-body">
             <h3>Decoração 3D premium</h3>
             <p>Peças decorativas, suportes e objetos especiais para ambientes.</p>
+            <p class="price-line">Sob orçamento</p>
+            <p class="variation-note">Valor varia conforme tamanho, cores, acabamento e complexidade.</p>
             <div class="seals"><span class="seal">Sob encomenda</span><span class="seal">Valor sob avaliação</span><span class="seal">Personalização disponível</span></div>
-            <div class="card-actions"><button class="btn magenta" type="button" data-modal="decoracao">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%3F%2C%20quero%20or%3Famento%20para%20uma%20pe%3Fa%20de%20decora%3F%3Fo%203D%20premium." target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+            <div class="card-actions"><button class="btn magenta" type="button" data-modal="decoracao">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20pedir%20pelo%20WhatsApp.%0A%0AProduto%20desejado%3A%20Decora%C3%A7%C3%A3o%203D%20premium%0AQuantidade%3A%20%0ATamanho%20aproximado%3A%20%0ACores%20desejadas%3A%20%0APersonaliza%C3%A7%C3%A3o%20desejada%3A%20%0ACidade%2FBairro%3A%20%0APrazo%20desejado%3A%20%0AObserva%C3%A7%C3%B5es%3A%20" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
           </div>
         </article>
 
@@ -878,8 +889,10 @@ body{
           <div class="product-body">
             <h3>Presentes simbólicos & institucionais</h3>
             <p>Homenagens, placas, troféus e peças de valor simbólico.</p>
+            <p class="price-line">Sob orçamento</p>
+            <p class="variation-note">Valor depende do tamanho, cores, personalização e acabamento.</p>
             <div class="seals"><span class="seal">Sob encomenda</span><span class="seal">Valor sob avaliação</span><span class="seal">Personalização disponível</span></div>
-            <div class="card-actions"><button class="btn magenta" type="button" data-modal="institucionais">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%3F%2C%20quero%20or%3Famento%20para%20presentes%20simb%3Flicos%20ou%20institucionais%20personalizados." target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+            <div class="card-actions"><button class="btn magenta" type="button" data-modal="institucionais">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20pedir%20pelo%20WhatsApp.%0A%0AProduto%20desejado%3A%20Presentes%20simb%C3%B3licos%20%26%20institucionais%0AQuantidade%3A%20%0ATamanho%20aproximado%3A%20%0ACores%20desejadas%3A%20%0APersonaliza%C3%A7%C3%A3o%20desejada%3A%20%0ACidade%2FBairro%3A%20%0APrazo%20desejado%3A%20%0AObserva%C3%A7%C3%B5es%3A%20" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
           </div>
         </article>
 
@@ -888,10 +901,10 @@ body{
           <div class="product-body">
             <h3>Souvenirs de Vila Velha</h3>
             <p>Lembranças turísticas e produtos locais para pontos de venda.</p>
-            <p class="price-line">A partir de R$ 25,00</p>
-            <p class="variation-note">Valores podem variar conforme tamanho, quantidade, cores, acabamento e complexidade.</p>
+            <p class="price-line">R$ 65,00</p>
+            <p class="variation-note">Valor pode variar conforme tamanho, cores e acabamento.</p>
             <div class="seals"><span class="seal">Sob encomenda</span><span class="seal">Valor sob avaliação</span><span class="seal">Personalização disponível</span></div>
-            <div class="card-actions"><button class="btn magenta" type="button" data-modal="souvenirs">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%3F%2C%20quero%20pedir%20um%20souvenir%20de%20Vila%20Velha." target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+            <div class="card-actions"><button class="btn magenta" type="button" data-modal="souvenirs">Ver detalhes</button><a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20pedir%20pelo%20WhatsApp.%0A%0AProduto%20desejado%3A%20Souvenirs%20de%20Vila%20Velha%0AQuantidade%3A%20%0ATamanho%20aproximado%3A%20%0ACores%20desejadas%3A%20%0APersonaliza%C3%A7%C3%A3o%20desejada%3A%20%0ACidade%2FBairro%3A%20%0APrazo%20desejado%3A%20%0AObserva%C3%A7%C3%B5es%3A%20" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
           </div>
         </article>
       </div>
@@ -951,52 +964,56 @@ body{
           <p class="section-kicker">Preços e orçamento</p>
           <h2>Preços iniciais e orçamento</h2>
         </div>
-        <p>Alguns produtos da Zyvora Labs possuem preço inicial. Produtos personalizados, peças maiores, itens com mais cores, acabamento especial ou produção em quantidade são avaliados caso a caso.</p>
+        <p>Os valores informados são referências iniciais. O preço final pode variar conforme tamanho da peça, número de cores, tempo de impressão, acabamento, complexidade do modelo, quantidade solicitada e forma de entrega.</p>
       </div>
       <div class="price-table" aria-label="Tabela de preços iniciais">
         <div class="price-row head"><strong>Produto</strong><strong>Condição</strong><strong>Observação</strong></div>
-        <div class="price-row"><strong>Pet 3D personalizado</strong><span>Sob orçamento</span><span>Avaliação por foto, nível de detalhe e acabamento.</span></div>
-        <div class="price-row"><strong>Chaveiro NFC & QR Code</strong><span>A partir de R$ 49,90</span><span>Pode incluir link para WhatsApp, Instagram, Pix, card?pio ou p?gina.</span></div>
-        <div class="price-row"><strong>Luminárias personalizadas</strong><span>Sob orçamento</span><span>Varia conforme tamanho, material e acabamento.</span></div>
-        <div class="price-row"><strong>Nomes e letras 3D</strong><span>A partir de R$ 25,00</span><span>Valor depende do tamanho, fonte e cor.</span></div>
+        <div class="price-row"><strong>Pet 3D personalizado</strong><span>A partir de R$ 80,00</span><span>Valor depende do tamanho, nível de detalhe, cores e acabamento.</span></div>
+        <div class="price-row"><strong>Chaveiro NFC & QR Code</strong><span>A partir de R$ 25,00</span><span>Valor pode variar conforme tamanho, cores, NFC, QR Code e acabamento.</span></div>
+        <div class="price-row"><strong>Decoração para luminárias</strong><span>Sob orçamento</span><span>Varia conforme tamanho, material, acabamento, cores e complexidade. Componentes elétricos, quando incluídos, são acessórios de terceiros ou apoio/brinde.</span></div>
+        <div class="price-row"><strong>Nomes e letras 3D</strong><span>A partir de R$ 30,00</span><span>Valor varia conforme tamanho, fonte, cores e complexidade.</span></div>
         <div class="price-row"><strong>Brindes corporativos</strong><span>Sob orçamento por quantidade</span><span>Ideal para empresas, eventos e associações.</span></div>
         <div class="price-row"><strong>Decoração 3D premium</strong><span>Sob orçamento</span><span>Peças decorativas e objetos especiais.</span></div>
         <div class="price-row"><strong>Presentes simbólicos & institucionais</strong><span>Sob orçamento</span><span>Placas, troféus e homenagens.</span></div>
-        <div class="price-row"><strong>Souvenirs de Vila Velha</strong><span>A partir de R$ 25,00</span><span>Produtos locais e lembran?as tur?sticas.</span></div>
+        <div class="price-row"><strong>Souvenirs de Vila Velha</strong><span>R$ 65,00</span><span>Valor pode variar conforme tamanho, cores e acabamento.</span></div>
       </div>
     </section>
 
-
-
-    <!-- COMO COMPRAR -->
+<!-- COMO COMPRAR -->
     <section class="section commerce-section" id="como-comprar">
       <div class="section-head">
         <div>
           <p class="section-kicker">Compra assistida</p>
           <h2>Como comprar</h2>
         </div>
-        <p>Escolha uma linha, abra os detalhes e envie seu pedido pelo WhatsApp. A Zyvora confirma personaliza??o, valor e prazo antes de iniciar a produ??o.</p>
+        <p>Todo pedido é confirmado pelo WhatsApp antes da produção.</p>
       </div>
-      <div class="commerce-grid">
-        <article class="commerce-card"><span>01</span><h3>Escolha o produto</h3><p>Veja pre?o inicial, condi??o e possibilidades de personaliza??o.</p></article>
-        <article class="commerce-card"><span>02</span><h3>Envie a refer?ncia</h3><p>Compartilhe foto, logo, medida, cores e quantidade pelo WhatsApp.</p></article>
-        <article class="commerce-card"><span>03</span><h3>Confirme o or?amento</h3><p>Receba a avalia??o final de valor, prazo e viabilidade de produ??o.</p></article>
+      <div class="commerce-grid commerce-grid-four">
+        <article class="commerce-card"><span>01</span><h3>Escolha ou envie sua ideia</h3><p>Escolha um produto da vitrine ou compartilhe uma referência personalizada.</p></article>
+        <article class="commerce-card"><span>02</span><h3>Informe os detalhes</h3><p>Envie quantidade, cores, tamanho e personalização desejada.</p></article>
+        <article class="commerce-card"><span>03</span><h3>Receba a confirmação</h3><p>A Zyvora confirma preço, prazo e entrega ou frete.</p></article>
+        <article class="commerce-card"><span>04</span><h3>Aprove e pague com segurança</h3><p>Após aprovação, o pagamento poderá ser feito por Pix ou cartão por link seguro.</p></article>
       </div>
     </section>
 
-    <!-- PAGAMENTO E ENTREGA -->
+<!-- ENTREGA, FRETE E EMBALAGEM -->
     <section class="section alt commerce-section" id="pagamento-entrega">
       <div class="section-head">
         <div>
-          <p class="section-kicker">Pedido sob encomenda</p>
-          <h2>Pagamento e entrega</h2>
+          <p class="section-kicker">Envio sob encomenda</p>
+          <h2>Entrega, frete e embalagem</h2>
         </div>
-        <p>As condi??es s?o combinadas diretamente no atendimento, de acordo com o produto, quantidade, prazo e destino.</p>
+        <div>
+          <p>Os produtos da Zyvora Labs são feitos sob encomenda e embalados com proteção conforme o tipo, tamanho e fragilidade da peça.</p>
+          <p>O frete é calculado após a confirmação do produto, quantidade, tamanho e cidade de entrega.</p>
+          <p>O valor final pode incluir: <strong>produto personalizado + embalagem de proteção + frete ou entrega local.</strong></p>
+          <p>Enviamos com rastreio quando a entrega for realizada por Correios ou transportadora. Para Vila Velha, Vitória e região, a entrega pode ser combinada pelo WhatsApp.</p>
+          <p>Produtos de preço padrão poderão receber link de pagamento. Produtos personalizados passam por orçamento antes do pagamento.</p>
+        </div>
       </div>
-      <div class="commerce-grid">
-        <article class="commerce-card"><span>Pagamento</span><h3>Confirma??o pelo WhatsApp</h3><p>Forma e etapas de pagamento s?o informadas junto ao or?amento final.</p></article>
-        <article class="commerce-card"><span>Produ??o</span><h3>Prazo sob avalia??o</h3><p>O prazo considera complexidade, acabamento e fila de produ??o.</p></article>
-        <article class="commerce-card"><span>Entrega</span><h3>Retirada ou envio</h3><p>A disponibilidade e o custo de entrega s?o confirmados antes da produ??o.</p></article>
+      <div class="commerce-actions">
+        <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20link%20de%20pagamento%20seguro%20para%20meu%20pedido.%20Produto%3A%20%0ANome%3A%20%0AValor%2For%C3%A7amento%3A%20%0AObserva%C3%A7%C3%B5es%3A%20" target="_blank" rel="noopener">Solicitar link de pagamento</a>
+        <a class="btn outline" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20calcular%20a%20entrega%20do%20meu%20pedido.%20Produto%3A%20%0ACidade%2FBairro%3A%20%0ACEP%3A%20%0ATamanho%20aproximado%20da%20pe%C3%A7a%3A%20%0APrazo%20desejado%3A%20" target="_blank" rel="noopener">Calcular entrega pelo WhatsApp</a>
       </div>
     </section>
 
@@ -1004,8 +1021,8 @@ body{
     <section class="section" id="orcamento">
       <div class="final-cta">
         <div class="final-copy">
-          <h2>Voc? imagina. A Zyvora cria.</h2>
-          <p>Envie sua ideia pelo WhatsApp e receba orienta??o sobre pre?o, prazo, personaliza??o e possibilidade de produ??o.</p>
+          <h2>Você imagina. A Zyvora cria.</h2>
+          <p>Envie sua ideia pelo WhatsApp e receba orientação sobre preço, prazo, personalização e possibilidade de produção.</p>
         </div>
         <div class="modal-actions">
           <a class="btn whats" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20vi%20a%20Vitrine%20Zyvora%20Labs%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20um%20produto%20personalizado." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
@@ -1021,7 +1038,7 @@ body{
       <h2>Zyvora Labs</h2>
       <p>IA, criatividade e fabricação inteligente</p>
       <p>Vila Velha/ES</p>
-      <p class="footer-version">Vitrine Zyvora Labs v5.0 • Atualizado em 19/06/26 às 12:01</p>
+      <p class="footer-version">Vitrine Zyvora Labs v0.5.3 • Atualizado em 16/06/26 às 18:15</p>
     </div>
     <div class="footer-links">
       <a href="https://wa.me/5527981783433?text=Olá%2C%20vi%20a%20Vitrine%20Zyvora%20Labs%20e%20quero%20fazer%20um%20orçamento%20de%20um%20produto%20personalizado." target="_blank" rel="noopener">WhatsApp</a>
@@ -1039,6 +1056,7 @@ body{
       <div class="modal-content">
         <h2 id="modalTitle"></h2>
         <p id="modalText"></p>
+        <p id="modalCompliance" hidden></p>
         <div class="modal-meta">
           <div><strong>Condição</strong><span id="modalPrice"></span></div>
           <div><strong>Prazo</strong><span id="modalDeadline">Sob avaliação</span></div>
@@ -1085,20 +1103,21 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
 });
 
 const productDetails = {
-  pet: { title: "Pet 3D personalizado", image: "images/optimized/cards/card_pets_personalizados.webp", price: "Sob orçamento", text: "Produtos sob encomenda para transformar fotos e referências do pet em peças afetivas.", send: "Foto do pet, nome, estilo desejado e tamanho aproximado.", deadline: "Sob avaliação", video: "", gallery: ["images/optimized/CRISTAL1.webp", "images/optimized/BONECOS.webp"], wa: "Olá, quero orçamento para um Pet 3D personalizado." },
-  chaveiro: { title: "Chaveiro NFC & QR Code", image: "images/optimized/cards/card_nfc_brindes.webp", price: "A partir de R$ 49,90", text: "Peças conectadas para empresas, eventos e marcas, com orçamento conforme personalização.", send: "Logo, link de destino, quantidade e preferência de cor.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero pedir um Chaveiro NFC & QR Code. Pode me passar as opções?" },
-  luminarias: { title: "Luminárias personalizadas", image: "images/optimized/cards/card_luminarias_3d.webp", price: "Sob orçamento", text: "Luminárias sob encomenda para presentes, ambientes e decoração premium.", send: "Referência visual, medida desejada, cores e tipo de uso.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero orçamento para uma luminária personalizada em 3D." },
-  criativos: { title: "Nomes e letras 3D", image: "images/optimized/cards/card_articulados_criativos.webp", price: "A partir de R$ 25,00", text: "Nomes, letras e peças criativas produzidas sob encomenda para decorar e presentear.", send: "Nome ou palavra, tamanho, cores e referência de estilo.", deadline: "Sob avaliação", video: "", gallery: ["images/optimized/Amanda_the_Panda_3_3b69292061.webp", "images/optimized/Amanda_the_Panda_5_e21c26daad.webp", "images/optimized/Mesh_Pets_7_f2c9f919e9.webp", "images/optimized/Mesh_Pets_8_db57027dfd.webp", "images/optimized/Mesh_Pets_9_d83da73da2.webp"], wa: "Olá, quero pedir nomes ou letras 3D personalizados." },
+  pet: { title: "Pet 3D personalizado", image: "images/optimized/cards/card_pets_personalizados.webp", price: "A partir de R$ 80,00", text: "Produtos sob encomenda para transformar fotos e referências do pet em peças afetivas.", send: "Foto do pet, nome, estilo desejado e tamanho aproximado.", deadline: "Sob avaliação", video: "", gallery: ["images/optimized/CRISTAL1.webp", "images/optimized/BONECOS.webp"], wa: "Olá, quero orçamento para um Pet 3D personalizado." },
+  chaveiro: { title: "Chaveiro NFC & QR Code", image: "images/optimized/cards/card_nfc_brindes.webp", price: "A partir de R$ 25,00", text: "Peças conectadas para empresas, eventos e marcas, com orçamento conforme personalização.", send: "Logo, link de destino, quantidade e preferência de cor.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero pedir um Chaveiro NFC & QR Code. Pode me passar as opções?" },
+  luminarias: { title: "Decoração para luminárias", image: "images/optimized/cards/card_luminarias_3d.webp", price: "Sob orçamento", text: "Criamos peças decorativas em impressão 3D para compor projetos de iluminação, decoração e presentes personalizados.", compliance: "A Zyvora Labs produz a peça decorativa personalizada em 3D. Componentes elétricos, quando incluídos, são acessórios de terceiros ou enviados como apoio/brinde, sem caracterizar fabricação de produto elétrico certificado.", send: "Quantidade; tamanho aproximado; cores desejadas; tipo de ambiente; personalização desejada; cidade/bairro; prazo desejado.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero orçamento para uma peça decorativa 3D para luminária/iluminação da Zyvora Labs.\n\nQuantidade:\nTamanho aproximado:\nCores desejadas:\nTipo de ambiente:\nPersonalização desejada:\nCidade/Bairro:\nPrazo desejado:\nObservações:" },
+  criativos: { title: "Nomes e letras 3D", image: "images/optimized/cards/card_articulados_criativos.webp", price: "A partir de R$ 30,00", text: "Nomes, letras e peças criativas produzidas sob encomenda para decorar e presentear.", send: "Nome ou palavra, tamanho, cores e referência de estilo.", deadline: "Sob avaliação", video: "", gallery: ["images/optimized/Amanda_the_Panda_3_3b69292061.webp", "images/optimized/Amanda_the_Panda_5_e21c26daad.webp", "images/optimized/Mesh_Pets_7_f2c9f919e9.webp", "images/optimized/Mesh_Pets_8_db57027dfd.webp", "images/optimized/Mesh_Pets_9_d83da73da2.webp"], wa: "Olá, quero pedir nomes ou letras 3D personalizados." },
   brindes: { title: "Brindes corporativos", image: "images/optimized/associacoes/associacao_chaveiro_institucional.webp", price: "Sob orçamento por quantidade", text: "Brindes personalizados para empresas, eventos, associações e ações de relacionamento.", send: "Logo, quantidade, prazo, público da ação e ideia do brinde.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero orçamento para brindes corporativos personalizados." },
   decoracao: { title: "Decoração 3D premium", image: "images/optimized/cards/card_props_cosplays.webp", price: "Sob orçamento", text: "Objetos decorativos e funcionais com visual tecnológico para ambientes personalizados.", send: "Referência do ambiente, medidas, cores e estilo desejado.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero orçamento para uma peça de decoração 3D premium." },
   institucionais: { title: "Presentes simbólicos & institucionais", image: "images/optimized/cards/card_maconaria_outros.webp", price: "Sob orçamento", text: "Placas, troféus e presentes institucionais com personalização e valor simbólico.", send: "Nome, frase, logo, data, tipo de homenagem e quantidade.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero orçamento para presentes simbólicos ou institucionais personalizados." },
-  souvenirs: { title: "Souvenirs de Vila Velha", image: "images/optimized/vila_velha/vila_velha_chaveiro.webp", price: "A partir de R$ 25,00", text: "Souvenirs locais sob encomenda para pontos de venda, turismo e lembranças de Vila Velha.", send: "Tipo de souvenir, quantidade, cores e ponto de venda ou evento.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero pedir um souvenir de Vila Velha." },
+  souvenirs: { title: "Souvenirs de Vila Velha", image: "images/optimized/vila_velha/vila_velha_chaveiro.webp", price: "R$ 65,00", text: "Souvenirs locais sob encomenda para pontos de venda, turismo e lembranças de Vila Velha.", send: "Tipo de souvenir, quantidade, cores e ponto de venda ou evento.", deadline: "Sob avaliação", video: "", gallery: [], wa: "Olá, quero pedir um souvenir de Vila Velha." },
 };
 
 const modal = document.getElementById("productModal");
 const modalImage = document.getElementById("modalImage");
 const modalTitle = document.getElementById("modalTitle");
 const modalText = document.getElementById("modalText");
+const modalCompliance = document.getElementById("modalCompliance");
 const modalGallery = document.getElementById("modalGallery");
 const modalWhats = document.getElementById("modalWhats");
 const modalPrice = document.getElementById("modalPrice");
@@ -1110,6 +1129,8 @@ function openProductModal(key){
   if(!data) return;
   modalTitle.textContent = data.title;
   modalText.textContent = data.text;
+  modalCompliance.textContent = data.compliance || "";
+  modalCompliance.hidden = !data.compliance;
   modalImage.src = data.image;
   modalImage.alt = data.title;
   modalPrice.textContent = data.price;
