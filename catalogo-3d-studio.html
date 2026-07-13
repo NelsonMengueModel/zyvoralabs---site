@@ -1,361 +1,457 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zyvora 3D Studio | Catálogo de Zyvora 3D Studio — Catálogo de Produtos 3D Personalizados</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zyvora 3D Studio | Catálogo de Produtos 3D</title>
+<meta name="description" content="Catálogo Zyvora 3D Studio: produtos 3D personalizados, PET, brindes, NFC, articulados, Vila Velha, associações, luminárias e peças sob encomenda." />
+
 <style>
 :root{
-  --bg:#050607;
-  --bg2:#090d10;
+  --bg:#05070D;
+  --bg2:#090D10;
   --card:#101820;
-  --line:#1f3338;
-  --text:#ffffff;
-  --muted:#cfd8dc;
-  /* Suavizado: cores inspiradas no logo (turquesa e roxo pastel) */
-  /* Paleta ainda mais suave inspirada na logomarca: azul pastel e roxo lavanda */
-  --blue:#84D1F3;
-  --green:#CDA3E7;
-  --graphite:#151b20;
+  --line:#1F3338;
+  --text:#FFFFFF;
+  --muted:#CFD8DC;
+  --muted2:#9FB0B8;
+  --blue:#00E7FF;
   --magenta:#D946FF;
+  --green:#00FFB3;
+  --amber:#FFD166;
 }
 *{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-section{padding:72px 8%}
-p{color:var(--muted);font-size:18px;line-height:1.65}
-h1,h2,h3{letter-spacing:-.03em}
-h1{font-size:clamp(38px,6vw,70px);max-width:980px;line-height:1.02;margin:0 0 22px}
-h2{font-size:clamp(30px,4vw,46px);margin:0 0 18px}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+a{color:inherit}
+p{color:var(--muted);font-size:16px;line-height:1.62}
+h1,h2,h3{letter-spacing:-.035em}
+h1{font-size:clamp(36px,5.6vw,72px);line-height:1.02;margin:0 0 20px}
+h2{font-size:clamp(28px,4vw,46px);line-height:1.12;margin:0 0 18px;text-align:center}
 h3{font-size:22px;margin:0 0 12px}
-.small{font-size:15px}
-.highlight{color:var(--green)}
-.hero{min-height:95vh;display:flex;align-items:center;background:radial-gradient(circle at 80% 10%,rgba(var(--blue),.26),transparent 33%),radial-gradient(circle at 20% 80%,rgba(var(--green),.18),transparent 35%),linear-gradient(135deg,#050607,#111820 75%);position:relative;overflow:hidden}
-.hero-content{position:relative;z-index:1;max-width:1000px}
-.logo{width:150px;height:auto;margin-bottom:20px;filter:drop-shadow(0 0 10px rgba(0,0,0,0.5));}
-.badge{display:inline-block;border:1px solid var(--blue);color:var(--blue);padding:9px 16px;border-radius:40px;font-size:13px;margin-bottom:26px;letter-spacing:.12em;text-transform:uppercase;background:rgba(var(--blue),.06)}
-.buttons{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px}
-.btn{background:var(--blue);color:#001014;border:0;padding:16px 24px;border-radius:14px;font-weight:800;text-decoration:none;display:inline-block;box-shadow:0 0 26px rgba(var(--blue),.22)}
-.btn.secondary{background:transparent;border:1px solid var(--blue);color:var(--blue);box-shadow:none}
-.btn.green{background:var(--green);color:#001014;box-shadow:0 0 26px rgba(var(--green),.18)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:22px;margin-top:34px}
-.card{background:linear-gradient(180deg,var(--card),#090c0f);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 0 30px rgba(var(--blue),.08)}
-.card h3{color:var(--blue)}
+section{padding:70px 8%}
 .dark{background:var(--bg2)}
-.two{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
-.visual{min-height:360px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(circle at 70% 20%,rgba(var(--blue),.28),transparent 28%),radial-gradient(circle at 25% 75%,rgba(var(--green),.20),transparent 30%),linear-gradient(145deg,#111820,#050607);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;box-shadow:0 0 50px rgba(var(--blue),.1)}
-.visual span{font-size:42px;font-weight:900;color:white;text-shadow:0 0 20px rgba(var(--blue),.55)}
-.steps{counter-reset:step}
-.step:before{counter-increment:step;content:counter(step);display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#001014;width:38px;height:38px;border-radius:50%;font-weight:900;margin-bottom:16px}
-.product .btn{margin-top:12px;padding:12px 16px;font-size:14px}
-.cta{text-align:center;background:radial-gradient(circle,rgba(var(--blue),.22),transparent 44%),#050607}
-.faq details{background:#111820;border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:12px}
-.faq summary{cursor:pointer;font-weight:800;color:#fff}
+.center{text-align:center;max-width:940px;margin:0 auto}
+.blue{color:var(--blue)}
+.magenta{color:var(--magenta)}
+.green{color:var(--green)}
 
-/* Carousel styling for menu opções */
-.carousel{display:flex;overflow-x:auto;gap:18px;scroll-snap-type:x mandatory;padding-bottom:12px}
-.carousel::-webkit-scrollbar{display:none}
-.carousel-item{flex:0 0 auto;min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;scroll-snap-align:start}
-.carousel-item h3{margin:0 0 8px;color:var(--blue)}
-.carousel-item p{margin:0;color:var(--muted);font-size:16px}
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 8%;
+  background:rgba(5,7,13,.94);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px);
+}
+.logo-box{display:flex;align-items:center;gap:14px}
+.logo-img{
+  height:50px;
+  width:auto;
+  border-radius:10px;
+  border:1px solid rgba(0,231,255,.35);
+}
+.logo-text{
+  font-family:Arial Black, Arial, sans-serif;
+  font-size:23px;
+  letter-spacing:2px;
+  color:var(--blue);
+}
+.logo-text span{color:#fff;font-weight:300}
+nav{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.nav-link{color:var(--muted);text-decoration:none;font-size:14px;padding:9px 6px}
+.nav-link:hover{color:var(--blue)}
 
-/* Detailed sections hidden until targeted via anchor */
-.detail-section{display:none;padding:72px 8%}
-.detail-section:target{display:block}
+.btn{
+  display:inline-block;
+  border:0;
+  border-radius:12px;
+  padding:13px 20px;
+  font-weight:800;
+  text-decoration:none;
+  cursor:pointer;
+  background:var(--blue);
+  color:#031014;
+  box-shadow:0 0 24px rgba(0,231,255,.16);
+  transition:.2s ease;
+  text-align:center;
+}
+.btn:hover{transform:translateY(-1px);opacity:.94}
+.btn.secondary{background:transparent;color:var(--blue);border:1px solid var(--blue);box-shadow:none}
+.btn.magenta-btn{background:var(--magenta);color:#150018;box-shadow:0 0 24px rgba(217,70,255,.18)}
+.btn.green-btn{background:var(--green);color:#00140F;box-shadow:0 0 24px rgba(0,255,179,.15)}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;justify-content:center}
 
-.proof{border:1px dashed rgba(var(--blue),.4);background:rgba(var(--blue),.04)}
-footer{padding:34px 8%;text-align:center;color:#8fa3aa;background:#030404}
-.sticky{position:fixed;bottom:18px;right:18px;z-index:5}
-.sticky .btn{border-radius:999px;padding:14px 20px}
-@media(max-width:820px){section{padding:54px 6%}.two{grid-template-columns:1fr}.hero{min-height:auto;padding-top:72px;padding-bottom:72px}.buttons{flex-direction:column}.btn{text-align:center;width:100%}.sticky{left:16px;right:16px}.sticky .btn{width:100%}}
+.hero{
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 80% 12%, rgba(217,70,255,.16), transparent 34%),
+    radial-gradient(circle at 12% 82%, rgba(0,231,255,.15), transparent 38%),
+    linear-gradient(135deg,#05070D,#08111A 75%);
+  position:relative;
+  overflow:hidden;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,231,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,231,255,.035) 1px, transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(circle at center, black, transparent 73%);
+}
+.hero-inner{position:relative;max-width:1120px}
+.badge{
+  display:inline-block;
+  border:1px solid rgba(217,70,255,.65);
+  color:var(--magenta);
+  background:rgba(217,70,255,.07);
+  padding:9px 16px;
+  border-radius:999px;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:22px;
+}
+.hero p{font-size:19px;max-width:900px;margin:0 auto;color:#DDE7EA}
+
+.category-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-top:30px;
+}
+.category-nav a{
+  text-decoration:none;
+  color:var(--blue);
+  border:1px solid rgba(0,231,255,.35);
+  background:rgba(0,231,255,.04);
+  border-radius:999px;
+  padding:9px 14px;
+  font-size:14px;
+}
+.category-nav a:hover{background:rgba(0,231,255,.10)}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+  margin-top:30px;
+}
+.card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:420px;
+  padding:0;
+  background:linear-gradient(180deg,var(--card),#090C0F);
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  transition:.22s ease;
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(0,231,255,.42);
+  box-shadow:0 0 30px rgba(0,231,255,.08);
+}
+.card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  display:block;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.card-body{padding:22px}
+.card h3{border-left:4px solid var(--blue);padding-left:12px}
+.card h3.magenta-title{border-left-color:var(--magenta)}
+.card h3.green-title{border-left-color:var(--green)}
+.card h3.amber-title{border-left-color:var(--amber)}
+.card p{font-size:15px}
+.card .btn{width:100%;margin-top:14px}
+
+.feature{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:30px;
+  align-items:center;
+}
+.feature-panel{
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:34px;
+  background:
+    radial-gradient(circle at 82% 12%,rgba(217,70,255,.12),transparent 36%),
+    radial-gradient(circle at 15% 88%,rgba(0,231,255,.08),transparent 34%),
+    linear-gradient(145deg,#101820,#06090E);
+}
+.feature-img{
+  width:100%;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 0 28px rgba(217,70,255,.12);
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:28px;
+}
+.gallery figure{
+  margin:0;
+  background:linear-gradient(180deg,var(--card),#090C0F);
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+}
+.gallery img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  display:block;
+}
+.gallery figcaption{
+  padding:14px 16px;
+  color:var(--muted);
+  font-size:14px;
+}
+.cta{
+  text-align:center;
+  background:
+    radial-gradient(circle at center, rgba(217,70,255,.13), transparent 42%),
+    #05070D;
+}
+footer{
+  padding:42px 8%;
+  text-align:center;
+  color:var(--muted);
+  background:#020305;
+  border-top:1px solid var(--line);
+}
+@media(max-width:900px){
+  header{flex-direction:column;text-align:center}
+  nav{justify-content:center}
+  section{padding:54px 6%}
+  .hero{min-height:auto;padding-top:70px;padding-bottom:70px}
+  .buttons{flex-direction:column}
+  .btn{width:100%}
+  .feature{grid-template-columns:1fr}
+  .card{min-height:auto}
+}
 </style>
 </head>
+
 <body>
 
-<div style="position:sticky;top:0;z-index:999;background:rgba(5,7,13,.94);border-bottom:1px solid #1F3338;padding:12px 8%;backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;">
-  <a href="index.html" style="color:#00E7FF;text-decoration:none;font-weight:800;">← Voltar para Zyvora Labs</a>
-  <a href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20vim%20pelo%20cat%C3%A1logo%20do%20Zyvora%203D%20Studio%20e%20quero%20um%20or%C3%A7amento." target="_blank" style="background:#00FFB3;color:#00140F;text-decoration:none;font-weight:800;padding:10px 16px;border-radius:10px;">Pedir orçamento</a>
-</div>
-
-
-<section style="padding:64px 8%;background:#05070D;color:#fff;border-bottom:1px solid #1F3338;">
-  <div style="max-width:980px;">
-    <div style="display:inline-block;border:1px solid #D946FF;color:#D946FF;padding:8px 14px;border-radius:40px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;">Zyvora 3D Studio</div>
-    <h1 style="font-size:clamp(34px,5vw,62px);line-height:1.05;margin:0 0 18px;">Catálogo de produtos 3D personalizados.</h1>
-    <p style="font-size:18px;line-height:1.65;color:#CFD8DC;max-width:860px;">Produtos físicos, brindes, peças PET, chaveiros inteligentes, miniaturas, luminárias, associações, maçonaria, mascotes, colecionáveis e projetos sob encomenda. Esta é a vitrine comercial da operação física da Zyvora Labs.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;">
-      <a href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20do%20Zyvora%203D%20Studio." target="_blank" style="background:#D946FF;color:#150018;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:12px;">Solicitar orçamento</a>
-      <a href="#opcoes-vitrine" style="background:transparent;color:#00E7FF;border:1px solid #00E7FF;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:12px;">Ver opções</a>
-    </div>
+<header>
+  <div class="logo-box">
+    <img src="images/optimized/Logo Zyvoralabs.webp" class="logo-img" alt="Logo Zyvora Labs">
+    <div class="logo-text">ZYVORA <span>3D STUDIO</span></div>
   </div>
-</section>
+  <nav>
+    <a class="nav-link" href="index.html">Zyvora Labs</a>
+    <a class="nav-link" href="#produtos">Produtos</a>
+    <a class="nav-link" href="#pet">PET</a>
+    <a class="nav-link" href="#vila-velha">Vila Velha</a>
+    <a class="nav-link" href="#associacoes">Associações</a>
+    <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20vim%20pelo%20cat%C3%A1logo%20do%20Zyvora%203D%20Studio%20e%20quero%20um%20or%C3%A7amento." target="_blank">Orçamento</a>
+  </nav>
+</header>
 
-<div class="sticky"><a class="btn green" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20criar%20uma%20pe%C3%A7a%20personalizada%20com%20a%20Zyvora%20Labs.">WhatsApp</a></div>
-<section class="hero" id="topo">
-  <div class="hero-content">
-    <img src="zyvora_logo.png" alt="Zyvora 3D Studio logo" class="logo">
-    <div class="badge">ZYVORA LABS | GRIFE 3D</div>
-    <h1>Produtos 3D personalizados com tecnologia, design e exclusividade.</h1>
-    <p>A Zyvora 3D Studio cria peças únicas sob encomenda, com acabamento premium, personalização inteligente, NFC, QR Code e CareCode para marcas, empresas, eventos, PETs e presentes especiais.</p>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge">Catálogo Zyvora 3D Studio</div>
+    <h1>Produtos 3D personalizados, úteis e com identidade.</h1>
+    <p>Brindes, PET, NFC, chaveiros, miniaturas, luminárias, associações, souvenires, peças sob demanda e produtos especiais para empresas, grupos e presentes personalizados.</p>
     <div class="buttons">
-      <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20da%20Zyvora%20Labs.">Solicitar orçamento</a>
-      <a class="btn secondary" href="#produtos">Ver produtos</a>
-      <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20da%20Zyvora%20Labs.">Falar no WhatsApp</a>
+      <a class="btn magenta-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20do%20Zyvora%203D%20Studio." target="_blank">Solicitar orçamento</a>
+      <a class="btn secondary" href="index.html">Voltar para Zyvora Labs</a>
+    </div>
+    <div class="category-nav">
+      <a href="#produtos">Produtos principais</a>
+      <a href="#pet">Linha PET</a>
+      <a href="#articulados">Articulados</a>
+      <a href="#vila-velha">Vila Velha</a>
+      <a href="#associacoes">Associações</a>
     </div>
   </div>
 </section>
-<section id="opcoes-menu">
-  <h2>Opções de produtos</h2>
-  <div class="carousel">
-    <div class="carousel-item"><h3>Produtos com NFC &amp; CareCode</h3><p>Peças com NFC e CareCode que conectam o mundo físico ao digital.</p></div>
-    <div class="carousel-item"><h3>Chaveiros &amp; Articulados</h3><p>Chaveiros criativos, articulados e decorativos.</p></div>
-    <div class="carousel-item"><h3>Luminárias Artísticas 3D</h3><p>Luminárias com design artístico e impressão 3D.</p></div>
-    <div class="carousel-item"><h3>Área Pet</h3><p>Produtos personalizados para pets e tutores.</p></div>
-    <div class="carousel-item"><h3>Brindes &amp; Display</h3><p>Brindes corporativos e displays promocionais.</p></div>
-    <div class="carousel-item"><h3>Maçonaria &amp; Outros</h3><p>Miniaturas de pessoas, maçons e outros temas.</p></div>
-    <div class="carousel-item"><h3>Mascotes de Times</h3><p>Mascotes e bonecos inspirados em times esportivos.</p></div>
-    <div class="carousel-item"><h3>Props &amp; Cosplays</h3><p>Props e acessórios para cosplay e cenografia.</p></div>
-    <div class="carousel-item"><h3>Religiões</h3><p>Esculturas e miniaturas de figuras religiosas.</p></div>
-  </div>
-</section>
 
-<section id="lista-opcoes" class="dark">
-  <h2>Conheça todas as opções</h2>
+<section id="produtos" class="dark">
+  <div class="center">
+    <h2>Produtos e soluções Zyvora 3D Studio</h2>
+    <p>Uma vitrine objetiva com os principais nichos comerciais da operação física da Zyvora Labs.</p>
+  </div>
+
   <div class="grid">
-    <div class="card"><h3>Produtos com NFC &amp; CareCode</h3><p>Peças com NFC e CareCode para conectar o físico ao digital.</p><a class="btn secondary" href="#detalhe-nfc">Saiba mais</a></div>
-    <div class="card"><h3>Chaveiros &amp; Articulados</h3><p>Chaveiros e miniaturas articuladas personalizadas.</p><a class="btn secondary" href="#detalhe-chaveiros">Saiba mais</a></div>
-    <div class="card"><h3>Luminárias Artísticas 3D</h3><p>Luminárias exclusivas com impressão 3D.</p><a class="btn secondary" href="#detalhe-luminarias">Saiba mais</a></div>
-    <div class="card"><h3>Área Pet</h3><p>Produtos personalizados para pets e tutores.</p><a class="btn secondary" href="#detalhe-pet">Saiba mais</a></div>
-    <div class="card"><h3>Brindes &amp; Display</h3><p>Brindes corporativos e displays promocionais.</p><a class="btn secondary" href="#detalhe-brindes">Saiba mais</a></div>
-    <div class="card"><h3>Maçonaria &amp; Outros</h3><p>Miniaturas de pessoas e irmãos maçons.</p><a class="btn secondary" href="#detalhe-maconaria">Saiba mais</a></div>
-    <div class="card"><h3>Mascotes de Times</h3><p>Bonecos e mascotes inspirados em times esportivos.</p><a class="btn secondary" href="#detalhe-mascotes">Saiba mais</a></div>
-    <div class="card"><h3>Props &amp; Cosplays</h3><p>Acessórios, peças e props para cosplay.</p><a class="btn secondary" href="#detalhe-props">Saiba mais</a></div>
-    <div class="card"><h3>Religiões</h3><p>Esculturas de santos católicos e figuras religiosas.</p><a class="btn secondary" href="#detalhe-religioes">Saiba mais</a></div>
+    <article class="card">
+      <img src="images/optimized/cards/card_nfc_brindes.png" alt="NFC, Core Code e brindes">
+      <div class="card-body">
+        <h3>NFC, Core Code & Brindes</h3>
+        <p>Chaveiros, displays e peças inteligentes que conectam o produto físico ao WhatsApp, Instagram, cardápio, Pix ou página do cliente.</p>
+        <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20NFC%2C%20Core%20Code%20ou%20brindes." target="_blank">Pedir orçamento</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/optimized/cards/card_pets_personalizados.png" alt="Linha PET personalizada">
+      <div class="card-body">
+        <h3 class="magenta-title">Linha PET</h3>
+        <p>Miniaturas, chaveiros e plaquinhas afetivas para eternizar o carinho por cães e gatos.</p>
+        <a class="btn magenta-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20produto%20PET%20personalizado." target="_blank">Criar produto PET</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/optimized/cards/card_articulados_criativos.png" alt="Articulados criativos">
+      <div class="card-body">
+        <h3>Articulados & Criativos</h3>
+        <p>Dragões, criaturas, bonecos e colecionáveis com forte apelo visual, foco em impressão rápida e produtos vendáveis.</p>
+        <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20produtos%20articulados%20ou%20colecion%C3%A1veis." target="_blank">Pedir orçamento</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/optimized/cards/card_luminarias_3d.png" alt="Luminárias 3D">
+      <div class="card-body">
+        <h3>Decoração & Luminárias</h3>
+        <p>Peças decorativas e luminárias 3D para ambientes, presentes, mesas, vitrines e projetos personalizados.</p>
+        <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20lumin%C3%A1ria%20ou%20pe%C3%A7a%20decorativa%203D." target="_blank">Projetar peça</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/optimized/cards/card_mascotes_times.png" alt="Mascotes de times">
+      <div class="card-body">
+        <h3>Mascotes de Times</h3>
+        <p>Peças temáticas, decorativas e colecionáveis para torcedores, datas especiais e presentes personalizados.</p>
+        <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20mascote%20ou%20pe%C3%A7a%20tem%C3%A1tica." target="_blank">Pedir mascote</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/optimized/cards/card_maconaria_outros.png" alt="Maçonaria e outros">
+      <div class="card-body">
+        <h3>Maçonaria & Outros</h3>
+        <p>Peças simbólicas, miniaturas, homenagens e objetos personalizados para grupos, irmãos e ocasiões especiais.</p>
+        <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20personalizada%20para%20ma%C3%A7onaria%20ou%20grupo." target="_blank">Pedir peça</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/optimized/cards/card_props_cosplays.png" alt="Props e cosplays">
+      <div class="card-body">
+        <h3>Props & Cosplays</h3>
+        <p>Acessórios, peças cenográficas, itens decorativos e produtos sob medida para fantasia, cosplay e eventos.</p>
+        <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20para%20prop%2C%20cosplay%20ou%20evento." target="_blank">Solicitar projeto</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/optimized/cards/card_religioes.png" alt="Religiões e esculturas">
+      <div class="card-body">
+        <h3>Religiões</h3>
+        <p>Esculturas, santos, orixás e peças simbólicas produzidas com cuidado, respeito e personalização.</p>
+        <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20religiosa%20personalizada." target="_blank">Pedir peça</a>
+      </div>
+    </article>
   </div>
 </section>
 
-<section>
-  <div class="two">
-    <div>
-      <h2>O que fazemos</h2>
-      <p>Transformamos ideias em produtos físicos personalizados usando impressão 3D, design criativo e tecnologia inteligente. Cada peça pode ser feita sob encomenda, com cores, nomes, marcas, QR Code, NFC ou CareCode.</p>
+<section id="pet">
+  <div class="feature">
+    <div class="feature-panel">
+      <h2 style="text-align:left">Linha PET personalizada</h2>
+      <p>Produtos afetivos para tutores: miniaturas, lembranças, chaveiros, plaquinhas e peças com QR Code ou CareCode.</p>
+      <p>A linha PET é uma das principais frentes emocionais da Zyvora 3D Studio: transforma fotos, histórias e afeto em objetos físicos personalizados.</p>
+      <div class="buttons" style="justify-content:flex-start">
+        <a class="btn magenta-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20criar%20um%20produto%20PET%20personalizado." target="_blank">Criar meu PET</a>
+      </div>
     </div>
-    <div class="visual"><span>3D + DESIGN<br>+ TECNOLOGIA</span></div>
+    <img class="feature-img" src="images/optimized/CRISTAL1.webp" alt="Cristal - Linha PET Zyvora 3D Studio">
   </div>
-  <div class="grid">
-    <div class="card"><h3>Brindes corporativos</h3><p>Produtos personalizados para empresas, eventos, associações e campanhas.</p></div>
-    <div class="card"><h3>Chaveiros NFC</h3><p>Peças inteligentes que abrem WhatsApp, Instagram, cardápios e portfólios.</p></div>
-    <div class="card"><h3>Produtos PET</h3><p>Plaquinhas, esculturas e identificadores com opção de CareCode.</p></div>
-    <div class="card"><h3>Presentes criativos</h3><p>Peças exclusivas com nomes, datas, frases e detalhes únicos.</p></div>
-  </div>
-</section>
-<section class="dark">
-  <h2>Tecnologia NFC, QR Code e <span class="highlight">CareCode</span></h2>
-  <p>Mais do que peças bonitas, criamos produtos inteligentes. Com NFC, QR Code e CareCode, uma peça física pode abrir um cardápio digital, Instagram, WhatsApp, portfólio, página de produto, identificação PET, currículo, cartão de visita ou página personalizada.</p>
-  <div class="grid">
-    <div class="card"><h3>Chaveiro NFC</h3><p>Encoste no celular e abra um link personalizado.</p></div>
-    <div class="card"><h3>QR Code para cardápio</h3><p>Ideal para pizzarias, restaurantes, lanchonetes e cafés.</p></div>
-    <div class="card"><h3>CareCode PET</h3><p>Identificação digital para pets, objetos e peças especiais.</p></div>
-    <div class="card"><h3>Brinde inteligente</h3><p>Conecte sua marca ao cliente de forma moderna.</p></div>
-  </div>
-</section>
-<section>
-  <h2>Linhas de produtos</h2>
-  <div class="grid">
-    <div class="card"><h3>Linha Corporativa</h3><p>Brindes personalizados para empresas, eventos, associações e campanhas.</p></div>
-    <div class="card"><h3>NFC Smart Gifts</h3><p>Chaveiros, placas e peças inteligentes que conectam o físico ao digital.</p></div>
-    <div class="card"><h3>Linha PET</h3><p>Peças personalizadas para tutores apaixonados por seus pets.</p></div>
-    <div class="card"><h3>Linha Copa 2026</h3><p>Produtos temáticos para torcer, presentear e vender durante a Copa.</p></div>
-    <div class="card"><h3>Presentes Personalizados</h3><p>Peças exclusivas com nomes, datas, frases e detalhes únicos.</p></div>
-    <div class="card"><h3>Organizadores Premium</h3><p>Produtos funcionais para escritório, casa e rotina.</p></div>
-    <div class="card"><h3>Linha Maçônica &amp; Pessoal</h3><p>Peças personalizadas para pessoas e irmãos maçons.</p></div>
+
+  <div class="gallery">
+    <figure><img src="images/optimized/BONECOS.webp" alt="Bonecos personalizados"><figcaption>Bonecos e lembranças personalizadas.</figcaption></figure>
+    <figure><img src="images/optimized/Mesh_Pets_7_f2c9f919e9.webp" alt="Mesh Pets 7"><figcaption>Peças PET e colecionáveis.</figcaption></figure>
+    <figure><img src="images/optimized/Mesh_Pets_8_db57027dfd.webp" alt="Mesh Pets 8"><figcaption>Produtos afetivos e personalizados.</figcaption></figure>
+    <figure><img src="images/optimized/Mesh_Pets_9_d83da73da2.webp" alt="Mesh Pets 9"><figcaption>Miniaturas, chaveiros e personagens.</figcaption></figure>
   </div>
 </section>
 
+<section id="articulados" class="dark">
+  <div class="center">
+    <h2>Articulados, colecionáveis e produtos criativos</h2>
+    <p>Peças com apelo visual, bom potencial de venda e produção objetiva.</p>
+  </div>
 
-
-<!-- Secções de detalhes (aparecem quando âncora é acessada) -->
-<section id="detalhe-nfc" class="detail-section dark">
-  <h2>Produtos com NFC &amp; CareCode</h2>
-  <p>Peças equipadas com NFC e CareCode para abrir links digitais, cardápios, portfólios e identificar pets ou objetos. Chaveiros, placas e itens com tecnologia sem contato.</p>
-  <!-- Coloque aqui uma foto ilustrativa. Exemplo: <img src="imagens/nfc-exemplo.jpg" alt="Produto com NFC"> -->
-  <!-- Exemplo de vídeo curto: <video src="videos/demo-nfc.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section id="detalhe-chaveiros" class="detail-section dark">
-  <h2>Chaveiros &amp; Articulados</h2>
-  <p>Chaveiros criativos, articulados e decorativos, com formas divertidas, logos ou personagens personalizados. Ideais para presentear e colecionar.</p>
-<!-- Galeria de imagens de articulados. As imagens dos arquivos que começam com AMANDA_THE_Panda e Mesh_Pets devem ser adicionadas aqui. Quando os arquivos estiverem disponíveis no servidor, basta garantir que os nomes correspondam ao padrão especificado. -->
-<div class="img-gallery">
-  <img src="AMANDA_THE_Panda1.png" alt="Amanda The Panda articulado" class="card-img" style="width: 100%; margin-bottom: 12px; border-radius: 10px; border: 1px solid var(--line);">
-  <img src="AMANDA_THE_Panda2.png" alt="Amanda The Panda articulado" class="card-img" style="width: 100%; margin-bottom: 12px; border-radius: 10px; border: 1px solid var(--line);">
-  <img src="Mesh_Pets1.png" alt="Mesh Pets articulado" class="card-img" style="width: 100%; margin-bottom: 12px; border-radius: 10px; border: 1px solid var(--line);">
-  <img src="Mesh_Pets2.png" alt="Mesh Pets articulado" class="card-img" style="width: 100%; margin-bottom: 12px; border-radius: 10px; border: 1px solid var(--line);">
-</div>
-
-  <!-- Exemplo de vídeo: <video src="videos/chaveiros.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section id="detalhe-luminarias" class="detail-section dark">
-  <h2>Luminárias Artísticas 3D</h2>
-  <p>Luminárias decorativas com design artístico, impressão 3D e iluminação LED. Crie ambientes únicos com peças exclusivas.</p>
-  <!-- Coloque aqui uma foto ilustrativa. Exemplo: <img src="imagens/luminaria-exemplo.jpg" alt="Luminária 3D"> -->
-  <!-- Exemplo de vídeo: <video src="videos/luminaria.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section id="detalhe-pet" class="detail-section dark">
-  <h2>Área Pet</h2>
-  <p>Plaquinhas de identificação, esculturas, alimentadores e acessórios personalizados para pets, com opção de CareCode para segurança e informação.</p>
-  <!-- Coloque aqui uma foto ilustrativa. Exemplo: <img src="imagens/pet-exemplo.jpg" alt="Peça para pets"> -->
-  <!-- Exemplo de vídeo: <video src="videos/pet.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section id="detalhe-brindes" class="detail-section dark">
-  <h2>Brindes &amp; Display</h2>
-  <p>Brindes corporativos, displays e stands promocionais feitos sob medida para eventos, campanhas e divulgação de marca.</p>
-  <!-- Coloque aqui uma foto ilustrativa. Exemplo: <img src="imagens/brinde-exemplo.jpg" alt="Brinde corporativo"> -->
-  <!-- Exemplo de vídeo: <video src="videos/brinde.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section id="detalhe-maconaria" class="detail-section dark">
-  <h2>Maçonaria &amp; Outros</h2>
-  <p>Miniaturas de pessoas, irmãos maçons e outras figuras significativas. Esculturas personalizadas para homenagens e coleções.</p>
-  <!-- Coloque aqui uma foto ilustrativa. Exemplo: <img src="imagens/maconaria-exemplo.jpg" alt="Peça maçonaria"> -->
-  <!-- Exemplo de vídeo: <video src="videos/maconaria.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section id="detalhe-mascotes" class="detail-section dark">
-  <h2>Mascotes de Times</h2>
-  <p>Bonecos e mascotes inspirados em times esportivos para decorar, colecionar ou presentear fãs.</p>
-  <!-- Coloque aqui uma foto ilustrativa. Exemplo: <img src="imagens/mascote-exemplo.jpg" alt="Mascote de time"> -->
-  <!-- Exemplo de vídeo: <video src="videos/mascote.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section id="detalhe-props" class="detail-section dark">
-  <h2>Props &amp; Cosplays</h2>
-  <p>Acessórios, armas, armaduras e peças para cosplay e cenografia, produzidos com alta fidelidade e acabamento.</p>
-  <!-- Coloque aqui uma foto ilustrativa. Exemplo: <img src="imagens/props-exemplo.jpg" alt="Prop para cosplay"> -->
-  <!-- Exemplo de vídeo: <video src="videos/props.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section id="detalhe-religioes" class="detail-section dark">
-  <h2>Religiões</h2>
-  <p>Esculturas e miniaturas de santos católicos, pais de santo, orixás e outras figuras religiosas para homenagear e decorar.</p>
-  <!-- Coloque aqui uma foto ilustrativa. Exemplo: <img src="imagens/religioes-exemplo.jpg" alt="Escultura religiosa"> -->
-  <!-- Exemplo de vídeo: <video src="videos/religioes.mp4" controls></video> -->
-  <a class="btn secondary" href="#lista-opcoes">Voltar</a>
-</section>
-
-<section class="dark steps">
-  <h2>Como funciona</h2>
-  <div class="grid">
-    <div class="card step"><h3>Envie sua ideia</h3><p>Você envia nome, marca, referência ou objetivo da peça.</p></div>
-    <div class="card step"><h3>Criamos o conceito</h3><p>A Zyvora define o melhor formato visual e funcional.</p></div>
-    <div class="card step"><h3>Produzimos em 3D</h3><p>A peça é impressa com acabamento personalizado.</p></div>
-    <div class="card step"><h3>Adicionamos tecnologia</h3><p>Incluímos NFC, QR Code ou CareCode quando necessário.</p></div>
-    <div class="card step"><h3>Você recebe</h3><p>Uma peça exclusiva, pronta para usar, vender ou presentear.</p></div>
+  <div class="gallery">
+    <figure><img src="images/optimized/Amanda_the_Panda_3_3b69292061.webp" alt="Amanda the Panda 3"><figcaption>Amanda The Panda — peça criativa.</figcaption></figure>
+    <figure><img src="images/optimized/Amanda_the_Panda_5_e21c26daad.webp" alt="Amanda the Panda 5"><figcaption>Personagens, colecionáveis e miniaturas.</figcaption></figure>
+    <figure><img src="images/optimized/cards/card_articulados_criativos.png" alt="Articulados criativos"><figcaption>Linha articulados e criativos.</figcaption></figure>
   </div>
 </section>
-<section>
-  <h2>Por que escolher a Zyvora 3D Studio</h2>
-  <div class="grid">
-    <div class="card"><h3>Exclusividade</h3><p>Produtos únicos e sob encomenda.</p></div>
-    <div class="card"><h3>Design premium</h3><p>Aparência moderna, tecnológica e sofisticada.</p></div>
-    <div class="card"><h3>Personalização</h3><p>Nome, marca, cor, função e tecnologia.</p></div>
-    <div class="card"><h3>Atendimento direto</h3><p>Orçamentos e pedidos pelo WhatsApp.</p></div>
+
+<section id="vila-velha">
+  <div class="center">
+    <h2>Souvenirs e linha Vila Velha</h2>
+    <p>Produtos personalizados inspirados no turismo local, lembranças, chaveiros, porta-latinhas e pequenos presentes.</p>
+  </div>
+
+  <div class="gallery">
+    <figure><img src="images/optimized/vila_velha/vila_velha_barquinho.png" alt="Barquinho Vila Velha"><figcaption>Barquinho decorativo.</figcaption></figure>
+    <figure><img src="images/optimized/vila_velha/vila_velha_chaveiro.png" alt="Chaveiro Vila Velha"><figcaption>Chaveiro turístico.</figcaption></figure>
+    <figure><img src="images/optimized/vila_velha/vila_velha_ima_geladeira.png" alt="Ímã Vila Velha"><figcaption>Ímã de geladeira.</figcaption></figure>
+    <figure><img src="images/optimized/vila_velha/vila_velha_placa_souvenir.png" alt="Placa souvenir Vila Velha"><figcaption>Placa souvenir.</figcaption></figure>
+    <figure><img src="images/optimized/vila_velha/vila_velha_porta_latinha.png" alt="Porta latinha Vila Velha"><figcaption>Porta-latinha personalizado.</figcaption></figure>
   </div>
 </section>
-<section id="produtos" class="dark"> 
-  <h2>Produtos em destaque</h2>
 
-  <div class="grid">
-    <div class="card product">
-      <h3>Chaveiro inteligente NFC</h3>
-      <p>Abre WhatsApp, Instagram, cardápios, portfólios, contatos ou páginas comerciais.</p>
-      <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20chaveiro%20NFC%20da%20Zyvora%20Labs.">Pedir orçamento</a>
-    </div>
+<section id="associacoes" class="dark">
+  <div class="center">
+    <h2>Associações, grupos e instituições</h2>
+    <p>Produtos personalizados para campanhas, eventos, grupos, lembranças, brindes e identidade institucional.</p>
+  </div>
 
-    <div class="card product">
-  <h3>Miniatura PET personalizada</h3>
-  <!-- Foto principal da miniatura PET (Cristal) -->
-  <img src="CRISTAL1.jpeg" class="card-img pet-highlight" alt="Cristal - Miniatura PET Zyvora 3D Studio" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--magenta); margin-bottom: 12px; box-shadow: 0 0 15px rgba(217,70,255,0.25);">
-  <p>Uma lembrança afetiva, decorativa e especial para eternizar o carinho pelo seu pet.</p>
-  <!-- Foto adicional (Bonecos) colocada na parte inferior do card, conforme solicitado. Substitua o nome do arquivo pelo nome exato da imagem quando ela estiver disponível. -->
-  <img src="BONECOS.png" class="card-img pet-highlight" alt="Bonecos personalizados Zyvora 3D Studio" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--magenta); margin-bottom: 12px; box-shadow: 0 0 15px rgba(217,70,255,0.25);">
-  <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20miniatura%20PET%20personalizada.">Criar meu PET</a>
-</div>
-
-    <div class="card product">
-      <h3>Pet Memorial com CareCode</h3>
-      <p>Peça de homenagem com nome, data, frase e acesso digital a uma memória especial.</p>
-      <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20criar%20uma%20lembran%C3%A7a%20eterna%20para%20meu%20pet.">Quero eternizar meu pet</a>
-    </div>
-
-    <div class="card product">
-      <h3>Luminária artística customizada</h3>
-      <p>Peças exclusivas com efeitos de luz para arquitetura, decoração e ambientes modernos.</p>
-      <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20projetar%20uma%20lumin%C3%A1ria%20personalizada.">Projetar luminária</a>
-    </div>
+  <div class="gallery">
+    <figure><img src="images/optimized/associacoes/associacao_chaveiro_institucional.png" alt="Chaveiro institucional"><figcaption>Chaveiro institucional.</figcaption></figure>
+    <figure><img src="images/optimized/associacoes/associacao_porta_retrato.png" alt="Porta retrato associação"><figcaption>Porta-retrato personalizado.</figcaption></figure>
+    <figure><img src="images/optimized/associacoes/associacao_suporte_oculos.png" alt="Suporte óculos associação"><figcaption>Suporte para óculos.</figcaption></figure>
+    <figure><img src="images/optimized/associacoes/associacao_suporte_smartphone.png" alt="Suporte smartphone associação"><figcaption>Suporte para smartphone.</figcaption></figure>
+    <figure><img src="images/optimized/associacoes/associacao_trofeu_mesa.png" alt="Troféu de mesa associação"><figcaption>Troféu de mesa.</figcaption></figure>
   </div>
 </section>
-<section>
-  <h2>Para empresas</h2>
-  <p>A Zyvora 3D Studio desenvolve peças personalizadas para empresas que querem sair do comum. Criamos brindes, chaveiros, placas, displays e produtos inteligentes com QR Code ou NFC para divulgar cardápios, WhatsApp, redes sociais, catálogos, eventos e campanhas.</p>
-  <p class="small">Restaurantes • Pizzarias • Barbearias • Clínicas • Academias • Lojas • Construtoras • Associações • Eventos • Profissionais autônomos</p>
-</section>
-<section class="dark">
-  <h2>Seu PET também pode ter uma peça única.</h2>
-  <p>Criamos peças personalizadas para PETs, como plaquinhas, esculturas, lembranças, identificadores e produtos com CareCode. Uma forma criativa, afetiva e tecnológica de eternizar o carinho pelo seu companheiro.</p>
-</section>
-<section>
-  <h2>Exclusividade Zyvora</h2>
-  <p>Na Zyvora 3D Studio, cada peça nasce de uma ideia. Não trabalhamos apenas com produtos prontos: criamos objetos com identidade, propósito e presença. Cada detalhe pode representar uma pessoa, uma marca, uma história ou uma ocasião especial.</p>
-</section>
-<section class="dark">
-  <h2>Prova social</h2>
-  <div class="grid">
-    <div class="card proof"><h3>Fotos de clientes</h3><p>Espaço para inserir entregas reais.</p></div>
-    <div class="card proof"><h3>Depoimentos</h3><p>Espaço para comentários de clientes.</p></div>
-    <div class="card proof"><h3>Bastidores</h3><p>Mostre a produção e o acabamento das peças.</p></div>
-  </div>
-</section>
+
 <section class="cta">
-  <h2>Quer criar uma peça exclusiva?</h2>
-  <p>Fale com a Zyvora 3D Studio e transforme sua ideia em um produto personalizado, moderno e inteligente.</p>
-  <div class="buttons" style="justify-content:center">
-    <a class="btn green" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20criar%20uma%20pe%C3%A7a%20exclusiva%20com%20a%20Zyvora%20Labs.">Chamar no WhatsApp</a>
-    <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento.">Solicitar orçamento</a>
-    <a class="btn secondary" href="#produtos">Ver portfólio</a>
+  <h2>Quer transformar uma ideia em produto físico?</h2>
+  <p>Fale com o Zyvora 3D Studio e envie sua referência, foto, logo ou necessidade.</p>
+  <div class="buttons">
+    <a class="btn magenta-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20fazer%20um%20produto%203D%20personalizado." target="_blank">Pedir orçamento</a>
+    <a class="btn secondary" href="index.html">Voltar para Zyvora Labs</a>
   </div>
 </section>
-<section class="faq">
-  <h2>Perguntas frequentes</h2>
-  <details><summary>A Zyvora faz peças sob encomenda?</summary><p>Sim. Trabalhamos com peças personalizadas conforme a ideia do cliente.</p></details>
-  <details><summary>Posso colocar minha marca?</summary><p>Sim. Podemos incluir logotipo, nome, cores e QR Code da sua empresa.</p></details>
-  <details><summary>O que é NFC?</summary><p>É uma tecnologia que permite abrir links ao aproximar o celular da peça.</p></details>
-  <details><summary>O que é CareCode?</summary><p>É uma identificação digital que pode ser usada em PETs, objetos e produtos personalizados.</p></details>
-  <details><summary>Posso pedir apenas uma unidade?</summary><p>Sim. Podemos produzir uma peça única ou lotes para empresas.</p></details>
-  <details><summary>Fazem brindes para empresas?</summary><p>Sim. Criamos brindes personalizados para empresas, eventos e campanhas.</p></details>
-  <details><summary>Quanto tempo leva para produzir?</summary><p>O prazo depende da complexidade, quantidade e acabamento da peça.</p></details>
-  <details><summary>Posso escolher as cores?</summary><p>Sim. As cores podem ser definidas conforme o projeto e disponibilidade dos materiais.</p></details>
-  <details><summary>Vocês enviam para outras cidades?</summary><p>Sim. Podemos enviar para outras cidades mediante cotação de frete.</p></details>
-  <details><summary>Como faço um orçamento?</summary><p>Chame no WhatsApp e envie sua ideia, referência, quantidade e prazo desejado.</p></details>
-</section>
+
 <footer>
-  Zyvora 3D Studio — Produtos 3D personalizados, inteligentes e exclusivos.<br>
-  Domínio Nacional:&nbsp;
-  <a href="https://zyvoralabs.com.br" target="_blank" style="color:var(--blue);text-decoration:none;">zyvoralabs.com.br</a>
-  &nbsp;|&nbsp;
-  Domínio Global/Tecnológico:&nbsp;
-  <a href="https://zyvora.io" target="_blank" style="color:var(--blue);text-decoration:none;">zyvora.io</a><br>
-  E-mail:&nbsp;<a href="mailto:nelson@zyvora.io" style="color:var(--blue);text-decoration:none;">nelson@zyvora.io</a>
+  <strong>Zyvora 3D Studio</strong><br>
+  Loja, fabricação digital, prototipagem e produtos 3D personalizados.<br>
+  Uma unidade operacional da <span class="blue">Zyvora Labs</span>.
 </footer>
+
 </body>
 </html>
