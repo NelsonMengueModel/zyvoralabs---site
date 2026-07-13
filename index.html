@@ -1,868 +1,839 @@
-<!--
-ZYVORA LABS | INDEX FINAL
-Última alteração: 14/06/26 - 09:47 - America/Sao_Paulo
-Versão: index_final_zyvora_labs_v9_modal_corrigido
-Observação: corrigido clique do botão Saiba Mais; onclick sem barras invertidas; modal funcional.
--->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zyvora Labs | Produtos 3D Personalizados e Brindes Inteligentes</title>
-<meta name="description" content="Zyvora Labs - Produtos 3D personalizados, brindes para associações, lembranças de Vila Velha, pets, mascotes e peças sob encomenda.">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zyvora Labs | Tecnologia, IA, Impressão 3D e Plataforma Viva</title>
+<meta name="description" content="Zyvora Labs cria tecnologia a partir da operação real: Zyvora 3D, 3DFlow, IA operacional e Plataforma Viva para pequenos negócios técnicos e criativos." />
 
 <style>
 :root{
   --bg:#05070D;
+  --bg2:#090D10;
   --card:#101820;
-  --card2:#080B10;
+  --card2:#0B1118;
   --line:#1F3338;
   --text:#FFFFFF;
   --muted:#CFD8DC;
+  --muted2:#9FB0B8;
   --blue:#00E7FF;
   --magenta:#D946FF;
-  --gold:#D5A84A;
+  --green:#00FFB3;
+  --electric:#3A7BFF;
+  --amber:#FFD166;
 }
-
 *{box-sizing:border-box;scroll-behavior:smooth}
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:var(--bg);
   color:var(--text);
+  overflow-x:hidden;
 }
-img{max-width:100%;display:block}
-p{color:var(--muted);line-height:1.6}
-a{text-decoration:none;color:inherit}
+a{color:inherit}
+p{color:var(--muted);font-size:16px;line-height:1.65}
+h1,h2,h3{letter-spacing:-.03em}
+h1{
+  font-size:clamp(34px,6vw,76px);
+  line-height:1.04;
+  margin:0 0 22px;
+}
+h2{
+  font-size:clamp(28px,4vw,48px);
+  line-height:1.12;
+  margin:0 0 18px;
+  text-align:center;
+}
+h3{font-size:22px;margin:0 0 12px}
+section{padding:72px 8%}
+.dark{background:var(--bg2)}
+.center{max-width:930px;margin:0 auto;text-align:center}
+.small{font-size:14px;color:var(--muted2)}
+.blue{color:var(--blue)}
+.magenta{color:var(--magenta)}
+.green{color:var(--green)}
+.amber{color:var(--amber)}
 
 header{
   position:sticky;
   top:0;
-  z-index:50;
+  z-index:100;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  padding:16px 7%;
-  background:rgba(5,7,13,.94);
+  justify-content:space-between;
+  gap:18px;
+  padding:16px 8%;
+  background:rgba(5,7,13,.92);
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(12px);
 }
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:24px;
-  font-weight:900;
+.logo-box{display:flex;align-items:center;gap:14px}
+.logo-img{
+  width:auto;
+  height:50px;
+  border-radius:10px;
+  border:1px solid rgba(0,231,255,.35);
+}
+.logo-text{
+  font-family:Arial Black, Arial, sans-serif;
+  font-size:23px;
   letter-spacing:2px;
   color:var(--blue);
 }
-
-.logo img{
-  width:58px;
-  height:38px;
-  object-fit:contain;
-  border:1px solid rgba(0,231,255,.5);
-  border-radius:8px;
+.logo-text span{color:#fff;font-weight:300}
+nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.nav-link{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+  padding:10px 8px;
 }
-
-.logo span{color:#fff;font-weight:500}
+.nav-link:hover{color:var(--blue)}
 
 .btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  padding:12px 20px;
-  border-radius:10px;
-  background:var(--blue);
-  color:#020305;
-  font-weight:900;
-}
-
-.btn-outline{
-  background:transparent;
-  color:var(--blue);
-  border:1px solid var(--blue);
-  padding:10px 14px;
-  border-radius:9px;
+  display:inline-block;
+  border:0;
+  border-radius:12px;
+  padding:14px 22px;
   font-weight:800;
-  margin-top:auto;
+  text-decoration:none;
+  cursor:pointer;
+  background:var(--blue);
+  color:#031014;
+  box-shadow:0 0 24px rgba(0,231,255,.16);
+  transition:.2s ease;
   text-align:center;
 }
+.btn:hover{transform:translateY(-1px);opacity:.94}
+.btn.secondary{background:transparent;color:var(--blue);border:1px solid var(--blue);box-shadow:none}
+.btn.magenta-btn{background:var(--magenta);color:#150018;box-shadow:0 0 24px rgba(217,70,255,.18)}
+.btn.green-btn{background:var(--green);color:#00140F;box-shadow:0 0 24px rgba(0,255,179,.15)}
+.btn.ghost{background:rgba(255,255,255,.04);border:1px solid var(--line);color:#fff;box-shadow:none}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
 
 .hero{
-  padding:76px 7%;
+  min-height:82vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
   background:
-    radial-gradient(circle at 76% 20%, rgba(0,231,255,.14), transparent 34%),
-    radial-gradient(circle at 18% 10%, rgba(217,70,255,.12), transparent 32%),
-    linear-gradient(180deg,#05070D,#071016);
+    radial-gradient(circle at 80% 10%, rgba(0,231,255,.16), transparent 34%),
+    radial-gradient(circle at 12% 82%, rgba(217,70,255,.14), transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(0,255,179,.05), transparent 45%),
+    linear-gradient(135deg,#05070D,#08111A 75%);
+  position:relative;
+  overflow:hidden;
 }
-
-.hero h1{
-  font-size:clamp(34px,5vw,64px);
-  margin:0 0 16px;
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,231,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,231,255,.035) 1px, transparent 1px);
+  background-size:42px 42px;
+  mask-image:radial-gradient(circle at center, black, transparent 72%);
 }
-
-.hero p{
-  max-width:880px;
-  margin:0 auto 26px;
-  font-size:18px;
-}
-
-.badges{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  justify-content:center;
-}
-
+.hero-inner{position:relative;max-width:1120px}
 .badge{
-  border:1px solid rgba(0,231,255,.35);
+  display:inline-block;
+  border:1px solid rgba(0,231,255,.55);
+  color:var(--blue);
+  background:rgba(0,231,255,.06);
+  padding:9px 16px;
   border-radius:999px;
-  padding:10px 14px;
-  background:rgba(16,24,32,.55);
-  color:var(--muted);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:22px;
 }
-
-.carousel{
-  overflow:hidden;
-  padding:30px 0;
-  background:#070B0F;
-  border-bottom:1px solid var(--line);
-}
-
-.track{
-  display:flex;
-  gap:22px;
-  width:max-content;
-  animation:scroll 45s linear infinite;
-}
-
-@keyframes scroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
-}
-
-.slide{
-  width:300px;
-  flex-shrink:0;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:linear-gradient(180deg,var(--card),var(--card2));
-  overflow:hidden;
-}
-
-.slide img{
-  width:100%;
-  height:170px;
-  object-fit:cover;
-}
-
-.slide div{padding:14px}
-.slide strong{display:block;color:var(--blue);margin-bottom:6px}
-
-section{
-  padding:64px 7%;
-}
-
-.alt{
-  background:linear-gradient(180deg,#071016,#05070D);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.title{
-  text-align:center;
-  margin-bottom:34px;
-}
-
-.title h2{
-  font-size:clamp(28px,3.5vw,44px);
-  margin:0 0 12px;
-}
-
-.title p{
-  max-width:880px;
-  margin:0 auto;
-}
+.hero p{font-size:19px;max-width:930px;margin:0 auto;color:#DDE7EA}
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(4,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:24px;
+  margin-top:30px;
 }
-
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(260px,1fr));
-  gap:24px;
-}
-
 .card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:210px;
+  padding:26px;
+  background:linear-gradient(180deg,var(--card),#090C0F);
   border:1px solid var(--line);
-  border-radius:18px;
-  background:linear-gradient(180deg,var(--card),var(--card2));
+  border-radius:22px;
+  transition:.22s ease;
   overflow:hidden;
-  display:flex;
-  flex-direction:column;
 }
-
-.card img{
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(0,231,255,.42);
+  box-shadow:0 0 30px rgba(0,231,255,.08);
+}
+.card h3{border-left:4px solid var(--blue);padding-left:12px}
+.card h3.magenta-title{border-left-color:var(--magenta)}
+.card h3.green-title{border-left-color:var(--green)}
+.card h3.amber-title{border-left-color:var(--amber)}
+.card-img{
   width:100%;
-  aspect-ratio:16/9;
+  height:190px;
   object-fit:cover;
-  background:#020305;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  margin:14px 0;
+  border:1px solid rgba(255,255,255,.08);
+}
+.card-img.pet{
+  border-color:rgba(217,70,255,.7);
+  box-shadow:0 0 18px rgba(217,70,255,.2);
+}
+.kicker{
+  display:block;
+  color:var(--muted2);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  margin-bottom:9px;
 }
 
-.body{
-  padding:20px;
-  display:flex;
-  flex-direction:column;
-  flex:1;
+.split{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:32px;
+  align-items:center;
+  margin-top:28px;
 }
-
-.card h3{
-  margin:0 0 10px;
-  padding-left:10px;
-  border-left:4px solid var(--blue);
-  font-size:20px;
-  line-height:1.15;
+.panel{
+  background:
+    radial-gradient(circle at 78% 10%, rgba(0,231,255,.10), transparent 34%),
+    linear-gradient(145deg,#101820,#06090E);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:34px;
 }
+.panel.platform{
+  background:
+    radial-gradient(circle at 75% 12%, rgba(0,255,179,.12), transparent 35%),
+    radial-gradient(circle at 16% 88%, rgba(0,231,255,.10), transparent 34%),
+    linear-gradient(145deg,#101820,#06090E);
+}
+.panel.threed{
+  background:
+    radial-gradient(circle at 75% 12%, rgba(217,70,255,.13), transparent 35%),
+    radial-gradient(circle at 16% 88%, rgba(0,231,255,.08), transparent 34%),
+    linear-gradient(145deg,#101820,#06090E);
+}
+.stat-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:20px;
+}
+.stat{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:16px;
+  background:rgba(255,255,255,.03);
+}
+.stat strong{display:block;color:#fff;margin-bottom:4px;font-size:18px}
+.stat span{color:var(--muted2);font-size:13px;line-height:1.4}
 
-.card.pet h3{border-left-color:var(--magenta)}
-.card.gold h3{border-left-color:var(--gold)}
-
-.card p{font-size:15px;margin:0 0 16px}
-.card ul{color:var(--muted);line-height:1.55;font-size:14px;margin:0 0 16px;padding-left:18px}
-
-.callout{
-  margin-top:34px;
-  border:1px solid rgba(0,231,255,.25);
+.timeline{
+  display:grid;
+  gap:14px;
+  margin-top:26px;
+}
+.step{
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:14px;
+  align-items:start;
+  padding:16px;
+  border:1px solid rgba(0,231,255,.18);
+  background:rgba(0,231,255,.035);
   border-radius:18px;
-  padding:24px;
-  background:rgba(16,24,32,.55);
+}
+.step .num{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;height:42px;
+  border-radius:50%;
+  color:#031014;
+  background:var(--blue);
+  font-weight:900;
+}
+.step strong{display:block;margin-bottom:5px}
+.step p{margin:0;font-size:14px}
+
+.pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.pill{
+  border:1px solid rgba(0,231,255,.24);
+  background:rgba(0,231,255,.04);
+  border-radius:999px;
+  padding:10px 13px;
+  color:var(--muted);
+  font-size:14px;
+}
+.pill.green-pill{border-color:rgba(0,255,179,.26);background:rgba(0,255,179,.04)}
+.pill.magenta-pill{border-color:rgba(217,70,255,.30);background:rgba(217,70,255,.05)}
+
+.carousel-container{
+  background:var(--bg2);
+  padding:48px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.carousel-title{
+  padding:0 8% 20px;
   display:flex;
   justify-content:space-between;
   gap:20px;
-  align-items:center;
+  align-items:flex-end;
+}
+.carousel-title h2{text-align:left;margin:0}
+.carousel-title p{max-width:600px;margin:0}
+.carousel-track{
+  display:flex;
+  gap:24px;
+  width:max-content;
+  padding:0 8%;
+  animation:scroll 44s linear infinite;
+}
+.carousel-track:hover{animation-play-state:paused}
+.carousel-item{
+  width:286px;
+  flex-shrink:0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:var(--card);
+  cursor:pointer;
+}
+.carousel-item:hover{border-color:var(--blue)}
+.carousel-item strong{display:block;color:var(--blue);margin-bottom:7px}
+.carousel-item span{display:block;color:var(--muted);font-size:13px;line-height:1.45}
+.carousel-img{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:14px;
+  border:1px solid rgba(255,255,255,.07);
+}
+@keyframes scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(calc(-286px * 5 - 120px))}
 }
 
-.callout p{margin:0}
+.solution-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:26px;
+  margin-top:30px;
+}
+.solution{
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:30px;
+  background:linear-gradient(180deg,#101820,#070A0E);
+}
+.solution h3{font-size:28px;border-left:0;padding-left:0}
+.solution ul{padding-left:20px;color:var(--muted);line-height:1.7}
+.solution li{margin-bottom:7px}
 
-footer{
-  padding:38px 7%;
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(5,7,13,.86);
+  backdrop-filter:blur(8px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+  opacity:0;
+  pointer-events:none;
+  transition:.22s ease;
+  padding:20px;
+}
+.modal.active{opacity:1;pointer-events:auto}
+.modal-content{
+  max-width:720px;
+  width:100%;
+  max-height:86vh;
+  overflow:auto;
+  background:#0B0F14;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:36px;
+  position:relative;
+  box-shadow:0 18px 60px rgba(0,0,0,.6);
+}
+.modal-close{
+  position:absolute;
+  top:14px;
+  right:18px;
+  background:transparent;
+  border:0;
+  color:var(--muted);
+  font-size:30px;
+  cursor:pointer;
+}
+.modal h4{font-size:28px;color:var(--blue);margin:0 0 14px}
+.modal ul{color:var(--muted);line-height:1.65;padding-left:20px}
+.img-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
+  margin:18px 0;
+}
+
+.cta{
   text-align:center;
+  background:
+    radial-gradient(circle at center, rgba(0,231,255,.13), transparent 42%),
+    #05070D;
+}
+.faq details{
+  background:#111820;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:12px;
+}
+.faq summary{cursor:pointer;font-weight:800;color:#fff}
+footer{
+  padding:42px 8%;
+  text-align:center;
+  color:var(--muted);
   background:#020305;
   border-top:1px solid var(--line);
 }
-
-
-.header-actions{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  flex-wrap:wrap;
-  justify-content:center;
+.sticky{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:60;
 }
+.sticky .btn{border-radius:999px}
 
-.btn-instagram{
-  background:transparent;
-  color:var(--magenta);
-  border:1px solid rgba(217,70,255,.75);
+@media(max-width:880px){
+  header{flex-direction:column;text-align:center}
+  nav{justify-content:center}
+  section{padding:56px 6%}
+  .hero{min-height:auto;padding-top:70px;padding-bottom:70px}
+  .buttons{flex-direction:column}
+  .btn{width:100%}
+  .split{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:1fr}
+  .carousel-title{flex-direction:column;align-items:flex-start;padding:0 6% 20px}
+  .carousel-track{padding:0 6%}
+  .sticky{left:14px;right:14px}
+  .sticky .btn{width:100%}
+  .modal-content{padding:28px 22px}
 }
-
-.slide img{
-  height:190px;
-  object-fit:contain;
-  padding:10px;
-  background:#020305;
-}
-
-.card{
-  min-height:100%;
-}
-
-.body{
-  gap:10px;
-}
-
-.card h3{
-  overflow-wrap:anywhere;
-}
-
-.card p,
-.card ul{
-  flex:1;
-}
-
-.card .btn-outline{
-  width:100%;
-  min-height:44px;
-  line-height:1.2;
-}
-
-.modal-media{
-  background:#020305;
-}
-
-.modal-media img{
-  max-height:min(520px,52vh);
-  object-fit:contain;
-  padding:12px;
-}
-
-.modal-gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(92px,1fr));
-  gap:10px;
-  margin:0 0 22px;
-}
-
-.modal-gallery img{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:contain;
-  padding:6px;
-  border:1px solid rgba(0,231,255,.22);
-  border-radius:12px;
-  background:#020305;
-}
-
-@media(max-width:1200px){
-  .grid{grid-template-columns:repeat(3,minmax(220px,1fr))}
-  .product-grid{grid-template-columns:repeat(2,minmax(260px,1fr))}
-}
-
-@media(max-width:820px){
-  header{flex-direction:column;gap:14px;text-align:center}
-  .header-actions{width:100%}
-  .header-actions .btn{flex:1 1 190px}
-  .hero{padding:58px 6%}
-  section{padding:52px 6%}
-  .slide{width:240px}
-  .slide img{height:170px}
-  .card img{object-fit:contain;padding:8px}
-
-  .grid,.product-grid{grid-template-columns:1fr}
-  .callout{flex-direction:column;text-align:center}
-  .slide{width:260px}
-}
-
-.version-badge {
-  position: fixed;
-  right: 14px;
-  bottom: 10px;
-  z-index: 80;
-  padding: 6px 10px;
-  border: 1px solid rgba(0,231,255,.35);
-  border-radius: 999px;
-  background: rgba(5,7,13,.78);
-  color: rgba(207,216,220,.84);
-  font-size: 11px;
-  letter-spacing: .3px;
-  backdrop-filter: blur(8px);
-}
-
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(0,0,0,.78);
-}
-
-.modal-backdrop.active {
-  display: flex;
-}
-
-.modal-box {
-  width: min(980px, 96vw);
-  max-height: 92vh;
-  overflow: auto;
-  border: 1px solid rgba(0,231,255,.35);
-  border-radius: 22px;
-  background: linear-gradient(180deg, #101820, #05070D);
-  box-shadow: 0 0 60px rgba(0,231,255,.18);
-}
-
-.modal-media img {
-  width: 100%;
-  max-height: min(520px,52vh);
-  object-fit: contain;
-  padding: 12px;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-.modal-content {
-  padding: 26px;
-}
-
-.modal-content h2 {
-  margin: 0 0 10px;
-  font-size: clamp(26px, 3vw, 38px);
-}
-
-.modal-content p {
-  margin: 0 0 18px;
-}
-
-.modal-content ul {
-  color: var(--muted);
-  line-height: 1.7;
-  margin: 0 0 24px;
-  padding-left: 20px;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.modal-close {
-  position: sticky;
-  top: 0;
-  float: right;
-  margin: 14px 14px 0 0;
-  width: 38px;
-  height: 38px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(0,0,0,.55);
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.btn-outline {
-  cursor: pointer;
-}
-
-
-@media (prefers-reduced-motion: reduce){
-  .track{animation:none;transform:none;flex-wrap:wrap;justify-content:center;width:auto}
-}
-
-
-@media(max-width: 720px) {
-  .version-badge {
-    right: 8px;
-    bottom: 8px;
-    font-size: 10px;
-  }
-  .modal-content {
-    padding: 20px;
-  }
-}
-
 </style>
 </head>
 
 <body>
-<header>
-  <div class="logo">
-    <img src="images/optimized/Logo Zyvoralabs.webp" alt="Logo Zyvora Labs">
-    ZYVORA <span>LABS</span>
-  </div>
-  <a class="btn" href="https://wa.me/5527981783433?text=Olá%2C%20gostaria%20de%20um%20orçamento%20com%20a%20Zyvora%20Labs." target="_blank">Contato WhatsApp</a>
-</header>
 
-<div class="carousel">
-  <div class="track">
-    <article class="slide"><img src="images/optimized/cards/card_nfc_brindes.webp?v=202606151030"><div><strong>NFC & Brindes</strong><span>Peças conectadas e úteis.</span></div></article>
-    <article class="slide"><img src="images/optimized/cards/card_pets_personalizados.webp?v=202606151030"><div><strong>Linha Pet</strong><span>Miniaturas e lembranças afetivas.</span></div></article>
-    <article class="slide"><img src="images/optimized/cards/card_mascotes_times.webp?v=202606151030"><div><strong>Mascotes de Times</strong><span>Peças para torcedores.</span></div></article>
-    <article class="slide"><img src="images/optimized/associacoes/associacao_suporte_smartphone.webp?v=202606151030"><div><strong>Associações</strong><span>Brindes úteis e comemorativos.</span></div></article>
-    <article class="slide"><img src="images/optimized/vila_velha/vila_velha_chaveiro.webp?v=202606151030"><div><strong>Vila Velha</strong><span>Souvenirs para turistas.</span></div></article>
-    <article class="slide"><img src="images/optimized/cards/card_articulados_criativos.webp?v=202606151030"><div><strong>Articulados</strong><span>Peças criativas e colecionáveis.</span></div></article>
-
-    <article class="slide"><img src="images/optimized/cards/card_nfc_brindes.webp?v=202606151030"><div><strong>NFC & Brindes</strong><span>Peças conectadas e úteis.</span></div></article>
-    <article class="slide"><img src="images/optimized/cards/card_pets_personalizados.webp?v=202606151030"><div><strong>Linha Pet</strong><span>Miniaturas e lembranças afetivas.</span></div></article>
-    <article class="slide"><img src="images/optimized/cards/card_mascotes_times.webp?v=202606151030"><div><strong>Mascotes de Times</strong><span>Peças para torcedores.</span></div></article>
-    <article class="slide"><img src="images/optimized/associacoes/associacao_suporte_smartphone.webp?v=202606151030"><div><strong>Associações</strong><span>Brindes úteis e comemorativos.</span></div></article>
-    <article class="slide"><img src="images/optimized/vila_velha/vila_velha_chaveiro.webp?v=202606151030"><div><strong>Vila Velha</strong><span>Souvenirs para turistas.</span></div></article>
-    <article class="slide"><img src="images/optimized/cards/card_articulados_criativos.webp?v=202606151030"><div><strong>Articulados</strong><span>Peças criativas e colecionáveis.</span></div></article>
-  </div>
+<div class="sticky">
+  <a class="btn green-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Zyvora%20Labs.%20Quero%20falar%20sobre%20uma%20solu%C3%A7%C3%A3o." target="_blank">Falar com a Zyvora</a>
 </div>
 
-<section class="hero">
-  <h1>A Grife da Impressão 3D Inteligente</h1>
-  <p>Produtos 3D personalizados, brindes úteis e peças sob encomenda, pensados para impressão rápida, baixo desperdício e alto desejo de compra.</p>
-  <div class="badges">
-    <span class="badge">1 a 3 cores sólidas</span>
-    <span class="badge">Peças simples e vendáveis</span>
-    <span class="badge">Brindes corporativos</span>
-    <span class="badge">Souvenirs de Vila Velha</span>
-    <span class="badge">Linha Pet e Mascotes</span>
+<header>
+  <div class="logo-box">
+    <img src="Logo Zyvoralabs.jpeg" class="logo-img" alt="Logo Zyvora Labs" />
+    <div class="logo-text">ZYVORA <span>LABS</span></div>
+  </div>
+  <nav>
+    <a class="nav-link" href="#labs">Labs</a>
+    <a class="nav-link" href="#zyvora3d">Zyvora 3D</a>
+    <a class="nav-link" href="#flow">3DFlow</a>
+    <a class="nav-link" href="#viva">Plataforma Viva</a>
+    <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20Zyvora%20Labs." target="_blank">WhatsApp</a>
+  </nav>
+</header>
+
+<section class="hero" id="topo">
+  <div class="hero-inner">
+    <div class="badge">Tecnologia criada a partir da operação real</div>
+    <h1>Zyvora Labs — Tecnologia, IA e Impressão 3D para transformar ideias em soluções reais.</h1>
+    <p>Criamos produtos personalizados em 3D e desenvolvemos plataformas inteligentes para ajudar pequenos negócios a operar melhor. A Zyvora une criatividade, impressão 3D, inteligência artificial e gestão operacional em um ecossistema vivo.</p>
+    <div class="buttons">
+      <a class="btn magenta-btn" href="#zyvora3d">Conheça a Zyvora 3D</a>
+      <a class="btn green-btn" href="#flow">Conheça o 3DFlow</a>
+      <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20conhecer%20a%20Zyvora." target="_blank">Fale pelo WhatsApp</a>
+    </div>
   </div>
 </section>
 
-<section id="produtos">
-  <div class="title">
-    <h2>Produtos e Soluções Zyvora Labs</h2>
-    <p>Uma vitrine enxuta com os principais nichos de venda: peças úteis, personalizadas, fáceis de produzir e com forte apelo visual.</p>
+<section id="labs" class="dark">
+  <div class="center">
+    <span class="kicker">O que é a Zyvora Labs</span>
+    <h2>Uma empresa de tecnologia, criação e inteligência operacional.</h2>
+    <p>A Zyvora Labs desenvolve soluções com IA, impressão 3D, automação, plataformas digitais e produtos personalizados. A visão é criar tecnologias úteis para pequenos negócios técnicos e criativos, começando pelo setor de impressão 3D.</p>
+    <p><strong>A frase guia é simples:</strong> a Zyvora Labs cria tecnologia a partir da operação real.</p>
   </div>
 
   <div class="grid">
-    <article class="card"><img src="images/optimized/cards/card_nfc_brindes.webp?v=202606151030"><div class="body"><h3>NFC, Core Code & Brindes</h3><p>Chaveiros, displays e peças inteligentes que conectam o produto físico ao WhatsApp, Instagram, cardápio, Pix ou página do cliente.</p><button class="btn-outline" onclick="openModal('nfc')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card pet"><img src="images/optimized/cards/card_pets_personalizados.webp?v=202606151030"><div class="body"><h3>Linha Pet</h3><p>Miniaturas, chaveiros e plaquinhas afetivas para eternizar o carinho por cães e gatos.</p><button class="btn-outline" onclick="openModal('pet')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/cards/card_articulados_criativos.webp?v=202606151030"><div class="body"><h3>Articulados & Criativos</h3><p>Dragões, criaturas, bonecos e colecionáveis de alto giro, com foco em impressão FDM rápida e montagem simples.</p><button class="btn-outline" onclick="openModal('articulados')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/cards/card_luminarias_3d.webp?v=202606151030"><div class="body"><h3>Decoração para luminárias</h3><p>Peças decorativas 3D para compor ambientes, presentes e projetos personalizados.</p><button class="btn-outline" onclick="openModal('luminarias')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card gold"><img src="images/optimized/cards/card_maconaria_outros.webp?v=202606151030"><div class="body"><h3>Maçonaria & Outros</h3><p>Miniaturas, chaveiros, placas e presentes personalizados para irmãos maçons, lojas e homenagens.</p><button class="btn-outline" onclick="openModal('maconaria')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/cards/card_mascotes_times.webp?v=202606151030"><div class="body"><h3>Mascotes de Times</h3><p>Peças inspiradas na paixão dos torcedores: mascotes, chaveiros, troféus e displays colecionáveis.</p><button class="btn-outline" onclick="openModal('mascotes')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/cards/card_props_cosplays.webp?v=202606151030"><div class="body"><h3>Props & Cosplays</h3><p>Acessórios, réplicas genéricas, suportes e itens criativos para eventos, decoração geek e colecionadores.</p><button class="btn-outline" onclick="openModal('props')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/cards/card_religioes.webp?v=202606151030"><div class="body"><h3>Religiões</h3><p>Peças decorativas, placas de fé e presentes simbólicos com respeito, simplicidade e acabamento elegante.</p><button class="btn-outline" onclick="openModal('religioes')">Saiba Mais / Pedir or?amento</button></div></article>
+    <div class="card">
+      <h3>Tecnologia aplicada</h3>
+      <p>IA, automação, dados, fluxos digitais e plataformas pensadas para resolver problemas concretos de operação.</p>
+    </div>
+    <div class="card">
+      <h3 class="magenta-title">Fabricação digital</h3>
+      <p>Impressão 3D como laboratório prático, fonte de aprendizado e unidade operacional real da empresa.</p>
+    </div>
+    <div class="card">
+      <h3 class="green-title">Plataforma viva</h3>
+      <p>Uma evolução além do cadastro: acompanhamento, interpretação de dados, recomendações e inteligência operacional.</p>
+    </div>
   </div>
 </section>
 
-<section class="alt" id="associacoes">
-  <div class="title">
-    <h2>Brindes para Associações, Sindicatos e Prefeitura</h2>
-    <p>Produtos úteis e fáceis de entregar em datas comemorativas, homenagens, eventos, campanhas e ações com aposentados.</p>
-  </div>
+<section>
+  <h2>Três frentes que se conectam</h2>
+  <p class="center">A Zyvora não é apenas uma loja de impressão 3D e também não é uma startup abstrata. Ela une uma operação real, uma plataforma SaaS e uma visão de tecnologia viva.</p>
 
-  <div class="product-grid">
-    <article class="card"><img src="images/optimized/associacoes/associacao_suporte_smartphone.webp?v=202606151030"><div class="body"><h3>Suporte para Smartphone</h3><ul><li>Útil no dia a dia</li><li>Impressão rápida</li><li>Excelente para grandes quantidades</li></ul><button class="btn-outline" onclick="openModal('assoc_smartphone')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/associacoes/associacao_chaveiro_institucional.webp?v=202606151030"><div class="body"><h3>Chaveiro Institucional</h3><ul><li>Baixo custo</li><li>Ideal para eventos</li><li>Personalização com nome ou logo</li></ul><button class="btn-outline" onclick="openModal('assoc_chaveiro')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/associacoes/associacao_trofeu_mesa.webp?v=202606151030"><div class="body"><h3>Troféu / Placa de Mesa</h3><ul><li>Presente de maior valor percebido</li><li>Ótimo para homenagens</li><li>1 a 3 cores sólidas</li></ul><button class="btn-outline" onclick="openModal('assoc_trofeu')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/associacoes/associacao_porta_retrato.webp?v=202606151030"><div class="body"><h3>Porta-retrato de Mesa</h3><ul><li>Afetivo e útil</li><li>Bom para datas comemorativas</li><li>Peças simples e montáveis</li></ul><button class="btn-outline" onclick="openModal('assoc_retrato')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/associacoes/associacao_suporte_oculos.webp?v=202606151030"><div class="body"><h3>Suporte para Óculos</h3><ul><li>Produto útil para aposentados</li><li>Baixo consumo de material</li><li>Boa aceitação como brinde</li></ul><button class="btn-outline" onclick="openModal('assoc_oculos')">Saiba Mais / Pedir or?amento</button></div></article>
-  </div>
-
-  <div class="callout">
-    <p><strong>Ideia comercial:</strong> montar kits com 2 ou 3 itens para associações comprarem em volume.</p>
-    <a class="btn" href="https://wa.me/5527981783433?text=Quero%20um%20orçamento%20de%20brindes%20para%20associação%20ou%20prefeitura" target="_blank">Falar sobre brindes</a>
+  <div class="grid">
+    <div class="card">
+      <span class="kicker">Empresa-mãe</span>
+      <h3>Zyvora Labs</h3>
+      <p>Cria soluções com IA, impressão 3D, automação, plataformas digitais e produtos personalizados.</p>
+      <a class="btn secondary" href="#labs">Entender a Labs</a>
+    </div>
+    <div class="card">
+      <span class="kicker">Operação real</span>
+      <h3 class="magenta-title">Zyvora 3D</h3>
+      <p>Produz peças físicas, testa produtos, valida processos, atende clientes e aprende com a operação.</p>
+      <a class="btn magenta-btn" href="#zyvora3d">Ver Zyvora 3D</a>
+    </div>
+    <div class="card">
+      <span class="kicker">SaaS operacional</span>
+      <h3 class="green-title">Zyvora 3DFlow</h3>
+      <p>Plataforma para gestão de negócios de impressão 3D, evoluindo para uma Plataforma Viva.</p>
+      <a class="btn green-btn" href="#flow">Ver 3DFlow</a>
+    </div>
   </div>
 </section>
 
-<section id="vila-velha">
-  <div class="title">
-    <h2>Lembranças de Vila Velha</h2>
-    <p>Souvenirs simples, bonitos e vendáveis para quiosques, pontos turísticos, praias, feiras, lojas e representantes locais.</p>
+<section id="zyvora3d" class="dark">
+  <div class="split">
+    <div>
+      <span class="kicker">Zyvora 3D</span>
+      <h2 style="text-align:left">Onde ideias viram produto físico.</h2>
+      <p>A Zyvora 3D é a unidade operacional real da Zyvora Labs. É onde a empresa produz peças físicas em impressão 3D, testa produtos, valida processos, atende clientes e aprende com a rotina real de produção.</p>
+      <p>Ela não é apenas uma loja de impressão 3D. É também o laboratório prático onde a Zyvora Labs valida sua tecnologia.</p>
+      <div class="buttons" style="justify-content:flex-start">
+        <a class="btn magenta-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20produto%203D%20personalizado%20da%20Zyvora%203D." target="_blank">Solicitar produto 3D</a>
+        <a class="btn ghost" href="#produtos">Ver produtos</a>
+      </div>
+    </div>
+
+    <div class="panel threed">
+      <div class="stat-grid">
+        <div class="stat"><strong>Brindes</strong><span>Peças personalizadas para empresas e campanhas.</span></div>
+        <div class="stat"><strong>Chaveiros</strong><span>Modelos simples, temáticos, inteligentes e com NFC.</span></div>
+        <div class="stat"><strong>PET</strong><span>Miniaturas, lembranças, identificação e CareCode.</span></div>
+        <div class="stat"><strong>Sob demanda</strong><span>Protótipos, peças decorativas e produtos especiais.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carousel-container" id="produtos">
+  <div class="carousel-title">
+    <div>
+      <h2>Produtos e aplicações da Zyvora 3D</h2>
+      <p>Produtos personalizados, úteis e com identidade. Cada peça também alimenta o aprendizado operacional que ajuda a construir a tecnologia da Zyvora Labs.</p>
+    </div>
   </div>
 
-  <div class="product-grid">
-    <article class="card"><img src="images/optimized/vila_velha/vila_velha_chaveiro.webp?v=202606151030"><div class="body"><h3>Chaveiro Vila Velha</h3><ul><li>Alto giro na praia</li><li>Leve e barato de produzir</li><li>Ideal para turista levar de lembrança</li></ul><button class="btn-outline" onclick="openModal('vv_chaveiro')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/vila_velha/vila_velha_ima_geladeira.webp?v=202606151030"><div class="body"><h3>Ímã de Geladeira</h3><ul><li>Souvenir clássico</li><li>Fácil de vender</li><li>Formato com Convento, mar e coqueiro</li></ul><button class="btn-outline" onclick="openModal('vv_ima')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/vila_velha/vila_velha_barquinho.webp?v=202606151030"><div class="body"><h3>Mini Barco Decorativo</h3><ul><li>Peça de mesa</li><li>Bom valor percebido</li><li>Remete ao mar e à cidade</li></ul><button class="btn-outline" onclick="openModal('vv_barquinho')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/vila_velha/vila_velha_placa_souvenir.webp?v=202606151030"><div class="body"><h3>Placa Souvenir</h3><ul><li>Produto de exposição</li><li>1 a 3 cores</li><li>Ótimo para vitrines e bancadas</li></ul><button class="btn-outline" onclick="openModal('vv_placa')">Saiba Mais / Pedir or?amento</button></div></article>
-    <article class="card"><img src="images/optimized/vila_velha/vila_velha_porta_latinha.webp?v=202606151030"><div class="body"><h3>Porta-latinha Praia</h3><ul><li>Útil na praia</li><li>Ótimo para ponto de venda</li><li>Produto com margem boa</li></ul><button class="btn-outline" onclick="openModal('vv_porta_latinha')">Saiba Mais / Pedir or?amento</button></div></article>
+  <div class="carousel-track">
+    <div class="carousel-item" onclick="openModal('modal-pet')">
+      <img src="CRISTAL1.jpeg" class="carousel-img" alt="Linha PET Zyvora 3D">
+      <strong>Linha PET</strong>
+      <span>Miniaturas, lembranças, plaquinhas e CareCode.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-brindes')">
+      <img src="Logo Zyvoralabs.jpeg" class="carousel-img" alt="Brindes personalizados">
+      <strong>Brindes personalizados</strong>
+      <span>Produtos para empresas, campanhas e eventos.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-chaveiros')">
+      <img src="Logo Zyvoralabs.jpeg" class="carousel-img" alt="Chaveiros inteligentes">
+      <strong>Chaveiros inteligentes</strong>
+      <span>NFC, QR Code, WhatsApp, Instagram e páginas digitais.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-mascotes')">
+      <img src="Logo Zyvoralabs.jpeg" class="carousel-img" alt="Mascotes e miniaturas">
+      <strong>Mascotes e miniaturas</strong>
+      <span>Peças temáticas, presentes e colecionáveis.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-luminarias')">
+      <img src="Logo Zyvoralabs.jpeg" class="carousel-img" alt="Luminárias 3D">
+      <strong>Luminárias</strong>
+      <span>Design, decoração e peças de impacto visual.</span>
+    </div>
+    <div class="carousel-item" onclick="openModal('modal-associacoes')">
+      <img src="Logo Zyvoralabs.jpeg" class="carousel-img" alt="Associações e grupos">
+      <strong>Associações e grupos</strong>
+      <span>Produtos personalizados para comunidades e instituições.</span>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="split">
+    <div class="panel platform">
+      <span class="kicker">Zyvora 3DFlow</span>
+      <h2 style="text-align:left">Gestão para negócios de impressão 3D.</h2>
+      <p>O 3DFlow é a plataforma SaaS criada pela Zyvora Labs para gestão de negócios de impressão 3D. A V1 já existe, está congelada e estável, com os principais módulos operacionais para rodar a empresa.</p>
+      <div class="pill-list">
+        <span class="pill green-pill">Produtos</span>
+        <span class="pill green-pill">Clientes</span>
+        <span class="pill green-pill">Fornecedores</span>
+        <span class="pill green-pill">Pedidos</span>
+        <span class="pill green-pill">Produção</span>
+        <span class="pill green-pill">Kanban</span>
+        <span class="pill green-pill">Lotes</span>
+        <span class="pill green-pill">Consignação</span>
+        <span class="pill green-pill">Financeiro</span>
+        <span class="pill green-pill">Custos</span>
+        <span class="pill green-pill">Assistente ZY</span>
+        <span class="pill green-pill">Upload com IA</span>
+        <span class="pill green-pill">Base de conhecimento</span>
+      </div>
+    </div>
+
+    <div>
+      <span class="kicker">Da V1 para a V2</span>
+      <h2 style="text-align:left">A evolução: de sistema que registra para plataforma que acompanha.</h2>
+      <p>A V1 registra informações. A V2 será uma Plataforma Viva: acompanha o empresário, interpreta dados, identifica riscos, recomenda ações e aprende com a operação real.</p>
+      <div class="buttons" style="justify-content:flex-start">
+        <a class="btn green-btn" href="#viva">Entender Plataforma Viva</a>
+        <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20Zyvora%203DFlow." target="_blank">Conhecer o 3DFlow</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="viva" class="dark">
+  <div class="center">
+    <span class="kicker">Plataforma Viva</span>
+    <h2>Não é só um sistema. É uma plataforma que acompanha a operação.</h2>
+    <p>O 3DFlow está evoluindo para uma Plataforma Viva: um ambiente que não apenas registra dados, mas acompanha o empresário, identifica riscos, sugere ações e aprende com a operação.</p>
   </div>
 
-  <div class="callout">
-    <p><strong>Ideia comercial:</strong> testar primeiro chaveiros, ímãs e porta-latinhas no ponto de venda da praia.</p>
-    <a class="btn" href="https://wa.me/5527981783433?text=Quero%20saber%20sobre%20lembranças%20de%20Vila%20Velha%20da%20Zyvora%20Labs" target="_blank">Falar sobre souvenirs</a>
+  <div class="timeline">
+    <div class="step">
+      <div class="num">1</div>
+      <div><strong>Inteligência operacional</strong><p>A plataforma entende pedidos, custos, produção, clientes, prazos, gargalos e prioridades.</p></div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div><strong>Acompanhamento do empresário</strong><p>A ZY acompanha a rotina, gera alertas, aponta riscos e ajuda a decidir o próximo passo.</p></div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div><strong>Aprendizado contínuo</strong><p>A operação real alimenta a plataforma, que evolui com dados, histórico e comportamento do negócio.</p></div>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <div><strong>Dashboard vivo</strong><p>Indicadores, briefing diário, alertas por setor e recomendações práticas para a operação.</p></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3 class="green-title">CRM inteligente</h3><p>Clientes, histórico, oportunidades, recompra e relacionamento com mais contexto.</p></div>
+    <div class="card"><h3 class="green-title">Produção inteligente</h3><p>Pedidos, prioridades, lotes, prazos, status e gargalos em um fluxo prático.</p></div>
+    <div class="card"><h3 class="green-title">Diagnóstico por imagem</h3><p>Fotos e uploads com IA para apoiar análise, documentação e decisão.</p></div>
+    <div class="card"><h3 class="green-title">Mobile e rotina</h3><p>A plataforma acompanha o empresário no celular, no balcão, na produção e no atendimento.</p></div>
+  </div>
+</section>
+
+<section id="zy">
+  <div class="split">
+    <div>
+      <span class="kicker">ZY Especialista Operacional</span>
+      <h2 style="text-align:left">A inteligência que transforma dados em ação.</h2>
+      <p>A ZY é a especialista operacional da Zyvora. Ela analisa dados, acompanha produção, observa clientes, identifica riscos e transforma informações em recomendações práticas.</p>
+      <p>Na Plataforma Viva, a ZY deixa de ser apenas uma assistente e passa a atuar como apoio operacional para o empresário.</p>
+    </div>
+    <div class="panel">
+      <div class="stat-grid">
+        <div class="stat"><strong>Briefing diário</strong><span>Resumo do que precisa de atenção hoje.</span></div>
+        <div class="stat"><strong>Alertas por setor</strong><span>Produção, financeiro, clientes e prazos.</span></div>
+        <div class="stat"><strong>Recomendações</strong><span>Ações sugeridas com base em dados reais.</span></div>
+        <div class="stat"><strong>Base de conhecimento</strong><span>Memória operacional, dicas e histórico da empresa.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="para-quem">
+  <h2>Para quem é</h2>
+  <p class="center">A Zyvora fala com quem produz, atende, vende, entrega e precisa organizar melhor sua operação. A plataforma começa pela impressão 3D, mas nasce com arquitetura para evoluir para outros negócios técnicos e criativos.</p>
+
+  <div class="grid">
+    <div class="card"><h3>Negócios de impressão 3D</h3><p>Controle de produtos, pedidos, produção, custos, estoque, clientes e entregas.</p></div>
+    <div class="card"><h3>Empreendedores criativos</h3><p>Organização de ideias, produtos personalizados, vendas, prazos e relacionamento.</p></div>
+    <div class="card"><h3>Empresas e associações</h3><p>Brindes personalizados, campanhas, produtos institucionais e projetos sob encomenda.</p></div>
+    <div class="card"><h3>Clientes personalizados</h3><p>Presentes, PET, miniaturas, mascotes, chaveiros, luminárias e peças afetivas.</p></div>
+    <div class="card"><h3>Negócios técnicos</h3><p>Energia solar, elétrica, assistência técnica e outras operações que precisam de gestão viva.</p></div>
+    <div class="card"><h3>Lojas e comércio local</h3><p>Supermercados, padarias, materiais de construção e lojas que precisam organizar rotinas, atendimento e processos.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Produtos físicos e soluções digitais</h2>
+  <div class="solution-grid">
+    <div class="solution">
+      <h3 class="magenta">Produtos físicos</h3>
+      <ul>
+        <li>Impressão 3D personalizada;</li>
+        <li>Brindes e produtos para empresas;</li>
+        <li>Chaveiros comuns e inteligentes;</li>
+        <li>Produtos decorativos;</li>
+        <li>Linha PET e CareCode;</li>
+        <li>Miniaturas, mascotes e peças sob demanda;</li>
+        <li>Produtos sazonais, como Copa 2026.</li>
+      </ul>
+      <a class="btn magenta-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20produto%203D%20personalizado." target="_blank">Pedir produto físico</a>
+    </div>
+
+    <div class="solution">
+      <h3 class="green">Soluções digitais</h3>
+      <ul>
+        <li>Zyvora 3DFlow;</li>
+        <li>IA operacional;</li>
+        <li>Automação de processos;</li>
+        <li>Base de conhecimento;</li>
+        <li>Dashboards vivos;</li>
+        <li>CRM inteligente;</li>
+        <li>Plataformas futuras para outros negócios técnicos.</li>
+      </ul>
+      <a class="btn green-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20conhecer%20as%20solu%C3%A7%C3%B5es%20digitais%20da%20Zyvora%20Labs." target="_blank">Conhecer solução digital</a>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="center">
+    <span class="kicker">Visão futura</span>
+    <h2>Uma arquitetura para novos produtos e novos setores.</h2>
+    <p>A Zyvora Labs começa com o 3DFlow porque a impressão 3D é sua primeira operação real. A mesma arquitetura poderá evoluir para outras plataformas, como SolarFlow, EnergyFlow, Casa Viva e soluções para outros negócios técnicos.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3 class="amber-title">SolarFlow</h3><p>Gestão operacional para energia solar, manutenção, visitas, clientes, documentos e atendimento técnico.</p></div>
+    <div class="card"><h3 class="amber-title">EnergyFlow</h3><p>Fluxos para elétrica, serviços técnicos, ordens, materiais, fotos, prazos e histórico.</p></div>
+    <div class="card"><h3 class="amber-title">Casa Viva</h3><p>Educação, impacto, oficinas, IA, construção modular e tecnologias úteis para comunidades.</p></div>
+    <div class="card"><h3 class="amber-title">Novas plataformas</h3><p>Produtos digitais criados a partir de operações reais, não de ideias abstratas.</p></div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2>Perguntas rápidas</h2>
+  <details><summary>A Zyvora Labs é só impressão 3D?</summary><p>Não. A Zyvora Labs é uma empresa de tecnologia, criação e inteligência operacional. A impressão 3D é a primeira operação real e o laboratório prático onde a tecnologia é validada.</p></details>
+  <details><summary>O que é a Zyvora 3D?</summary><p>É a unidade operacional de produtos físicos da Zyvora Labs. Ela produz brindes, chaveiros, PET, miniaturas, peças decorativas, produtos para empresas e itens sob demanda.</p></details>
+  <details><summary>O que é o 3DFlow?</summary><p>É a plataforma SaaS da Zyvora Labs para gestão de negócios de impressão 3D, com pedidos, clientes, produção, custos, financeiro, consignação, Kanban, IA e base de conhecimento.</p></details>
+  <details><summary>O que significa Plataforma Viva?</summary><p>É a evolução do sistema: uma plataforma que acompanha o empresário, interpreta dados, identifica riscos, recomenda ações e aprende com a operação real.</p></details>
+  <details><summary>Quem é a ZY?</summary><p>ZY é a especialista operacional da Zyvora. Ela analisa dados, acompanha produção, observa clientes, identifica riscos e transforma informações em recomendações práticas.</p></details>
+</section>
+
+<section class="cta">
+  <h2>Vamos transformar ideia, dado e operação em solução real?</h2>
+  <p>Fale com a Zyvora Labs para produto 3D personalizado, 3DFlow, Plataforma Viva ou uma solução sob medida para sua operação.</p>
+  <div class="buttons">
+    <a class="btn magenta-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20produto%203D%20personalizado." target="_blank">Produto 3D</a>
+    <a class="btn green-btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20conhecer%20o%203DFlow%20e%20a%20Plataforma%20Viva." target="_blank">3DFlow / Plataforma Viva</a>
+    <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20Zyvora%20Labs." target="_blank">Falar com a Zyvora</a>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2026 Zyvora Labs. Todos os direitos reservados.</p>
-  <p>Nelson Model • WhatsApp: 27 98178-3433</p>
-  <p>Zyvora Labs v0.5.6 • Site principal • Atualizado em 16/06/26 às 07:15</p>
+  <strong>Zyvora Labs</strong><br/>
+  Tecnologia, IA, impressão 3D, inteligência operacional e plataformas vivas.<br/>
+  <span class="magenta">Zyvora 3D</span> | <span class="green">Zyvora 3DFlow</span> | <span class="blue">ZY Especialista Operacional</span><br/>
+  <span class="small">A Zyvora Labs cria tecnologia a partir da operação real.</span>
 </footer>
 
+<!-- Modais -->
+<div class="modal" id="modal-pet">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-pet')">&times;</button>
+    <h4>Linha PET</h4>
+    <img src="CRISTAL1.jpeg" class="card-img pet" alt="Cristal - Linha PET Zyvora 3D">
+    <img src="BONECOS.PNG" class="card-img pet" alt="Bonecos personalizados Zyvora 3D">
+    <p>Miniaturas, lembranças, plaquinhas, CareCode e peças afetivas para tutores.</p>
+  </div>
+</div>
 
-<div class="version-badge">Zyvora Labs v0.5.6 • Site principal • Atualizado em 16/06/26 às 07:15</div>
+<div class="modal" id="modal-brindes">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-brindes')">&times;</button>
+    <h4>Brindes personalizados</h4>
+    <p>Peças para empresas, campanhas, eventos, balcão, promoções e relacionamento com clientes.</p>
+    <ul><li>Displays e suportes;</li><li>Logos em relevo;</li><li>Produtos institucionais;</li><li>Brindes com QR Code ou NFC.</li></ul>
+  </div>
+</div>
 
-<div id="modalBackdrop" class="modal-backdrop">
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal-close" onclick="closeModal(event)" aria-label="Fechar">×</button>
-    <div class="modal-media">
-      <img id="modalImg" src="" alt="">
-    </div>
-    <div class="modal-content">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc"></p>
-      <ul id="modalBullets"></ul>
-      <div id="modalGallery" class="modal-gallery" aria-label="Mais exemplos do produto"></div>
-      <div class="modal-actions">
-        <a id="modalWhats" class="btn" href="#" target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
-        <button class="btn-outline" onclick="closeModal(event)">Fechar</button>
-      </div>
-    </div>
+<div class="modal" id="modal-chaveiros">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-chaveiros')">&times;</button>
+    <h4>Chaveiros inteligentes</h4>
+    <p>Chaveiros personalizados com possibilidade de NFC, QR Code, WhatsApp, Instagram, cardápio, catálogo ou página digital.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-mascotes">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-mascotes')">&times;</button>
+    <h4>Mascotes e miniaturas</h4>
+    <p>Miniaturas personalizadas, mascotes de times, personagens temáticos e peças colecionáveis.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-luminarias">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-luminarias')">&times;</button>
+    <h4>Luminárias</h4>
+    <p>Luminárias artísticas e decorativas em impressão 3D, feitas para ambientes, presentes e projetos personalizados.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-associacoes">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-associacoes')">&times;</button>
+    <h4>Associações e grupos</h4>
+    <p>Produtos para associações, grupos, irmandades, comunidades, eventos e campanhas institucionais.</p>
   </div>
 </div>
 
 <script>
-const modalData = {
-  "nfc": {
-    "title": "NFC, Core Code & Brindes Inteligentes",
-    "img": "images/optimized/cards/card_nfc_brindes.webp?v=202606151030",
-    "desc": "Peças 3D que unem produto físico e ação digital. Ideais para empresas, restaurantes, barbearias, clínicas, eventos e campanhas promocionais.",
-    "bullets": [
-      "Chaveiros NFC, displays QR Code e peças de mesa.",
-      "Direciona para WhatsApp, Instagram, Pix, cardápio ou página do cliente.",
-      "Produção simples, boa margem e alto valor percebido.",
-      "Ideal para brindes corporativos e kits comerciais."
-    ],
-    "wa": "Quero saber mais sobre NFC, Core Code e brindes inteligentes da Zyvora Labs."
-  },
-  "pet": {
-    "title": "Linha Pet Personalizada",
-    "img": "images/optimized/cards/card_pets_personalizados.webp?v=202606151030",
-    "desc": "Produtos afetivos para tutores que querem eternizar seus pets em miniaturas, chaveiros e lembranças personalizadas.",
-    "bullets": [
-      "Mini busto decorativo, chaveiro pet e plaquinha de lembrança.",
-      "Até 3 cores sólidas, com partes separadas e montagem simples.",
-      "Bom apelo emocional e excelente para presentes.",
-      "Pode receber nome do pet e detalhes personalizados."
-    ],
-    "wa": "Quero personalizar um produto da Linha Pet da Zyvora Labs.",
-    "extraImgs": [
-      "images/optimized/CRISTAL1.webp?v=202606151030",
-      "images/optimized/BONECOS.webp?v=202606151030"
-    ]
-  },
-  "articulados": {
-    "title": "Articulados & Criativos",
-    "img": "images/optimized/cards/card_articulados_criativos.webp?v=202606151030",
-    "desc": "Peças criativas, colecionáveis e de alto giro para presentes, pontos de venda, eventos e vendas por impulso.",
-    "bullets": [
-      "Dragões, criaturas, mascotes genéricos e bonecos criativos.",
-      "Foco em impressão FDM rápida, com 1 a 3 cores sólidas.",
-      "Peças articuladas ou modulares, com montagem simples.",
-      "Boa linha para catálogo online e venda em volume."
-    ],
-    "wa": "Quero saber mais sobre articulados e peças criativas da Zyvora Labs."
-  },
-  "luminarias": {
-    "title": "Decoração para luminárias",
-    "img": "images/optimized/cards/card_luminarias_3d.webp?v=202606151030",
-    "desc": "Peças decorativas 3D para compor projetos de iluminação, decoração e presentes personalizados.",
-    "bullets": [
-      "Peças modulares e fáceis de montar.",
-      "Opções em 1 a 3 cores sólidas.",
-      "Ideal para escritórios, quartos, salas e presentes.",
-      "Produto de maior valor percebido.",
-      "Componentes elétricos, quando incluídos, são acessórios de terceiros enviados como cortesia/brinde, sem caracterizar fabricação de produto elétrico certificado."
-    ],
-    "wa": "Quero saber mais sobre decoração para luminárias da Zyvora Labs."
-  },
-  "maconaria": {
-    "title": "Maçonaria & Outros",
-    "img": "images/optimized/cards/card_maconaria_outros.webp?v=202606151030",
-    "desc": "Peças personalizadas para irmãos maçons, lojas, datas especiais, homenagens e presentes simbólicos.",
-    "bullets": [
-      "Miniaturas, chaveiros, placas e troféus de mesa.",
-      "Uso de preto, dourado, azul ou prata em partes separadas.",
-      "Produtos com forte apelo de irmandade e lembrança.",
-      "Ideal para encomendas por loja ou grupo."
-    ],
-    "wa": "Quero saber mais sobre produtos maçônicos personalizados."
-  },
-  "mascotes": {
-    "title": "Mascotes de Times",
-    "img": "images/optimized/cards/card_mascotes_times.webp?v=202606151030",
-    "desc": "Linha de peças inspiradas na paixão dos torcedores, com mascotes e objetos colecionáveis de alto apelo visual.",
-    "bullets": [
-      "Mini estátuas, chaveiros, troféus e displays.",
-      "Produtos de boa margem e alta recompra.",
-      "Cores sólidas e partes separadas para facilitar impressão.",
-      "Ideal para venda em grupos de torcedores e pontos de venda."
-    ],
-    "wa": "Quero saber mais sobre mascotes de times em 3D."
-  },
-  "props": {
-    "title": "Props & Cosplays",
-    "img": "images/optimized/cards/card_props_cosplays.webp?v=202606151030",
-    "desc": "Acessórios e itens criativos para eventos, decoração geek, colecionadores e conteúdo digital.",
-    "bullets": [
-      "Props genéricos, suportes, acessórios e peças decorativas.",
-      "Foco em peças modulares e fáceis de montar.",
-      "Até 3 cores sólidas, evitando desperdício.",
-      "Boa linha para nichos geek e criativos."
-    ],
-    "wa": "Quero saber mais sobre props e cosplays da Zyvora Labs."
-  },
-  "religioes": {
-    "title": "Religiões",
-    "img": "images/optimized/cards/card_religioes.webp?v=202606151030",
-    "desc": "Peças religiosas e decorativas para presentes de fé, lembranças, eventos e datas especiais.",
-    "bullets": [
-      "Placas, cruzes, suportes e peças de mesa.",
-      "Design simples, elegante e respeitoso.",
-      "Boa opção para presentes e lembranças.",
-      "Produção em 1 a 3 cores sólidas."
-    ],
-    "wa": "Quero saber mais sobre peças religiosas em 3D."
-  },
-  "assoc_smartphone": {
-    "title": "Suporte para Smartphone",
-    "img": "images/optimized/associacoes/associacao_suporte_smartphone.webp?v=202606151030",
-    "desc": "Brinde útil, simples e com alta aceitação para aposentados, associações, sindicatos e prefeitura.",
-    "bullets": [
-      "Útil para mesa, sala, escritório e vídeo-chamadas.",
-      "Impressão rápida e baixo consumo de material.",
-      "Pode receber nome da associação ou campanha.",
-      "Excelente para grandes quantidades."
-    ],
-    "wa": "Quero orçamento de suporte para smartphone para associação."
-  },
-  "assoc_chaveiro": {
-    "title": "Chaveiro Institucional",
-    "img": "images/optimized/associacoes/associacao_chaveiro_institucional.webp?v=202606151030",
-    "desc": "Brinde barato, leve e fácil de entregar em eventos, campanhas e datas comemorativas.",
-    "bullets": [
-      "Baixo custo unitário.",
-      "Pode ter logo, frase ou símbolo da associação.",
-      "Ideal para kits e lembranças de evento.",
-      "Produção rápida em volume."
-    ],
-    "wa": "Quero orçamento de chaveiro institucional."
-  },
-  "assoc_trofeu": {
-    "title": "Troféu / Placa de Mesa",
-    "img": "images/optimized/associacoes/associacao_trofeu_mesa.webp?v=202606151030",
-    "desc": "Peça de homenagem com maior valor percebido, indicada para reconhecimento e datas especiais.",
-    "bullets": [
-      "Ideal para homenagear associados ou servidores.",
-      "Visual elegante para mesa e estante.",
-      "Pode receber nome, data e mensagem.",
-      "Boa opção para presentes institucionais."
-    ],
-    "wa": "Quero orçamento de troféu ou placa de mesa."
-  },
-  "assoc_retrato": {
-    "title": "Porta-retrato de Mesa",
-    "img": "images/optimized/associacoes/associacao_porta_retrato.webp?v=202606151030",
-    "desc": "Produto afetivo para homenagens, aniversários, aposentadorias e ações comemorativas.",
-    "bullets": [
-      "Presente emocional e útil.",
-      "Peça simples com bom valor percebido.",
-      "Pode ser entregue com foto ou mensagem.",
-      "Ideal para kits de homenagem."
-    ],
-    "wa": "Quero orçamento de porta-retrato personalizado."
-  },
-  "assoc_oculos": {
-    "title": "Suporte para Óculos",
-    "img": "images/optimized/associacoes/associacao_suporte_oculos.webp?v=202606151030",
-    "desc": "Produto prático para o dia a dia, especialmente útil para aposentados e público adulto.",
-    "bullets": [
-      "Organiza e protege os óculos.",
-      "Peça leve, estável e fácil de imprimir.",
-      "Boa aceitação como brinde funcional.",
-      "Pode usar as cores da associação."
-    ],
-    "wa": "Quero orçamento de suporte para óculos."
-  },
-  "vv_chaveiro": {
-    "title": "Chaveiro Vila Velha",
-    "img": "images/optimized/vila_velha/vila_velha_chaveiro.webp?v=202606151030",
-    "desc": "Souvenir pequeno, leve e de alto giro para turistas e pontos de venda na praia.",
-    "bullets": [
-      "Ideal para venda por impulso.",
-      "Remete ao mar, barco, coqueiro e Vila Velha.",
-      "Baixo custo e produção rápida.",
-      "Ótimo para representantes e quiosques."
-    ],
-    "wa": "Quero saber sobre chaveiros de Vila Velha."
-  },
-  "vv_ima": {
-    "title": "Ímã de Geladeira Vila Velha",
-    "img": "images/optimized/vila_velha/vila_velha_ima_geladeira.webp?v=202606151030",
-    "desc": "Lembrança turística clássica com Convento, mar e elementos locais.",
-    "bullets": [
-      "Produto fácil de vender para turistas.",
-      "Base plana e impressão simples.",
-      "Pode ter ímã aplicado no verso.",
-      "Ótimo para lojas e pontos turísticos."
-    ],
-    "wa": "Quero saber sobre ímãs de geladeira de Vila Velha."
-  },
-  "vv_barquinho": {
-    "title": "Mini Barco Decorativo",
-    "img": "images/optimized/vila_velha/vila_velha_barquinho.webp?v=202606151030",
-    "desc": "Peça decorativa de mesa inspirada no mar e na identidade turística de Vila Velha.",
-    "bullets": [
-      "Bom valor percebido.",
-      "Peça leve, bonita e presenteável.",
-      "Pode ser vendida como souvenir premium.",
-      "Ideal para exposição em balcão."
-    ],
-    "wa": "Quero saber sobre mini barcos decorativos de Vila Velha."
-  },
-  "vv_placa": {
-    "title": "Placa Souvenir Vila Velha",
-    "img": "images/optimized/vila_velha/vila_velha_placa_souvenir.webp?v=202606151030",
-    "desc": "Peça de mesa com cenário turístico para quem quer levar uma lembrança visual da cidade.",
-    "bullets": [
-      "Produto decorativo e fácil de expor.",
-      "Boa opção para turista levar na mala.",
-      "1 a 3 cores sólidas.",
-      "Ideal para feiras, lojas e quiosques."
-    ],
-    "wa": "Quero saber sobre placas souvenir de Vila Velha."
-  },
-  "vv_porta_latinha": {
-    "title": "Porta-latinha Praia",
-    "img": "images/optimized/vila_velha/vila_velha_porta_latinha.webp?v=202606151030",
-    "desc": "Produto útil para praia, barco, piscina e eventos, com tema Vila Velha.",
-    "bullets": [
-      "Útil e com boa margem.",
-      "Produto ideal para ponto de venda na praia.",
-      "Design temático com mar e cidade.",
-      "Pode ser feito em cores tropicais."
-    ],
-    "wa": "Quero saber sobre porta-latinhas de Vila Velha."
+function openModal(id){
+  const modal = document.getElementById(id);
+  if(modal) modal.classList.add('active');
+}
+function closeModal(id){
+  const modal = document.getElementById(id);
+  if(modal) modal.classList.remove('active');
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    document.querySelectorAll('.modal.active').forEach(m => m.classList.remove('active'));
   }
-};
-
-function openModal(id) {
-  const data = modalData[id];
-  if (!data) return;
-
-  document.getElementById("modalTitle").textContent = data.title;
-  document.getElementById("modalDesc").textContent = data.desc;
-
-  const img = document.getElementById("modalImg");
-  img.src = data.img;
-  img.alt = data.title;
-
-  const ul = document.getElementById("modalBullets");
-  ul.innerHTML = "";
-  data.bullets.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    ul.appendChild(li);
+});
+document.querySelectorAll('.modal').forEach(function(modal){
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) modal.classList.remove('active');
   });
-
-  const whatsText = encodeURIComponent(data.wa || "Olá, gostaria de um orçamento com a Zyvora Labs.");
-  document.getElementById("modalWhats").href = "https://wa.me/5527981783433?text=" + whatsText;
-
-  document.getElementById("modalBackdrop").classList.add("active");
-  document.body.style.overflow = "hidden";
-}
-
-function closeModal(event) {
-  if (event) event.stopPropagation();
-  const backdrop = document.getElementById("modalBackdrop");
-  backdrop.classList.remove("active");
-  document.body.style.overflow = "";
-}
-
-document.getElementById("modalBackdrop").addEventListener("click", function(event) {
-  if (event.target === this) {
-    closeModal(event);
-  }
-});
-
-document.querySelector(".modal-box").addEventListener("click", function(event) {
-  event.stopPropagation();
-});
-
-document.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") {
-    document.getElementById("modalBackdrop").classList.remove("active");
-    document.body.style.overflow = "";
-  }
 });
 </script>
 
