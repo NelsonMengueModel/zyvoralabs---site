@@ -1,4 +1,4 @@
-<!-- ZYVORA 3D STUDIO CATALOGO FINAL | Base: catalogo-3d-studio-v6-vida-pet-correto(1).html | Atualizado em 14/07/2026 - 16:09 -->
+<!-- ZYVORA 3D STUDIO CATALOGO FINAL V13 | Botão voltar para plataforma | Atualizado em 14/07/2026 - 17:17 -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -352,11 +352,51 @@ footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;b
   background:rgba(217,70,255,.13);
 }
 
+
+/* V13 - Botão voltar para Plataforma Viva */
+.platform-return{
+  position:fixed;
+  left:12px;
+  bottom:10px;
+  z-index:2000;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(5,7,13,.88);
+  color:var(--green);
+  border:1px solid rgba(0,255,179,.45);
+  border-radius:999px;
+  padding:8px 13px;
+  font-size:12px;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 0 18px rgba(0,255,179,.10);
+  backdrop-filter:blur(8px);
+}
+.platform-return:hover{
+  color:var(--blue);
+  border-color:rgba(0,231,255,.55);
+  transform:translateY(-1px);
+}
+.header-platform-btn{
+  border-color:rgba(0,255,179,.55)!important;
+  color:var(--green)!important;
+  font-weight:800;
+}
+@media(max-width:760px){
+  .platform-return{
+    left:8px;
+    bottom:8px;
+    font-size:11px;
+    padding:7px 10px;
+  }
+}
+
 </style>
 </head>
 
 <body>
-<div class="version-badge">Catálogo 3D Studio · Atualizado em 14/07/2026 - 16:09</div>
+<div class="version-badge">Catálogo 3D Studio V13 · Atualizado em 14/07/2026 - 17:17</div>
 
 <header>
   <div class="logo-box">
@@ -364,7 +404,7 @@ footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;b
     <div class="logo-text">ZYVORA <span>3D STUDIO</span></div>
   </div>
   <nav>
-    <a class="nav-link" href="index.html?v=1200">Zyvora Labs</a>
+    <a class="nav-link header-platform-btn" href="index.html?v=1300">← Voltar para Plataforma Viva</a>
     <a class="nav-link" href="#produtos">Produtos</a>
     <a class="nav-link" href="#categorias">Categorias</a>
     <a class="nav-link" href="#galeria">Galeria</a>
@@ -601,7 +641,7 @@ footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;b
 <section class="cta">
   <h2>Quer transformar uma ideia em peça física exclusiva?</h2>
   <p>Envie foto, referência, logo ou necessidade pelo WhatsApp. A Zyvora 3D Studio avalia o projeto e orienta o melhor caminho.</p>
-  <div class="buttons"><a class="btn mag" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20uma%20ideia%20para%20um%20produto%203D%20personalizado%20da%20Zyvora%203D%20Studio." target="_blank">Enviar minha ideia</a><a class="btn secondary" href="index.html?v=1200">Voltar para Zyvora Labs</a></div>
+  <div class="buttons"><a class="btn mag" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20uma%20ideia%20para%20um%20produto%203D%20personalizado%20da%20Zyvora%203D%20Studio." target="_blank">Enviar minha ideia</a><a class="btn secondary" href="index.html?v=1300">Voltar para Plataforma Viva</a></div>
 </section>
 
 <div class="modal" id="modal-nfc"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-nfc')">&times;</button><h4>NFC, QR Code & Core Code</h4><img src="images/optimized/cards/card_nfc_brindes.webp" alt="NFC"><p>Produtos físicos conectados ao mundo digital. Ideais para empresas, profissionais, balcões, cardápios, contatos, campanhas e brindes inteligentes.</p><ul><li>Acesso por aproximação com NFC.</li><li>QR Code para WhatsApp, Instagram, Pix, cardápio ou site.</li><li>Peças úteis para balcão, evento, recepção e relacionamento com clientes.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20produto%20com%20NFC%20ou%20QR%20Code." target="_blank">Pedir orçamento</a></div></div>
@@ -614,6 +654,8 @@ footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;b
 <div class="modal" id="modal-maconaria"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-maconaria')">&times;</button><h4>Maçonaria & Outros</h4><img src="images/optimized/cards/card_maconaria_outros.png" alt="Maçonaria"><p>Peças simbólicas, miniaturas, homenagens e objetos personalizados para grupos, irmãos, associações e ocasiões especiais.</p><ul><li>Peças simbólicas e decorativas.</li><li>Miniaturas e homenagens.</li><li>Itens personalizados para grupos e instituições.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20para%20ma%C3%A7onaria%20ou%20grupo." target="_blank">Pedir peça</a></div></div>
 <div class="modal" id="modal-props"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-props')">&times;</button><h4>Props & Cosplays</h4><img src="images/optimized/cards/card_props_cosplays.png" alt="Props"><p>Acessórios, peças cenográficas, itens decorativos e produtos sob medida para fantasia, cosplay, vídeos e eventos.</p><ul><li>Props e acessórios personalizados.</li><li>Peças para eventos, vídeos e decoração.</li><li>Projetos sob referência visual.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20para%20prop%20ou%20cosplay." target="_blank">Solicitar projeto</a></div></div>
 <div class="modal" id="modal-religioes"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-religioes')">&times;</button><h4>Religiões</h4><img src="images/optimized/cards/card_religioes.png" alt="Religiões"><p>Esculturas, santos, orixás e peças simbólicas produzidas com cuidado, respeito e personalização.</p><ul><li>Esculturas religiosas personalizadas.</li><li>Peças simbólicas para ambientes e lembranças.</li><li>Projetos sob encomenda e referência.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20religiosa%20personalizada." target="_blank">Pedir peça</a></div></div>
+
+<a class="platform-return" href="index.html?v=1300">← Voltar para Plataforma Viva</a>
 
 <footer><strong>Zyvora 3D Studio</strong><br>Fabricação digital, prototipagem e produtos 3D personalizados.<br>Uma unidade operacional da Zyvora Labs.</footer>
 <script>
