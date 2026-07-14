@@ -1,4 +1,4 @@
-<!-- ZYVORA 3D STUDIO CATALOGO FINAL V14 | Card de movimento com 2 cenas alternando a cada 5s | Atualizado em 14/07/2026 - 18:24 -->
+<!-- ZYVORA 3D STUDIO CATALOGO FINAL V15 | UX refinada: filtros no topo, botões consistentes, tag solta removida | Atualizado em 14/07/2026 - 19:46 -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -551,11 +551,36 @@ footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;b
   .process-steps{grid-template-columns:repeat(2,1fr);padding:12px 14px 14px}
 }
 
+
+/* V15 - filtros no topo, botões consistentes e status removido */
+.life-strip{display:none!important}
+.hero .quick-menu{
+  margin-top:26px;
+  margin-bottom:24px;
+  justify-content:center;
+}
+.hero .quick-menu a{
+  border-color:rgba(0,231,255,.46);
+  background:rgba(0,231,255,.06);
+}
+.card .btn,
+.card .btn.mag{
+  background:var(--blue)!important;
+  color:#031014!important;
+  border:0!important;
+  box-shadow:0 0 24px rgba(0,231,255,.16)!important;
+}
+.card h3.mag-title{border-left-color:var(--mag)}
+.hero .buttons{margin-top:22px}
+@media(max-width:760px){
+  .hero .quick-menu{display:grid;grid-template-columns:1fr}
+}
+
 </style>
 </head>
 
 <body>
-<div class="version-badge">Catálogo 3D Studio V14 · Atualizado em 14/07/2026 - 18:24</div>
+<div class="version-badge">Catálogo 3D Studio V15 · Atualizado em 14/07/2026 - 19:46</div>
 
 <header>
   <div class="logo-box">
@@ -577,14 +602,17 @@ footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;b
     <h1>Produtos <span class="blue">3D</span> personalizados com tecnologia, design e exclusividade.</h1>
     <p>Soluções sob encomenda para empresas, eventos, presentes, marcas, associações e projetos especiais.</p>
 
+
+
+    <div class="quick-menu">
+      <a href="#brindes">Brindes corporativos</a><a href="#nfc">NFC, QR Code e CareCode</a><a href="#pet">Linha PET personalizada</a><a href="#articulados">Chaveiros e articulados</a><a href="#luminarias">Luminárias 3D</a><a href="#miniaturas">Miniaturas e presentes</a>
+    </div>
+  
+
     <div class="buttons">
       <a class="btn mag" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20do%20Zyvora%203D%20Studio." target="_blank">Solicitar orçamento</a>
       <a class="btn secondary" href="#produtos">Ver produtos</a>
     </div>
-
-    
-<div class="life-strip"><span class="life-dot"></span><span>Página viva: produtos em movimento, ideias em transformação.</span></div>
-
 <div class="studio-carousel" aria-label="Carrossel de produtos Zyvora 3D Studio">
   <div class="carousel-track">
     <a class="carousel-card" href="#nfc" onclick="openModal('modal-nfc')">
@@ -717,12 +745,7 @@ footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;b
     </a>
   </div>
 </div>
-
-
-    <div class="quick-menu">
-      <a href="#brindes">Brindes corporativos</a><a href="#nfc">NFC, QR Code e CareCode</a><a href="#pet">Linha PET personalizada</a><a href="#articulados">Chaveiros e articulados</a><a href="#luminarias">Luminárias 3D</a><a href="#miniaturas">Miniaturas e presentes</a>
-    </div>
-  </div>
+</div>
 </section>
 
 
@@ -792,10 +815,10 @@ footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;b
   <div class="center"><h2>Catálogo de produtos e soluções</h2><p>Uma vitrine profissional com as principais linhas comerciais da operação física da Zyvora Labs.</p></div>
   <div class="grid">
     <article class="card" id="nfc"><img src="images/optimized/cards/card_nfc_brindes.webp" alt="NFC e brindes"><div class="card-body"><h3>NFC, QR Code & Brindes</h3><p>Chaveiros, displays e peças inteligentes que conectam o produto físico ao WhatsApp, Instagram, cardápio, Pix ou página do cliente.</p><button class="btn" onclick="openModal('modal-nfc')">Saiba mais</button></div></article>
-    <article class="card" id="pet"><img src="images/optimized/cards/card_pets_personalizados.webp" alt="Linha PET"><div class="card-body"><h3 class="mag-title">Linha PET</h3><p>Miniaturas, chaveiros, plaquinhas, lembranças e produtos afetivos para eternizar o carinho por cães e gatos.</p><button class="btn mag" onclick="openModal('modal-pet')">Saiba mais</button></div></article>
+    <article class="card" id="pet"><img src="images/optimized/cards/card_pets_personalizados.webp" alt="Linha PET"><div class="card-body"><h3 class="mag-title">Linha PET</h3><p>Miniaturas, chaveiros, plaquinhas, lembranças e produtos afetivos para eternizar o carinho por cães e gatos.</p><button class="btn" onclick="openModal('modal-pet')">Saiba mais</button></div></article>
     <article class="card" id="articulados"><img src="images/optimized/cards/card_articulados_criativos.png" alt="Articulados"><div class="card-body"><h3>Articulados & Criativos</h3><p>Dragões, criaturas, bonecos e colecionáveis com forte apelo visual, foco em produtos vendáveis e impressão eficiente.</p><button class="btn" onclick="openModal('modal-articulados')">Saiba mais</button></div></article>
     <article class="card" id="luminarias"><img src="images/optimized/cards/card_luminarias_3d.png" alt="Luminárias"><div class="card-body"><h3>Luminárias artísticas 3D</h3><p>Peças decorativas e luminárias 3D para ambientes, presentes, mesas, vitrines e projetos personalizados.</p><button class="btn" onclick="openModal('modal-luminarias')">Saiba mais</button></div></article>
-    <article class="card" id="miniaturas"><img src="images/optimized/cards/BONECOS.png" alt="Miniaturas"><div class="card-body"><h3 class="mag-title">Miniaturas personalizadas</h3><p>Pessoas, pets, temas especiais, homenagens, grupos e presentes personalizados com identidade.</p><button class="btn mag" onclick="openModal('modal-miniaturas')">Saiba mais</button></div></article>
+    <article class="card" id="miniaturas"><img src="images/optimized/cards/BONECOS.png" alt="Miniaturas"><div class="card-body"><h3 class="mag-title">Miniaturas personalizadas</h3><p>Pessoas, pets, temas especiais, homenagens, grupos e presentes personalizados com identidade.</p><button class="btn" onclick="openModal('modal-miniaturas')">Saiba mais</button></div></article>
     <article class="card" id="mascotes"><img src="images/optimized/cards/card_mascotes_times.png" alt="Mascotes"><div class="card-body"><h3>Mascotes de times</h3><p>Peças temáticas, decorativas e colecionáveis para torcedores, datas especiais e presentes personalizados.</p><button class="btn" onclick="openModal('modal-mascotes')">Saiba mais</button></div></article>
     <article class="card" id="maconaria"><img src="images/optimized/cards/card_maconaria_outros.png" alt="Maçonaria"><div class="card-body"><h3>Maçonaria & Outros</h3><p>Peças simbólicas, miniaturas, homenagens e objetos personalizados para grupos, irmãos e ocasiões especiais.</p><button class="btn" onclick="openModal('modal-maconaria')">Saiba mais</button></div></article>
     <article class="card" id="props"><img src="images/optimized/cards/card_props_cosplays.png" alt="Props"><div class="card-body"><h3>Props & Cosplays</h3><p>Acessórios, peças cenográficas, itens decorativos e produtos sob medida para fantasia, cosplay e eventos.</p><button class="btn" onclick="openModal('modal-props')">Saiba mais</button></div></article>
