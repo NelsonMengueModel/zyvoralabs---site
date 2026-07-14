@@ -1,3 +1,4 @@
+<!-- ZYVORA LABS INDEX V8 | Atualizado em 14/07/2026 - 14:01 | 3D Studio: /catalogo-3d-studio.html?v=80 -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -604,16 +605,22 @@ footer{
   border-radius:28px;
   overflow:hidden;
   background:#04070D;
-  min-height:620px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding:28px 18px 0;
 }
 .hero-zy-image img{
   display:block;
-  width:100%;
-  height:620px;
-  object-fit:cover;
-  object-position:center top;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:760px;
+  object-fit:contain;
+  object-position:center bottom;
   image-rendering:auto;
   transform:translateZ(0);
+  filter:drop-shadow(0 16px 32px rgba(0,0,0,.25));
 }
 .hero-zy-badge{
   position:absolute;
@@ -660,23 +667,107 @@ footer{
 .hero-mini-metric span{display:block;color:var(--green);font-size:11px;margin-top:4px;font-weight:800}
 @media(max-width:1100px){.hero-zy-intro{max-width:300px}}
 @media(max-width:760px){
-  .hero-zy-image{min-height:520px}
-  .hero-zy-image img{height:520px}
+  .hero-zy-image{padding:18px 12px 0}
+  .hero-zy-image img{width:100%;height:auto;max-height:520px;object-fit:contain}
   .hero-zy-intro{position:static;max-width:none;margin-top:14px}
   .hero-mini-grid{grid-template-columns:1fr}
   .hero-zy-card{padding:14px}
 }
 
 
-/* V5 - retrato inferior da ZY mais nítido */
-.zy-portrait{min-height:660px}
-.zy-portrait img{display:block;width:100%;height:660px;object-fit:cover;object-position:center top;image-rendering:auto;transform:translateZ(0)}
-@media(max-width:760px){.zy-portrait{min-height:520px}.zy-portrait img{height:520px}}
+/* V6 - retrato inferior da ZY sem corte */
+.zy-portrait{
+  min-height:unset;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px 18px 16px;
+}
+.zy-portrait img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:680px;
+  object-fit:contain;
+  object-position:center center;
+  image-rendering:auto;
+  transform:translateZ(0);
+  filter:drop-shadow(0 16px 32px rgba(0,0,0,.25));
+}
+@media(max-width:760px){.zy-portrait{padding:22px 12px 10px}.zy-portrait img{width:100%;height:auto;max-height:500px;object-fit:contain}}
+
+
+/* V8 - acesso claro ao 3DFlow/3D Studio e versão no rodapé */
+.footer-version{
+  margin-top:18px;
+  padding:14px 18px;
+  display:inline-flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  border:1px solid rgba(0,231,255,.22);
+  border-radius:999px;
+  background:rgba(0,231,255,.035);
+  color:var(--muted2);
+  font-size:12px;
+  font-weight:700;
+}
+.footer-version b{color:var(--blue)}
+.footer-version a{color:var(--green);text-decoration:none}
+.footer-version a:hover{color:var(--blue)}
+.pathways{
+  padding:70px 7%;
+  background:radial-gradient(circle at 18% 18%,rgba(0,231,255,.10),transparent 30%),
+             radial-gradient(circle at 82% 65%,rgba(217,70,255,.10),transparent 34%),
+             rgba(3,6,11,.78);
+  border-top:1px solid rgba(0,231,255,.10);
+  border-bottom:1px solid rgba(0,231,255,.10);
+}
+.pathways-grid{
+  max-width:1180px;
+  margin:32px auto 0;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+.pathway-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  padding:30px;
+  min-height:310px;
+  background:linear-gradient(180deg,rgba(16,24,32,.92),rgba(6,10,16,.96));
+  border:1px solid rgba(0,231,255,.24);
+  box-shadow:0 0 42px rgba(0,231,255,.07);
+}
+.pathway-card:nth-child(2){border-color:rgba(217,70,255,.35);box-shadow:0 0 42px rgba(217,70,255,.08)}
+.pathway-label{
+  display:inline-flex;
+  border:1px solid rgba(0,231,255,.35);
+  color:var(--blue);
+  background:rgba(0,231,255,.04);
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:20px;
+}
+.pathway-card:nth-child(2) .pathway-label{border-color:rgba(217,70,255,.44);color:var(--mag);background:rgba(217,70,255,.06)}
+.pathway-card h3{font-size:clamp(28px,3.6vw,42px);line-height:1.04;margin-bottom:14px}
+.pathway-card p{margin-bottom:24px}
+.pathway-list{display:grid;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.pathway-list li{color:var(--muted);font-size:14px}
+.pathway-list li:before{content:"✓";color:var(--green);font-weight:900;margin-right:8px}
+.pathway-actions{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:900px){.pathways-grid{grid-template-columns:1fr}.footer-version{border-radius:18px}}
 
 </style>
 </head>
 <body>
-<div class="version-badge">Atualizado em 14/07/2026 - 09:25</div>
+<div class="version-badge">V8 · Atualizado em 14/07/2026 - 14:01</div>
 
 <header>
   <a class="logo" href="#">
@@ -686,8 +777,9 @@ footer{
   <nav>
     <a href="#viva">Plataforma Viva</a>
     <a href="#zy">ZY</a>
+    <a href="https://app.zyvoralabs.com.br/" target="_blank">3DFlow</a>
+    <a href="/catalogo-3d-studio.html?v=80">3D Studio</a>
     <a href="#atuacao">Atuação</a>
-    <a href="catalogo-3d-studio.html?v=70">3D Studio</a>
     <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20Plataforma%20Viva%20da%20Zyvora%20Labs." target="_blank">WhatsApp</a>
   </nav>
 </header>
@@ -702,6 +794,8 @@ footer{
       <button class="btn" onclick="speakZy()">▶ Ouvir a ZY</button>
       <a class="btn secondary" href="#zy">Conhecer a ZY</a>
       <a class="btn magenta" href="https://app.zyvoralabs.com.br/" target="_blank">Acessar 3DFlow</a>
+      <a class="btn secondary" href="/catalogo-3d-studio.html?v=80">Visitar 3D Studio</a>
+      <a class="btn secondary" href="/catalogo-3d-studio.html?v=80">Visitar 3D Studio</a>
     </div>
     <div class="note">A ZY aparece logo na abertura porque é o principal diferencial da Plataforma Viva.</div>
   </div>
@@ -741,6 +835,46 @@ footer{
     <span><b>Plataforma Viva</b> · operação acompanhada todos os dias</span>
   </div>
 </div>
+
+
+<section class="pathways" id="acessos">
+  <div class="center reveal">
+    <div class="eyebrow">Escolha seu caminho</div>
+    <h2>Duas frentes da Zyvora. <span class="blue">Um mesmo ecossistema vivo.</span></h2>
+    <p>A Zyvora Labs apresenta a tecnologia, a inteligência operacional e a visão de futuro. O 3DFlow é o software. O Zyvora 3D Studio é a operação real e o catálogo de produtos físicos.</p>
+  </div>
+
+  <div class="pathways-grid">
+    <article class="pathway-card reveal">
+      <div class="pathway-label">Software SaaS</div>
+      <h3>3DFlow</h3>
+      <p>A plataforma de gestão operacional para oficinas, hubs e negócios de impressão 3D, construída sobre a visão da Plataforma Viva.</p>
+      <ul class="pathway-list">
+        <li>gestão de pedidos, produção e entregas</li>
+        <li>custos, margem, estoque e fluxo operacional</li>
+        <li>base para a inteligência ativa da ZY</li>
+      </ul>
+      <div class="pathway-actions">
+        <a class="btn" href="https://app.zyvoralabs.com.br/" target="_blank">Acessar 3DFlow →</a>
+      </div>
+    </article>
+
+    <article class="pathway-card reveal">
+      <div class="pathway-label">Produtos físicos</div>
+      <h3>Zyvora 3D Studio</h3>
+      <p>A grife 3D da Zyvora: produtos personalizados, brindes inteligentes, peças PET, NFC, luminárias, miniaturas e soluções sob encomenda.</p>
+      <ul class="pathway-list">
+        <li>catálogo de produtos 3D personalizados</li>
+        <li>brindes, PET, NFC, associações e presentes</li>
+        <li>laboratório real onde a plataforma é validada</li>
+      </ul>
+      <div class="pathway-actions">
+        <a class="btn magenta" href="/catalogo-3d-studio.html?v=80">Visitar 3D Studio →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
 
 <section id="viva">
   <div class="center reveal">
@@ -783,7 +917,7 @@ footer{
             <p style="margin:6px 0 0">Proativa. Precisa. Humana.</p>
           </div>
         </div>
-        <p>Agora a página mostra a imagem da ZY para dar mais presença à experiência. Ela representa a inteligência que acompanha a empresa, identifica riscos e ajuda o gestor a agir com mais segurança.</p>
+        <p>A ZY aparece com mais presença visual e sem cortes, reforçando seu papel como inteligência operacional da experiência. Ela acompanha a empresa, identifica riscos, interpreta sinais e ajuda o gestor a agir com mais segurança.</p>
         <div class="chips">
           <span class="chip">Briefings diários</span>
           <span class="chip">Alertas de risco</span>
@@ -807,7 +941,7 @@ footer{
         </ul>
         <p><span class="mag">Ação recomendada:</span> revisar a fila de acabamento e atualizar custos antes de aceitar novos prazos curtos.</p>
         <button class="btn green" onclick="speakZy()">▶ Ouvir a ZY</button>
-        <div class="note">Observação: a fala foi ajustada para pronunciar “Zai” em vez de soletrar Z-Y. O site continua priorizando voz feminina em pt-BR.</div>
+        <div class="note">Observação: a fala foi ajustada para pronunciar “Zí” de forma natural, sem soletrar as letras. O site continua priorizando voz feminina em pt-BR.</div>
       </div>
     </div>
   </div>
@@ -858,7 +992,7 @@ footer{
     </div>
     <div class="buttons">
       <a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20Plataforma%20Viva%20da%20Zyvora%20Labs." target="_blank">Quero conhecer a Zyvora →</a>
-      <a class="btn secondary" href="catalogo-3d-studio.html?v=70">Ver Zyvora 3D Studio</a>
+      <a class="btn secondary" href="/catalogo-3d-studio.html?v=80">Ver Zyvora 3D Studio</a>
     </div>
   </div>
 </section>
@@ -868,10 +1002,20 @@ footer{
   <strong>Zyvora Labs</strong><br>
   Plataforma Viva · IA Operacional · 3DFlow · ZY Especialista Operacional<br>
   Sistemas que acompanham o seu negócio.
+
+  <div class="footer-version">
+    <span><b>V8</b></span>
+    <span>Atualizado em 14/07/2026 - 14:01</span>
+    <span>•</span>
+    <a href="/catalogo-3d-studio.html?v=80">Abrir 3D Studio</a>
+    <span>•</span>
+    <a href="https://app.zyvoralabs.com.br/" target="_blank">Abrir 3DFlow</a>
+  </div>
+
 </footer>
 
 <script>
-const zyText = "Olá. Eu sou a Zai, especialista operacional da Zyvora Labs. A Plataforma Viva transforma dados do dia a dia em alertas, recomendações e decisões práticas. Aqui, o sistema não apenas registra. Ele acompanha, interpreta e ajuda sua empresa a agir com mais clareza.";
+const zyText = "Olá. Eu sou a Zí, especialista operacional da Zyvora Labs. A Plataforma Viva transforma dados do dia a dia em alertas, recomendações e decisões práticas. Aqui, o sistema não apenas registra. Ele acompanha, interpreta e ajuda sua empresa a agir com mais clareza.";
 const typeTarget = document.getElementById("typeLine");
 const statusTarget = document.getElementById("voiceStatus");
 let typingIndex = 0;
@@ -911,8 +1055,8 @@ function speakZy(){
   const chosenVoice = pickPreferredVoice();
 
   utter.lang = chosenVoice?.lang || "pt-BR";
-  utter.rate = 1.16;
-  utter.pitch = 1.12;
+  utter.rate = 1.08;
+  utter.pitch = 1.06;
   utter.volume = 1;
 
   if(chosenVoice) utter.voice = chosenVoice;
