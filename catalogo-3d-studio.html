@@ -1,0 +1,626 @@
+<!-- CATALOGO-3D-STUDIO | V7 VIDA | Atualizado em 14/07/2026 - 07:38 | Substituir este arquivo na RAIZ do GitHub -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zyvora 3D Studio | Catálogo Interativo</title>
+<meta name="description" content="Catálogo interativo Zyvora 3D Studio: produtos 3D personalizados, NFC, brindes, PET, articulados, luminárias, mascotes e peças sob encomenda.">
+<style>
+:root{--bg:#05070D;--bg2:#090D10;--card:#101820;--line:#1F3338;--text:#fff;--muted:#CFD8DC;--muted2:#9FB0B8;--blue:#00E7FF;--mag:#D946FF;--green:#00FFB3;--amber:#FFD166}
+*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}a{color:inherit}p{color:var(--muted);font-size:16px;line-height:1.6}h1,h2,h3,h4{letter-spacing:-.035em}h1{font-size:clamp(38px,6vw,76px);line-height:1.02;margin:0 0 20px}h2{font-size:clamp(28px,4vw,46px);line-height:1.12;text-align:center;margin:0 0 16px}h3{font-size:22px;margin:0 0 10px}section{padding:72px 8%}.dark{background:var(--bg2)}.center{text-align:center;max-width:960px;margin:0 auto}.blue{color:var(--blue)}.magenta{color:var(--mag)}
+header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 8%;background:rgba(5,7,13,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.logo-box{display:flex;align-items:center;gap:14px}.logo-img{height:50px;width:auto;border-radius:10px;border:1px solid rgba(0,231,255,.35);object-fit:cover}.logo-text{font-family:Arial Black,Arial,sans-serif;font-size:23px;letter-spacing:2px;color:var(--blue)}.logo-text span{color:#fff;font-weight:300}nav{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}.nav-link{color:var(--muted);text-decoration:none;font-size:14px;padding:9px 6px}.nav-link:hover{color:var(--blue)}
+.btn{display:inline-block;border:0;border-radius:12px;padding:13px 20px;font-weight:800;text-decoration:none;cursor:pointer;background:var(--blue);color:#031014;box-shadow:0 0 24px rgba(0,231,255,.16);transition:.2s ease;text-align:center}.btn:hover{transform:translateY(-1px);opacity:.94}.btn.secondary{background:transparent;color:var(--blue);border:1px solid var(--blue);box-shadow:none}.btn.mag{background:var(--mag);color:#150018;box-shadow:0 0 24px rgba(217,70,255,.18)}.btn.green{background:var(--green);color:#00140F;box-shadow:0 0 24px rgba(0,255,179,.15)}.buttons{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.hero{min-height:82vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 82% 12%,rgba(217,70,255,.18),transparent 34%),radial-gradient(circle at 12% 82%,rgba(0,231,255,.16),transparent 38%),radial-gradient(circle at 50% 52%,rgba(0,255,179,.05),transparent 45%),linear-gradient(135deg,#05070D,#08111A 75%);position:relative;overflow:hidden;padding-top:86px;padding-bottom:86px}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,231,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,231,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at center,black,transparent 73%)}.hero-inner{position:relative;max-width:1240px}.badge{display:inline-block;border:1px solid rgba(217,70,255,.65);color:var(--mag);background:rgba(217,70,255,.07);padding:9px 16px;border-radius:999px;font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:22px}.hero p{font-size:19px;max-width:910px;margin:0 auto;color:#DDE7EA}
+.hero-grid{display:grid;grid-template-columns:repeat(6,minmax(150px,1fr));gap:14px;margin-top:42px}.hero-card{background:linear-gradient(180deg,rgba(16,24,32,.96),rgba(8,12,16,.96));border:1px solid rgba(0,231,255,.24);border-radius:18px;padding:14px;text-align:left;min-height:265px;display:flex;flex-direction:column;justify-content:space-between;transition:.22s ease;text-decoration:none}.hero-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 0 24px rgba(0,231,255,.12)}.hero-card.pet,.hero-card.people{border-color:rgba(217,70,255,.35)}.hero-card img{width:100%;height:122px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08);margin-bottom:12px;background:#05070D}.hero-card strong{color:#fff;display:block;font-size:15px;line-height:1.25}.hero-card span{display:block;color:var(--muted2);font-size:12px;margin-top:6px;line-height:1.35}.num{display:inline-block;border:1px solid var(--blue);color:var(--blue);border-radius:6px;padding:3px 7px;font-weight:900;font-size:12px;margin-bottom:8px}.hero-card.pet .num,.hero-card.people .num{border-color:var(--mag);color:var(--mag)}
+.quick-menu{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}.quick-menu a{text-decoration:none;color:var(--blue);border:1px solid rgba(0,231,255,.35);background:rgba(0,231,255,.04);border-radius:999px;padding:10px 15px;font-size:14px;font-weight:700}.quick-menu a:hover{background:rgba(0,231,255,.10)}
+.icon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px;margin-top:30px}.icon-card{background:linear-gradient(180deg,var(--card),#090C0F);border:1px solid var(--line);border-radius:22px;padding:22px;text-align:center;min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center;transition:.22s ease;text-decoration:none}.icon-card:hover{transform:translateY(-3px);border-color:rgba(0,231,255,.42);box-shadow:0 0 28px rgba(0,231,255,.08)}.icon{width:56px;height:56px;border-radius:18px;border:1px solid rgba(0,231,255,.35);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:16px;color:var(--blue);background:rgba(0,231,255,.04)}.icon-card.pet .icon,.icon-card.people .icon{color:var(--mag);border-color:rgba(217,70,255,.45);background:rgba(217,70,255,.05)}.icon-card strong{font-size:16px;line-height:1.3}.icon-card span{color:var(--muted2);font-size:13px;margin-top:8px;line-height:1.35}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px;margin-top:32px}.card{display:flex;flex-direction:column;justify-content:space-between;min-height:455px;padding:0;background:linear-gradient(180deg,var(--card),#090C0F);border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:.22s ease}.card:hover{transform:translateY(-3px);border-color:rgba(0,231,255,.42);box-shadow:0 0 30px rgba(0,231,255,.08)}.card img{width:100%;height:210px;object-fit:cover;display:block;border-bottom:1px solid rgba(255,255,255,.08);background:#05070D}.card-body{padding:22px;display:flex;flex-direction:column;height:100%}.card h3{border-left:4px solid var(--blue);padding-left:12px}.card h3.mag-title{border-left-color:var(--mag)}.card p{font-size:15px;flex:1}.card .btn{width:100%;margin-top:14px}
+.diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:30px}.diff{display:flex;align-items:flex-start;gap:16px;padding:20px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,var(--card),#090C0F)}.diff .icon{margin:0;min-width:56px}.diff strong{display:block;margin-bottom:6px}.diff p{font-size:14px;margin:0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}.gallery figure{margin:0;background:linear-gradient(180deg,var(--card),#090C0F);border:1px solid var(--line);border-radius:20px;overflow:hidden}.gallery img{width:100%;height:210px;object-fit:cover;display:block}.gallery figcaption{padding:14px 16px;color:var(--muted);font-size:14px}.cta{text-align:center;background:radial-gradient(circle at center,rgba(217,70,255,.13),transparent 42%),#05070D}
+.modal{position:fixed;inset:0;background:rgba(5,7,13,.86);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:1000;opacity:0;pointer-events:none;transition:.22s ease;padding:20px}.modal.active{opacity:1;pointer-events:auto}.modal-content{max-width:760px;width:100%;max-height:86vh;overflow:auto;background:#0B0F14;border:1px solid var(--line);border-radius:24px;padding:34px;position:relative;box-shadow:0 18px 60px rgba(0,0,0,.6)}.modal-close{position:absolute;top:14px;right:18px;background:transparent;border:0;color:var(--muted);font-size:30px;cursor:pointer}.modal h4{font-size:28px;color:var(--blue);margin:0 0 14px}.modal h4.mag-title{color:var(--mag)}.modal ul{color:var(--muted);line-height:1.65;padding-left:20px}.modal img{width:100%;max-height:280px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.08);margin:12px 0 18px}
+footer{padding:42px 8%;text-align:center;color:var(--muted);background:#020305;border-top:1px solid var(--line)}
+@media(max-width:1120px){.hero-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:760px){header{flex-direction:column;text-align:center}nav{justify-content:center}section{padding:54px 6%}.hero{min-height:auto;padding-top:70px;padding-bottom:70px}.buttons{flex-direction:column}.btn{width:100%}.hero-grid{grid-template-columns:1fr}.hero-card{min-height:auto}.hero-card img{height:190px}.card{min-height:auto}.modal-content{padding:28px 22px}}
+
+.version-badge{
+  position:fixed;
+  right:12px;
+  bottom:10px;
+  z-index:2000;
+  background:rgba(5,7,13,.88);
+  color:var(--blue);
+  border:1px solid rgba(0,231,255,.45);
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:12px;
+  font-weight:700;
+  box-shadow:0 0 18px rgba(0,231,255,.12);
+  backdrop-filter:blur(8px);
+}
+@media(max-width:760px){
+  .version-badge{
+    right:8px;
+    bottom:8px;
+    font-size:11px;
+    padding:6px 10px;
+  }
+}
+
+
+/* Ajustes V4 - PET sem corte e botão Saiba Mais no topo */
+.hero-card .mini-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(0,231,255,.55);
+  color:var(--blue);
+  background:rgba(0,231,255,.05);
+  font-size:12px;
+  font-weight:800;
+  text-align:center;
+}
+.hero-card.pet .mini-btn,
+.hero-card.people .mini-btn{
+  border-color:rgba(217,70,255,.65);
+  color:var(--mag);
+  background:rgba(217,70,255,.06);
+}
+
+.hero-card img.pet-hero-img{
+  object-fit:contain;
+  object-position:center;
+  background:#05070D;
+  padding:6px;
+}
+
+.card img.pet-card-img{
+  object-fit:contain;
+  object-position:center;
+  background:#05070D;
+  padding:10px;
+}
+
+.modal img.modal-pet-img{
+  width:100%;
+  max-height:620px;
+  object-fit:contain;
+  object-position:center;
+  background:#05070D;
+  border-radius:18px;
+  border:1px solid rgba(217,70,255,.38);
+  padding:10px;
+}
+
+.gallery img.pet-gallery-img{
+  object-fit:contain;
+  object-position:center;
+  background:#05070D;
+  padding:8px;
+}
+
+
+/* Ajustes V5 - Página com vida: carrossel premium em movimento */
+.life-strip{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:28px auto 0;
+  color:var(--muted);
+  font-size:14px;
+  letter-spacing:.04em;
+}
+.life-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 16px rgba(0,255,179,.9);
+  animation:pulseLife 1.7s ease-in-out infinite;
+}
+@keyframes pulseLife{
+  0%,100%{transform:scale(.75);opacity:.55}
+  50%{transform:scale(1.28);opacity:1}
+}
+
+.studio-carousel{
+  width:100%;
+  margin-top:42px;
+  overflow:hidden;
+  position:relative;
+  padding:8px 0 18px;
+  mask-image:linear-gradient(90deg,transparent 0%,black 7%,black 93%,transparent 100%);
+}
+.studio-carousel::before,
+.studio-carousel::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:80px;
+  z-index:3;
+  pointer-events:none;
+}
+.studio-carousel::before{
+  left:0;
+  background:linear-gradient(90deg,rgba(5,7,13,.98),transparent);
+}
+.studio-carousel::after{
+  right:0;
+  background:linear-gradient(270deg,rgba(5,7,13,.98),transparent);
+}
+.carousel-track{
+  display:flex;
+  gap:18px;
+  width:max-content;
+  animation:zyvoraCarousel 34s linear infinite;
+}
+.studio-carousel:hover .carousel-track{
+  animation-play-state:paused;
+}
+@keyframes zyvoraCarousel{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+.carousel-card{
+  width:265px;
+  min-height:310px;
+  flex:0 0 auto;
+  background:linear-gradient(180deg,rgba(16,24,32,.98),rgba(8,12,16,.98));
+  border:1px solid rgba(0,231,255,.24);
+  border-radius:22px;
+  padding:15px;
+  text-align:left;
+  text-decoration:none;
+  transition:.22s ease;
+  box-shadow:0 16px 36px rgba(0,0,0,.22);
+  position:relative;
+}
+.carousel-card:hover{
+  transform:translateY(-4px) scale(1.015);
+  border-color:var(--blue);
+  box-shadow:0 0 30px rgba(0,231,255,.15);
+}
+.carousel-card.pet,
+.carousel-card.people{
+  border-color:rgba(217,70,255,.36);
+}
+.carousel-card img{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.09);
+  background:#05070D;
+  display:block;
+  margin-bottom:14px;
+}
+.carousel-card img.contain-img{
+  object-fit:contain;
+  padding:7px;
+}
+.carousel-card strong{
+  color:#fff;
+  display:block;
+  font-size:16px;
+  line-height:1.25;
+  margin-top:4px;
+}
+.carousel-card span{
+  display:block;
+  color:var(--muted2);
+  font-size:13px;
+  margin-top:7px;
+  line-height:1.35;
+}
+.carousel-card .mini-btn{
+  margin-top:14px;
+}
+.life-section{
+  background:
+    radial-gradient(circle at 20% 20%,rgba(0,231,255,.11),transparent 32%),
+    radial-gradient(circle at 80% 70%,rgba(217,70,255,.10),transparent 34%),
+    #070B10;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.life-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:28px;
+  align-items:center;
+  max-width:1180px;
+  margin:0 auto;
+}
+.life-panel{
+  background:linear-gradient(180deg,rgba(16,24,32,.92),rgba(8,12,16,.92));
+  border:1px solid rgba(0,231,255,.22);
+  border-radius:26px;
+  padding:30px;
+}
+.life-panel h2{
+  text-align:left;
+}
+.life-points{
+  display:grid;
+  gap:14px;
+  margin-top:20px;
+}
+.life-point{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  color:var(--muted);
+}
+.life-point b{
+  color:var(--blue);
+}
+.orbit-box{
+  min-height:330px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.orbit-core{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,231,255,.18),rgba(217,70,255,.10),transparent 68%);
+  border:1px solid rgba(0,231,255,.28);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-family:Arial Black,Arial,sans-serif;
+  color:white;
+  letter-spacing:.08em;
+  box-shadow:0 0 50px rgba(0,231,255,.12);
+}
+.orbit-item{
+  position:absolute;
+  width:74px;
+  height:74px;
+  border-radius:22px;
+  border:1px solid rgba(0,231,255,.34);
+  background:rgba(16,24,32,.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  box-shadow:0 0 22px rgba(0,231,255,.08);
+}
+.orbit-item:nth-child(2){top:18px;left:50%;transform:translateX(-50%);animation:floatA 4s ease-in-out infinite}
+.orbit-item:nth-child(3){right:20px;top:50%;transform:translateY(-50%);animation:floatB 4.5s ease-in-out infinite}
+.orbit-item:nth-child(4){bottom:18px;left:50%;transform:translateX(-50%);animation:floatC 4.2s ease-in-out infinite}
+.orbit-item:nth-child(5){left:20px;top:50%;transform:translateY(-50%);animation:floatD 4.7s ease-in-out infinite}
+@keyframes floatA{0%,100%{margin-top:0}50%{margin-top:-12px}}
+@keyframes floatB{0%,100%{margin-right:0}50%{margin-right:-12px}}
+@keyframes floatC{0%,100%{margin-bottom:0}50%{margin-bottom:-12px}}
+@keyframes floatD{0%,100%{margin-left:0}50%{margin-left:-12px}}
+
+@media(max-width:900px){
+  .carousel-card{width:238px}
+  .life-grid{grid-template-columns:1fr}
+  .life-panel h2{text-align:center}
+}
+@media(max-width:760px){
+  .studio-carousel::before,
+  .studio-carousel::after{width:34px}
+  .carousel-track{animation-duration:44s}
+  .carousel-card{width:225px;min-height:300px}
+  .carousel-card img{height:132px}
+  .orbit-box{min-height:280px}
+  .orbit-core{width:145px;height:145px;font-size:13px}
+  .orbit-item{width:58px;height:58px;font-size:24px}
+}
+
+
+/* Ajustes V6 - PET correto no carrossel e Saiba Mais como botão real */
+.carousel-card .mini-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  max-width:100%;
+  margin-top:14px;
+  padding:8px 13px;
+  border-radius:999px;
+  border:1px solid rgba(0,231,255,.58);
+  color:var(--blue);
+  background:rgba(0,231,255,.055);
+  font-size:12px;
+  font-weight:900;
+  line-height:1;
+  box-shadow:0 0 16px rgba(0,231,255,.06);
+}
+.carousel-card.pet .mini-btn,
+.carousel-card.people .mini-btn{
+  border-color:rgba(217,70,255,.70);
+  color:var(--mag);
+  background:rgba(217,70,255,.075);
+  box-shadow:0 0 16px rgba(217,70,255,.08);
+}
+.carousel-card:hover .mini-btn{
+  background:rgba(0,231,255,.12);
+}
+.carousel-card.pet:hover .mini-btn,
+.carousel-card.people:hover .mini-btn{
+  background:rgba(217,70,255,.13);
+}
+
+</style>
+</head>
+
+<body>
+<div class="version-badge">Atualizado em 14/07/2026 - 07:38</div>
+
+<header>
+  <div class="logo-box">
+    <img src="Logo Zyvoralabs.jpeg" class="logo-img" alt="Logo Zyvora Labs">
+    <div class="logo-text">ZYVORA <span>3D STUDIO</span></div>
+  </div>
+  <nav>
+    <a class="nav-link" href="index.html">Zyvora Labs</a>
+    <a class="nav-link" href="#produtos">Produtos</a>
+    <a class="nav-link" href="#categorias">Categorias</a>
+    <a class="nav-link" href="#galeria">Galeria</a>
+    <a class="btn secondary" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20vim%20pelo%20cat%C3%A1logo%20do%20Zyvora%203D%20Studio%20e%20quero%20um%20or%C3%A7amento." target="_blank">Orçamento</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge">IA, criatividade e fabricação inteligente</div>
+    <h1>Produtos <span class="blue">3D</span> personalizados com tecnologia, design e exclusividade.</h1>
+    <p>Soluções sob encomenda para empresas, eventos, presentes, marcas, associações e projetos especiais.</p>
+
+    <div class="buttons">
+      <a class="btn mag" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20do%20Zyvora%203D%20Studio." target="_blank">Solicitar orçamento</a>
+      <a class="btn secondary" href="#produtos">Ver produtos</a>
+    </div>
+
+    
+<div class="life-strip"><span class="life-dot"></span><span>Página viva: produtos em movimento, ideias em transformação.</span></div>
+
+<div class="studio-carousel" aria-label="Carrossel de produtos Zyvora 3D Studio">
+  <div class="carousel-track">
+    <a class="carousel-card" href="#nfc" onclick="openModal('modal-nfc')">
+      <span class="num">01</span>
+      <img src="images/optimized/cards/card_nfc_brindes.webp" alt="Chaveiro inteligente e brindes com NFC">
+      <strong>Chaveiro inteligente com NFC</strong>
+      <span>Peças conectadas a WhatsApp, Instagram, Pix, cardápio ou página do cliente.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#brindes" onclick="openModal('modal-brindes')">
+      <span class="num">02</span>
+      <img src="images/optimized/cards/associacao_chaveiro_institucional.png" alt="Brindes corporativos">
+      <strong>Brinde corporativo / display de mesa</strong>
+      <span>Produtos para empresas, campanhas, balcão, eventos e relacionamento.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card pet" href="#pet" onclick="openModal('modal-pet')">
+      <span class="num">03</span>
+      <img src="images/optimized/cards/card_pets_personalizados.webp" alt="Linha PET personalizada">
+      <strong>Miniatura PET personalizada</strong>
+      <span>Lembranças afetivas para tutores de cães e gatos.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#articulados" onclick="openModal('modal-articulados')">
+      <span class="num">04</span>
+      <img src="images/optimized/cards/card_articulados_criativos.png" alt="Peças articuladas e chaveiros criativos">
+      <strong>Peças articuladas / chaveiros criativos</strong>
+      <span>Bonecos, colecionáveis, chaveiros e produtos com movimento.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#luminarias" onclick="openModal('modal-luminarias')">
+      <span class="num">05</span>
+      <img src="images/optimized/cards/card_luminarias_3d.png" alt="Luminária artística 3D">
+      <strong>Luminária artística 3D</strong>
+      <span>Decoração, presentes e peças visuais de alto impacto.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card people" href="#miniaturas" onclick="openModal('modal-miniaturas')">
+      <span class="num">06</span>
+      <img src="images/optimized/cards/BONECOS.png" alt="Miniaturas personalizadas">
+      <strong>Miniaturas personalizadas</strong>
+      <span>Pessoas, PETs, temas especiais, grupos e presentes.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#mascotes" onclick="openModal('modal-mascotes')">
+      <span class="num">07</span>
+      <img src="images/optimized/cards/card_mascotes_times.png" alt="Mascotes de times">
+      <strong>Mascotes e colecionáveis</strong>
+      <span>Peças temáticas para torcedores, grupos e presentes.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#maconaria" onclick="openModal('modal-maconaria')">
+      <span class="num">08</span>
+      <img src="images/optimized/cards/card_maconaria_outros.png" alt="Maçonaria e grupos">
+      <strong>Maçonaria, grupos e símbolos</strong>
+      <span>Peças simbólicas, homenagens e objetos personalizados.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <!-- Duplicação para loop contínuo -->
+    <a class="carousel-card" href="#nfc" onclick="openModal('modal-nfc')">
+      <span class="num">01</span>
+      <img src="images/optimized/cards/card_nfc_brindes.webp" alt="Chaveiro inteligente e brindes com NFC">
+      <strong>Chaveiro inteligente com NFC</strong>
+      <span>Peças conectadas a WhatsApp, Instagram, Pix, cardápio ou página do cliente.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#brindes" onclick="openModal('modal-brindes')">
+      <span class="num">02</span>
+      <img src="images/optimized/cards/associacao_chaveiro_institucional.png" alt="Brindes corporativos">
+      <strong>Brinde corporativo / display de mesa</strong>
+      <span>Produtos para empresas, campanhas, balcão, eventos e relacionamento.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card pet" href="#pet" onclick="openModal('modal-pet')">
+      <span class="num">03</span>
+      <img src="images/optimized/cards/card_pets_personalizados.webp" alt="Linha PET personalizada">
+      <strong>Miniatura PET personalizada</strong>
+      <span>Lembranças afetivas para tutores de cães e gatos.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#articulados" onclick="openModal('modal-articulados')">
+      <span class="num">04</span>
+      <img src="images/optimized/cards/card_articulados_criativos.png" alt="Peças articuladas e chaveiros criativos">
+      <strong>Peças articuladas / chaveiros criativos</strong>
+      <span>Bonecos, colecionáveis, chaveiros e produtos com movimento.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#luminarias" onclick="openModal('modal-luminarias')">
+      <span class="num">05</span>
+      <img src="images/optimized/cards/card_luminarias_3d.png" alt="Luminária artística 3D">
+      <strong>Luminária artística 3D</strong>
+      <span>Decoração, presentes e peças visuais de alto impacto.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card people" href="#miniaturas" onclick="openModal('modal-miniaturas')">
+      <span class="num">06</span>
+      <img src="images/optimized/cards/BONECOS.png" alt="Miniaturas personalizadas">
+      <strong>Miniaturas personalizadas</strong>
+      <span>Pessoas, PETs, temas especiais, grupos e presentes.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#mascotes" onclick="openModal('modal-mascotes')">
+      <span class="num">07</span>
+      <img src="images/optimized/cards/card_mascotes_times.png" alt="Mascotes de times">
+      <strong>Mascotes e colecionáveis</strong>
+      <span>Peças temáticas para torcedores, grupos e presentes.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+
+    <a class="carousel-card" href="#maconaria" onclick="openModal('modal-maconaria')">
+      <span class="num">08</span>
+      <img src="images/optimized/cards/card_maconaria_outros.png" alt="Maçonaria e grupos">
+      <strong>Maçonaria, grupos e símbolos</strong>
+      <span>Peças simbólicas, homenagens e objetos personalizados.</span>
+      <span class="mini-btn">Saiba mais</span>
+    </a>
+  </div>
+</div>
+
+
+    <div class="quick-menu">
+      <a href="#brindes">Brindes corporativos</a><a href="#nfc">NFC, QR Code e CareCode</a><a href="#pet">Linha PET personalizada</a><a href="#articulados">Chaveiros e articulados</a><a href="#luminarias">Luminárias 3D</a><a href="#miniaturas">Miniaturas e presentes</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="life-section">
+  <div class="life-grid">
+    <div class="life-panel">
+      <div class="badge">A estratégia é vida</div>
+      <h2>Uma página viva para uma fábrica viva.</h2>
+      <p>A Zyvora 3D Studio não vende apenas peças. Ela transforma foto, ideia, símbolo e necessidade em produto físico com presença, utilidade e emoção.</p>
+      <div class="life-points">
+        <div class="life-point"><b>01.</b><span>O cliente vê movimento e entende que a marca está ativa.</span></div>
+        <div class="life-point"><b>02.</b><span>Os produtos aparecem como possibilidades reais, não como catálogo parado.</span></div>
+        <div class="life-point"><b>03.</b><span>Cada card leva para detalhes e para o WhatsApp, reduzindo atrito na venda.</span></div>
+      </div>
+    </div>
+    <div class="orbit-box" aria-label="Ecossistema vivo Zyvora 3D Studio">
+      <div class="orbit-core">ZYVORA<br>3D<br>STUDIO</div>
+      <div class="orbit-item">💡</div>
+      <div class="orbit-item">🐾</div>
+      <div class="orbit-item">▦</div>
+      <div class="orbit-item">🎁</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="categorias" class="dark">
+  <div class="center"><h2>O que produzimos</h2><p>Escolha uma categoria para entender melhor ou pedir orçamento direto pelo WhatsApp.</p></div>
+  <div class="icon-grid">
+    <a class="icon-card" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20brindes%20corporativos%20da%20Zyvora%203D%20Studio." target="_blank"><div class="icon">🎁</div><strong>Brindes corporativos</strong><span>Peças úteis para marcas, balcões e eventos.</span></a>
+    <a class="icon-card" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20produto%20com%20NFC%2C%20QR%20Code%20ou%20CareCode." target="_blank"><div class="icon">▦</div><strong>NFC, QR Code e CareCode</strong><span>Conecte o físico ao digital.</span></a>
+    <a class="icon-card pet" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20produto%20PET%20personalizado." target="_blank"><div class="icon">🐾</div><strong>Linha PET personalizada</strong><span>Miniaturas, plaquinhas e lembranças.</span></a>
+    <a class="icon-card" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20chaveiros%20ou%20pe%C3%A7as%20articuladas." target="_blank"><div class="icon">🔗</div><strong>Chaveiros e articulados</strong><span>Criativos, colecionáveis e vendáveis.</span></a>
+    <a class="icon-card" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20lumin%C3%A1ria%203D%20personalizada." target="_blank"><div class="icon">💡</div><strong>Luminárias 3D</strong><span>Design para decorar e presentear.</span></a>
+    <a class="icon-card people" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20miniatura%20ou%20presente%20personalizado." target="_blank"><div class="icon">👤</div><strong>Miniaturas e presentes</strong><span>Pessoas, temas e momentos especiais.</span></a>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="center"><h2>Catálogo de produtos e soluções</h2><p>Uma vitrine profissional com as principais linhas comerciais da operação física da Zyvora Labs.</p></div>
+  <div class="grid">
+    <article class="card" id="nfc"><img src="images/optimized/cards/card_nfc_brindes.webp" alt="NFC e brindes"><div class="card-body"><h3>NFC, QR Code & Brindes</h3><p>Chaveiros, displays e peças inteligentes que conectam o produto físico ao WhatsApp, Instagram, cardápio, Pix ou página do cliente.</p><button class="btn" onclick="openModal('modal-nfc')">Saiba mais</button></div></article>
+    <article class="card" id="pet"><img src="images/optimized/cards/card_pets_personalizados.webp" alt="Linha PET"><div class="card-body"><h3 class="mag-title">Linha PET</h3><p>Miniaturas, chaveiros, plaquinhas, lembranças e produtos afetivos para eternizar o carinho por cães e gatos.</p><button class="btn mag" onclick="openModal('modal-pet')">Saiba mais</button></div></article>
+    <article class="card" id="articulados"><img src="images/optimized/cards/card_articulados_criativos.png" alt="Articulados"><div class="card-body"><h3>Articulados & Criativos</h3><p>Dragões, criaturas, bonecos e colecionáveis com forte apelo visual, foco em produtos vendáveis e impressão eficiente.</p><button class="btn" onclick="openModal('modal-articulados')">Saiba mais</button></div></article>
+    <article class="card" id="luminarias"><img src="images/optimized/cards/card_luminarias_3d.png" alt="Luminárias"><div class="card-body"><h3>Luminárias artísticas 3D</h3><p>Peças decorativas e luminárias 3D para ambientes, presentes, mesas, vitrines e projetos personalizados.</p><button class="btn" onclick="openModal('modal-luminarias')">Saiba mais</button></div></article>
+    <article class="card" id="miniaturas"><img src="images/optimized/cards/BONECOS.png" alt="Miniaturas"><div class="card-body"><h3 class="mag-title">Miniaturas personalizadas</h3><p>Pessoas, pets, temas especiais, homenagens, grupos e presentes personalizados com identidade.</p><button class="btn mag" onclick="openModal('modal-miniaturas')">Saiba mais</button></div></article>
+    <article class="card" id="mascotes"><img src="images/optimized/cards/card_mascotes_times.png" alt="Mascotes"><div class="card-body"><h3>Mascotes de times</h3><p>Peças temáticas, decorativas e colecionáveis para torcedores, datas especiais e presentes personalizados.</p><button class="btn" onclick="openModal('modal-mascotes')">Saiba mais</button></div></article>
+    <article class="card" id="maconaria"><img src="images/optimized/cards/card_maconaria_outros.png" alt="Maçonaria"><div class="card-body"><h3>Maçonaria & Outros</h3><p>Peças simbólicas, miniaturas, homenagens e objetos personalizados para grupos, irmãos e ocasiões especiais.</p><button class="btn" onclick="openModal('modal-maconaria')">Saiba mais</button></div></article>
+    <article class="card" id="props"><img src="images/optimized/cards/card_props_cosplays.png" alt="Props"><div class="card-body"><h3>Props & Cosplays</h3><p>Acessórios, peças cenográficas, itens decorativos e produtos sob medida para fantasia, cosplay e eventos.</p><button class="btn" onclick="openModal('modal-props')">Saiba mais</button></div></article>
+    <article class="card" id="religioes"><img src="images/optimized/cards/card_religioes.png" alt="Religiões"><div class="card-body"><h3>Religiões</h3><p>Esculturas, santos, orixás e peças simbólicas produzidas com cuidado, respeito e personalização.</p><button class="btn" onclick="openModal('modal-religioes')">Saiba mais</button></div></article>
+  </div>
+</section>
+
+<section class="dark"><div class="center"><h2>Nossos diferenciais</h2><p>Produção sob encomenda, design exclusivo, tecnologia inteligente e atendimento direto pelo WhatsApp.</p></div>
+  <div class="diff-grid">
+    <div class="diff"><div class="icon">⚙️</div><div><strong>Produção sob encomenda</strong><p>Peças feitas especialmente para sua necessidade, sem depender de estoque genérico.</p></div></div>
+    <div class="diff"><div class="icon">✏️</div><div><strong>Design exclusivo</strong><p>Projetos com identidade visual, acabamento e adequação ao uso real.</p></div></div>
+    <div class="diff"><div class="icon">▣</div><div><strong>Tecnologia inteligente</strong><p>Integração com NFC, QR Code, CareCode e experiências digitais.</p></div></div>
+    <div class="diff"><div class="icon">💬</div><div><strong>Atendimento direto</strong><p>Agilidade, atenção e suporte real pelo WhatsApp durante o pedido.</p></div></div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="center"><h2>Galeria rápida</h2><p>Algumas linhas visuais para inspiração e orçamento.</p></div>
+  <div class="gallery">
+    <figure><img src="images/optimized/cards/CRISTAL1.jpeg" class="pet-gallery-img" alt="Cristal"><figcaption>Linha PET personalizada.</figcaption></figure>
+    <figure><img src="images/optimized/cards/BONECOS.png" alt="Bonecos"><figcaption>Bonecos e lembranças personalizadas.</figcaption></figure>
+    <figure><img src="images/optimized/cards/card_articulados_criativos.png" alt="Articulados"><figcaption>Articulados e colecionáveis.</figcaption></figure>
+    <figure><img src="images/optimized/cards/card_luminarias_3d.png" alt="Luminárias"><figcaption>Luminárias e decoração.</figcaption></figure>
+    <figure><img src="images/optimized/cards/vila_velha_chaveiro.png" alt="Vila Velha"><figcaption>Souvenirs e produtos locais.</figcaption></figure>
+    <figure><img src="images/optimized/cards/associacao_chaveiro_institucional.png" alt="Associações"><figcaption>Associações e grupos.</figcaption></figure>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Quer transformar uma ideia em peça física exclusiva?</h2>
+  <p>Envie foto, referência, logo ou necessidade pelo WhatsApp. A Zyvora 3D Studio avalia o projeto e orienta o melhor caminho.</p>
+  <div class="buttons"><a class="btn mag" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20tenho%20uma%20ideia%20para%20um%20produto%203D%20personalizado%20da%20Zyvora%203D%20Studio." target="_blank">Enviar minha ideia</a><a class="btn secondary" href="index.html">Voltar para Zyvora Labs</a></div>
+</section>
+
+<div class="modal" id="modal-nfc"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-nfc')">&times;</button><h4>NFC, QR Code & Core Code</h4><img src="images/optimized/cards/card_nfc_brindes.webp" alt="NFC"><p>Produtos físicos conectados ao mundo digital. Ideais para empresas, profissionais, balcões, cardápios, contatos, campanhas e brindes inteligentes.</p><ul><li>Acesso por aproximação com NFC.</li><li>QR Code para WhatsApp, Instagram, Pix, cardápio ou site.</li><li>Peças úteis para balcão, evento, recepção e relacionamento com clientes.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20produto%20com%20NFC%20ou%20QR%20Code." target="_blank">Pedir orçamento</a></div></div>
+<div class="modal" id="modal-brindes"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-brindes')">&times;</button><h4>Brindes corporativos</h4><img src="images/optimized/cards/card_nfc_brindes.webp" alt="Brindes"><p>Displays, chaveiros, suportes e produtos personalizados para empresas, eventos, lojas, associações e campanhas.</p><ul><li>Brindes úteis e personalizados.</li><li>Displays de mesa com QR Code.</li><li>Peças para campanhas comerciais e institucionais.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20brindes%20corporativos%20da%20Zyvora%203D%20Studio." target="_blank">Pedir orçamento</a></div></div>
+<div class="modal" id="modal-pet"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-pet')">&times;</button><h4 class="mag-title">Linha PET personalizada</h4><img src="images/optimized/cards/CRISTAL1.jpeg" class="modal-pet-img" alt="PET"><p>Produtos afetivos para tutores: miniaturas, plaquinhas, chaveiros, lembranças e peças com identidade emocional.</p><ul><li>Miniaturas e lembranças personalizadas.</li><li>Plaquinhas e chaveiros PET.</li><li>CareCode e QR Code para identificação e memória digital.</li></ul><a class="btn mag" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20produto%20PET%20personalizado." target="_blank">Criar produto PET</a></div></div>
+<div class="modal" id="modal-articulados"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-articulados')">&times;</button><h4>Articulados & Criativos</h4><img src="images/optimized/cards/card_articulados_criativos.png" alt="Articulados"><p>Peças com movimento, apelo visual e bom potencial de venda: bonecos, criaturas, chaveiros, colecionáveis e produtos temáticos.</p><ul><li>Peças articuladas impressas já montadas.</li><li>Produtos criativos para presentes e coleções.</li><li>Itens com boa exposição visual para vitrines e redes sociais.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20produtos%20articulados%20ou%20criativos." target="_blank">Pedir orçamento</a></div></div>
+<div class="modal" id="modal-luminarias"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-luminarias')">&times;</button><h4>Luminárias artísticas 3D</h4><img src="images/optimized/cards/card_luminarias_3d.png" alt="Luminárias"><p>Luminárias, peças decorativas e objetos de presença visual para ambientes, presentes, mesas, vitrines e projetos personalizados.</p><ul><li>Decoração personalizada.</li><li>Peças para ambientes residenciais e comerciais.</li><li>Projetos sob encomenda por tema, logo ou referência.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20lumin%C3%A1ria%203D%20personalizada." target="_blank">Projetar peça</a></div></div>
+<div class="modal" id="modal-miniaturas"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-miniaturas')">&times;</button><h4 class="mag-title">Miniaturas personalizadas</h4><img src="images/optimized/cards/BONECOS.png" alt="Miniaturas"><p>Miniaturas de pessoas, pets, temas especiais, grupos, profissões, datas e presentes personalizados.</p><ul><li>Presentes personalizados.</li><li>Peças de homenagem e memória.</li><li>Miniaturas temáticas para grupos, eventos e ocasiões especiais.</li></ul><a class="btn mag" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20miniatura%20personalizada." target="_blank">Pedir miniatura</a></div></div>
+<div class="modal" id="modal-mascotes"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-mascotes')">&times;</button><h4>Mascotes de times</h4><img src="images/optimized/cards/card_mascotes_times.png" alt="Mascotes"><p>Peças temáticas, decorativas e colecionáveis para torcedores, datas especiais e presentes personalizados.</p><ul><li>Mascotes e personagens temáticos.</li><li>Peças para torcedores e colecionadores.</li><li>Produtos para datas, campanhas e presentes.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20um%20mascote%20ou%20pe%C3%A7a%20tem%C3%A1tica." target="_blank">Pedir mascote</a></div></div>
+<div class="modal" id="modal-maconaria"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-maconaria')">&times;</button><h4>Maçonaria & Outros</h4><img src="images/optimized/cards/card_maconaria_outros.png" alt="Maçonaria"><p>Peças simbólicas, miniaturas, homenagens e objetos personalizados para grupos, irmãos, associações e ocasiões especiais.</p><ul><li>Peças simbólicas e decorativas.</li><li>Miniaturas e homenagens.</li><li>Itens personalizados para grupos e instituições.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20para%20ma%C3%A7onaria%20ou%20grupo." target="_blank">Pedir peça</a></div></div>
+<div class="modal" id="modal-props"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-props')">&times;</button><h4>Props & Cosplays</h4><img src="images/optimized/cards/card_props_cosplays.png" alt="Props"><p>Acessórios, peças cenográficas, itens decorativos e produtos sob medida para fantasia, cosplay, vídeos e eventos.</p><ul><li>Props e acessórios personalizados.</li><li>Peças para eventos, vídeos e decoração.</li><li>Projetos sob referência visual.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20para%20prop%20ou%20cosplay." target="_blank">Solicitar projeto</a></div></div>
+<div class="modal" id="modal-religioes"><div class="modal-content"><button class="modal-close" onclick="closeModal('modal-religioes')">&times;</button><h4>Religiões</h4><img src="images/optimized/cards/card_religioes.png" alt="Religiões"><p>Esculturas, santos, orixás e peças simbólicas produzidas com cuidado, respeito e personalização.</p><ul><li>Esculturas religiosas personalizadas.</li><li>Peças simbólicas para ambientes e lembranças.</li><li>Projetos sob encomenda e referência.</li></ul><a class="btn" href="https://wa.me/5527981783433?text=Ol%C3%A1%2C%20quero%20uma%20pe%C3%A7a%20religiosa%20personalizada." target="_blank">Pedir peça</a></div></div>
+
+<footer><strong>Zyvora 3D Studio</strong><br>Fabricação digital, prototipagem e produtos 3D personalizados.<br>Uma unidade operacional da Zyvora Labs.</footer>
+<script>
+function openModal(id){const m=document.getElementById(id);if(m){m.classList.add('active');document.body.style.overflow='hidden'}}
+function closeModal(id){const m=document.getElementById(id);if(m){m.classList.remove('active');document.body.style.overflow='auto'}}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal.active').forEach(m=>m.classList.remove('active'));document.body.style.overflow='auto'}});
+document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('active');document.body.style.overflow='auto'}}));
+</script>
+</body>
+</html>
