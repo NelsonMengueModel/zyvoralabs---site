@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kit Devocional NFC | Sagrada Família e Maria, mãe de Jesus</title>
+    <meta
+      name="description"
+      content="Experiência devocional NFC do kit Sagrada Família: oração em família, história de Maria e Jesus, liturgia, missa, terço e cuidados da peça em PLA."
+    />
+    <style>
+      :root {
+        --navy: #10294d;
+        --blue: #1d5594;
+        --gold: #c99a32;
+        --soft-gold: #f4e5bd;
+        --ivory: #fffaf0;
+        --paper: #fffdf8;
+        --pearl: #eff4f7;
+        --ink: #1e2633;
+        --muted: #5c6675;
+        --rose: #8a4d58;
+        --line: rgba(16, 41, 77, 0.14);
+        --shadow: 0 24px 70px rgba(16, 41, 77, 0.16);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 8% 0%, rgba(244, 229, 189, 0.7), transparent 34%),
+          linear-gradient(180deg, var(--ivory), #eef4f8 52%, #fff);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; }
+
+      .page { overflow: hidden; }
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px clamp(18px, 4vw, 56px);
+        background: rgba(255, 253, 248, 0.92);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(16px);
+      }
+      .brand {
+        display: flex;
+        flex-direction: column;
+        color: var(--navy);
+        font-weight: 900;
+      }
+      .brand small {
+        color: var(--rose);
+        font-size: 0.76rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .top-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        overflow-x: auto;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 7px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--navy);
+        font-size: 0.9rem;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .hero {
+        min-height: calc(100svh - 64px);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.88fr);
+        gap: clamp(28px, 5vw, 72px);
+        align-items: center;
+        padding: clamp(34px, 6vw, 84px) clamp(18px, 4vw, 56px);
+      }
+      .hero-copy { max-width: 740px; }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--rose);
+        font-size: 0.88rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .eyebrow::before { content: ""; width: 34px; height: 2px; background: var(--gold); }
+      h1, h2, h3 {
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: -0.03em;
+      }
+      h1 {
+        margin: 18px 0 16px;
+        font-size: clamp(2.65rem, 7vw, 6.3rem);
+        line-height: 0.94;
+      }
+      h2 {
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 4.6vw, 4rem);
+        line-height: 1.03;
+      }
+      h3 {
+        margin: 0 0 8px;
+        font-size: 1.5rem;
+        line-height: 1.12;
+      }
+      .lead {
+        max-width: 660px;
+        color: #344257;
+        font-size: clamp(1.08rem, 2vw, 1.36rem);
+      }
+      .hero-actions, .quick-grid, .content-grid, .care-grid, .product-grid, .journey-grid {
+        display: grid;
+        gap: 14px;
+      }
+      .hero-actions {
+        grid-template-columns: repeat(2, minmax(0, max-content));
+        margin-top: 28px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 13px 18px;
+        border: 1px solid var(--navy);
+        border-radius: 10px;
+        background: var(--navy);
+        color: #fff;
+        font-weight: 900;
+        text-decoration: none;
+      }
+      .button.secondary { background: #fff; color: var(--navy); }
+      .button.gold { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+      .hero-card {
+        position: relative;
+        padding: 18px;
+        border: 1px solid rgba(201, 154, 50, 0.38);
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.72);
+        box-shadow: var(--shadow);
+      }
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 16px;
+        border: 1px solid rgba(201, 154, 50, 0.32);
+        border-radius: 22px;
+        pointer-events: none;
+      }
+      .product-photo {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 22px;
+        object-fit: cover;
+      }
+      .nfc-strip {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 14px;
+        align-items: center;
+        margin-top: 14px;
+        padding: 16px;
+        border-radius: 18px;
+        background: var(--navy);
+        color: #fff;
+      }
+      .nfc-symbol {
+        display: grid;
+        place-items: center;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: var(--soft-gold);
+        color: var(--navy);
+        font-weight: 1000;
+      }
+      .nfc-strip strong { display: block; font-size: 1.05rem; }
+      .nfc-strip span { color: rgba(255,255,255,0.78); }
+
+      section { padding: clamp(50px, 8vw, 98px) clamp(18px, 4vw, 56px); }
+      .section-inner { width: min(1120px, 100%); margin: 0 auto; }
+      .section-kicker {
+        margin: 0 0 8px;
+        color: var(--rose);
+        font-size: 0.84rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .section-lead {
+        max-width: 800px;
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .quick-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .quick-card, .product-item, .story-card, .content-card, .care-card, .note-box {
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.78);
+        box-shadow: 0 14px 34px rgba(16, 41, 77, 0.07);
+      }
+      .quick-card {
+        min-height: 150px;
+        padding: 18px;
+        text-decoration: none;
+      }
+      .quick-card span {
+        display: inline-grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 14px;
+        border-radius: 50%;
+        background: var(--soft-gold);
+        color: var(--navy);
+        font-weight: 1000;
+      }
+      .quick-card strong { display: block; color: var(--navy); font-size: 1.08rem; }
+      .quick-card small { color: var(--muted); font-size: 0.92rem; }
+
+      .prayer-section { background: var(--navy); color: #fff; }
+      .prayer-section h2, .prayer-section .section-kicker { color: #fff; }
+      .prayer-section .section-lead { color: rgba(255,255,255,0.76); }
+      .prayer-box {
+        display: grid;
+        grid-template-columns: 0.72fr 1fr;
+        gap: 26px;
+        align-items: stretch;
+        padding: clamp(18px, 4vw, 34px);
+        border: 1px solid rgba(244, 229, 189, 0.42);
+        border-radius: 28px;
+        background: rgba(255,255,255,0.08);
+      }
+      .prayer-box img {
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .prayer-text p { margin: 0 0 16px; color: rgba(255,255,255,0.9); font-size: 1.1rem; }
+      .amen { color: var(--soft-gold) !important; font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem !important; font-weight: 800; }
+
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .product-item {
+        display: grid;
+        grid-template-columns: minmax(170px, 0.78fr) minmax(0, 1fr);
+        gap: 18px;
+        padding: 18px;
+      }
+      .product-item img {
+        width: 100%;
+        height: 100%;
+        min-height: 260px;
+        border-radius: 18px;
+        object-fit: cover;
+      }
+      .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+      .tags span { padding: 7px 10px; border-radius: 999px; background: var(--pearl); color: var(--navy); font-size: 0.9rem; font-weight: 800; }
+
+      .journey-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .story-card { padding: 20px; }
+      .chapter {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+        color: var(--rose);
+        font-weight: 1000;
+      }
+      .chapter span {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--soft-gold);
+        color: var(--navy);
+      }
+      .story-card p, .product-item p, .care-card p, .content-card p, .note-box p { margin: 0; color: var(--muted); }
+      .reference { color: var(--gold); font-weight: 900; }
+
+      .content-section { background: linear-gradient(180deg, #fff, #eef4f8); }
+      .content-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .content-card { padding: 20px; text-decoration: none; min-height: 220px; }
+      .content-card .icon {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        background: var(--navy);
+        color: var(--soft-gold);
+        font-size: 1.25rem;
+        font-weight: 1000;
+      }
+      .content-card strong { color: var(--navy); }
+      .content-card em { display: block; margin-top: 12px; color: var(--rose); font-style: normal; font-weight: 800; }
+
+      .care-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .care-card { padding: 20px; border-top: 4px solid var(--gold); }
+      .note-box { margin-top: 18px; padding: 18px 20px; background: #fff; }
+      .note-box strong { color: var(--navy); }
+
+      .footer {
+        padding: 30px clamp(18px, 4vw, 56px);
+        background: #101722;
+        color: rgba(255,255,255,0.76);
+      }
+      .footer-inner {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .footer a { color: var(--soft-gold); }
+
+      @media (max-width: 980px) {
+        .hero, .prayer-box { grid-template-columns: 1fr; }
+        .quick-grid, .content-grid, .care-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .product-grid, .journey-grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 640px) {
+        .topbar { align-items: flex-start; flex-direction: column; }
+        .hero-actions, .quick-grid, .content-grid, .care-grid, .product-item { grid-template-columns: 1fr; }
+        .button { width: 100%; }
+        .product-item img, .prayer-box img { min-height: 280px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar" aria-label="Topo da página">
+        <div class="brand">
+          Zyvora 3D Studio
+          <small>peças que conectam histórias</small>
+        </div>
+        <div class="top-actions" aria-label="Resumo do kit">
+          <span class="pill">NFC incluso</span>
+          <span class="pill">Oração</span>
+          <span class="pill">História</span>
+          <span class="pill">Código M003</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="inicio">
+          <div class="hero-copy">
+            <span class="eyebrow">Experiência devocional do kit</span>
+            <h1>Sagrada Família NFC</h1>
+            <p class="lead">
+              Esta página abre quando o celular toca a etiqueta NFC do kit. Ela foi criada para transformar a peça física em um momento de fé: oração em família, história de Maria e Jesus, links devocionais e cuidados para conservar o presente.
+            </p>
+            <div class="hero-actions">
+              <a class="button gold" href="#oracao">Começar pela oração</a>
+              <a class="button secondary" href="#conteudos">Abrir missa e conteúdos</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Imagem do kit Sagrada Família NFC">
+            <img class="product-photo" src="assets/sagrada-familia-branco-dourado.png" alt="Sagrada Família branca com detalhes dourados" />
+            <div class="nfc-strip">
+              <div class="nfc-symbol" aria-hidden="true">NFC</div>
+              <div>
+                <strong>Encoste o celular na etiqueta do kit.</strong>
+                <span>A experiência abre no navegador, sem instalar aplicativo.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="atalhos" aria-label="Atalhos da experiência NFC">
+          <div class="section-inner">
+            <p class="section-kicker">Escolha seu momento</p>
+            <h2>Uma página para rezar, conhecer e presentear.</h2>
+            <p class="section-lead">
+              O NFC ajuda quem recebe o kit a entender o significado da peça e a criar um pequeno ritual de oração em casa.
+            </p>
+            <div class="quick-grid">
+              <a class="quick-card" href="#oracao"><span>1</span><strong>Oração em família</strong><small>Prece simples para o lar.</small></a>
+              <a class="quick-card" href="#historia"><span>2</span><strong>História de Maria</strong><small>10 passagens com meditação.</small></a>
+              <a class="quick-card" href="#conteudos"><span>3</span><strong>Missa e terço</strong><small>Links devocionais oficiais.</small></a>
+              <a class="quick-card" href="#cuidados"><span>4</span><strong>Cuidados do kit</strong><small>Uso interno e conservação.</small></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="prayer-section" id="oracao">
+          <div class="section-inner">
+            <p class="section-kicker">Momento de oração</p>
+            <h2>Uma prece para abrir quando tocar no NFC.</h2>
+            <p class="section-lead">
+              Reze com calma. Esta oração foi escrita para quem recebeu o kit como presença de fé, proteção e união dentro de casa.
+            </p>
+            <div class="prayer-box">
+              <img src="assets/maria-mae-de-jesus-bandeja.png" alt="Maria, mãe de Jesus, em peça branca com bandeja integrada" />
+              <div class="prayer-text">
+                <p>Senhor Jesus, abençoe este lar com paz, amor e unidade. Que a Sagrada Família inspire nossas escolhas, fortaleça nossa paciência e ensine cada coração a cuidar melhor de quem ama.</p>
+                <p>Maria, mãe de Jesus, presença de ternura e fé, acompanha esta família. Guarda nossas alegrias, consola nossas preocupações e conduz nossos passos para mais perto de Deus.</p>
+                <p>Que esta pequena peça lembre todos os dias que a fé também mora nos gestos simples: agradecer, perdoar, proteger e permanecer unidos.</p>
+                <p class="amen">Amém.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="kit">
+          <div class="section-inner">
+            <p class="section-kicker">O kit físico</p>
+            <h2>Duas peças para compor um canto de oração.</h2>
+            <p class="section-lead">
+              O acabamento em branco e dourado valoriza a decoração. As peças podem ficar juntas ou separadas, conforme o espaço da casa.
+            </p>
+            <div class="product-grid">
+              <article class="product-item">
+                <img src="assets/sagrada-familia-branco-dourado.png" alt="Sagrada Família impressa em 3D com detalhes dourados" />
+                <div>
+                  <h3>Sagrada Família</h3>
+                  <p>Jesus, Maria e José em uma composição compacta, com acabamento em PLA branco e detalhes dourados. Uma peça para lembrar proteção, unidade e amor dentro de casa.</p>
+                  <div class="tags"><span>aprox. 14 cm</span><span>PLA branco</span><span>detalhes dourados</span></div>
+                </div>
+              </article>
+              <article class="product-item">
+                <img src="assets/maria-mae-de-jesus-bandeja.png" alt="Maria, mãe de Jesus, com bandeja integrada" />
+                <div>
+                  <h3>Maria, mãe de Jesus</h3>
+                  <p>Imagem de Nossa Senhora com bandeja integrada para pequenas lembranças, joias ou um terço do próprio cliente. O terço e os itens de ambientação das fotos são ilustrativos.</p>
+                  <div class="tags"><span>aprox. 17 cm</span><span>bandeja integrada</span><span>uso interno</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="historia">
+          <div class="section-inner">
+            <p class="section-kicker">História devocional</p>
+            <h2>Jesus e Maria em 10 momentos para meditar.</h2>
+            <p class="section-lead">
+              Uma trilha simples para pais, filhos e familiares lerem aos poucos. Cada passagem apresenta um episódio bíblico e uma meditação curta para a vida de casa.
+            </p>
+            <div class="journey-grid">
+              <article class="story-card"><div class="chapter"><span>1</span>A Anunciação</div><h3>Maria acolhe o chamado.</h3><p><span class="reference">Lucas 1:26-38.</span> A fé começa quando Maria escuta, confia e responde com humildade.</p></article>
+              <article class="story-card"><div class="chapter"><span>2</span>A Visitação</div><h3>A fé vira serviço.</h3><p><span class="reference">Lucas 1:39-56.</span> Maria vai ao encontro de Isabel e transforma a alegria recebida em cuidado.</p></article>
+              <article class="story-card"><div class="chapter"><span>3</span>O Nascimento de Jesus</div><h3>Deus chega na simplicidade.</h3><p><span class="reference">Lucas 2:1-20.</span> Em Belém, Maria guarda cada acontecimento no coração.</p></article>
+              <article class="story-card"><div class="chapter"><span>4</span>A Apresentação no Templo</div><h3>Oferecer e confiar.</h3><p><span class="reference">Lucas 2:22-35.</span> Maria escuta palavras de alegria e de dor, permanecendo fiel.</p></article>
+              <article class="story-card"><div class="chapter"><span>5</span>A Fuga para o Egito</div><h3>O amor protege.</h3><p><span class="reference">Mateus 2:13-15.</span> Maria e José partem com Jesus para preservar sua vida.</p></article>
+              <article class="story-card"><div class="chapter"><span>6</span>Jesus no Templo</div><h3>Procurar e reencontrar.</h3><p><span class="reference">Lucas 2:41-52.</span> Maria procura Jesus e aprende a confiar nos caminhos de Deus.</p></article>
+              <article class="story-card"><div class="chapter"><span>7</span>As Bodas de Caná</div><h3>Maria aponta para Jesus.</h3><p><span class="reference">João 2:1-11.</span> Ela percebe a necessidade e orienta: façam o que Ele disser.</p></article>
+              <article class="story-card"><div class="chapter"><span>8</span>Aos pés da Cruz</div><h3>Maria permanece.</h3><p><span class="reference">João 19:25-27.</span> Sua presença recorda a fé que não abandona nos dias difíceis.</p></article>
+              <article class="story-card"><div class="chapter"><span>9</span>Maria com os discípulos</div><h3>A oração sustenta a comunidade.</h3><p><span class="reference">Atos 1:12-14.</span> Maria persevera em oração com os discípulos.</p></article>
+              <article class="story-card"><div class="chapter"><span>10</span>Maria, exemplo de fé</div><h3>Guardar, meditar e seguir.</h3><p><span class="reference">Lucas 2:19; 2:51; 1:48.</span> Maria inspira uma fé humilde, obediente e confiante.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="conteudos">
+          <div class="section-inner">
+            <p class="section-kicker">Conteúdos para continuar</p>
+            <h2>Missa, liturgia, terço e música para o momento de fé.</h2>
+            <p class="section-lead">
+              Estes botões levam a páginas oficiais ou estáveis de conteúdo católico. A Zyvora pode atualizar esta seleção quando houver uma opção melhor para a experiência do kit.
+            </p>
+            <div class="content-grid">
+              <a class="content-card" href="https://tv.cancaonova.com/tv-ao-vivo/?app=TV" target="_blank" rel="noopener"><span class="icon">▶</span><h3>Missa e TV ao vivo</h3><p>Abra a TV Canção Nova para acompanhar programação católica ao vivo.</p><em>Abrir Canção Nova</em></a>
+              <a class="content-card" href="https://www.cnbb.org.br/liturgia-diaria/" target="_blank" rel="noopener"><span class="icon">✦</span><h3>Liturgia diária</h3><p>Leituras do dia e conteúdo litúrgico da CNBB para rezar com a Igreja no Brasil.</p><em>Abrir CNBB</em></a>
+              <a class="content-card" href="https://tv.cancaonova.com/programa/terco-mariano/" target="_blank" rel="noopener"><span class="icon">✚</span><h3>Terço Mariano</h3><p>Uma referência para rezar e meditar com Maria, mãe de Jesus.</p><em>Abrir Terço</em></a>
+              <a class="content-card" href="https://www.vaticannews.va/pt/epg.html" target="_blank" rel="noopener"><span class="icon">☼</span><h3>Vatican News</h3><p>Programação, transmissões e conteúdos da Igreja para acompanhar pelo celular.</p><em>Abrir Vatican News</em></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="cuidados">
+          <div class="section-inner">
+            <p class="section-kicker">Cuidados e transparência</p>
+            <h2>O que acompanha e como conservar.</h2>
+            <div class="care-grid">
+              <article class="care-card"><h3>Ambiente interno</h3><p>Use em local protegido de sol forte, chuva e calor excessivo.</p></article>
+              <article class="care-card"><h3>Limpeza simples</h3><p>Passe pano seco ou levemente umedecido. Evite produtos abrasivos.</p></article>
+              <article class="care-card"><h3>PLA artesanal</h3><p>Pequenas marcas de camada podem ocorrer e fazem parte do processo de impressão 3D.</p></article>
+            </div>
+            <div class="note-box">
+              <p><strong>Observação:</strong> o kit inclui as duas peças decorativas e a experiência NFC. Terço, joias, vela e itens de ambientação mostrados em fotos são ilustrativos e não acompanham o produto.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <span>Zyvora 3D Studio · Kit Devocional NFC M003</span>
+          <a href="#inicio">Voltar ao início</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
